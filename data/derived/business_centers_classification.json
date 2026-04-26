@@ -1,0 +1,32 @@
+{
+  "ChIJJeFvxt_X7kYRcBjzaM3PAAQ": {
+    "is_office": false,
+    "reason": "Locality, not an office building.",
+    "name": "Olaine",
+    "types": "locality,political"
+  },
+  "ChIJA3K8ZePX7kYRbDpfCWbI884": {
+    "is_office": false,
+    "reason": "Printing company, likely industrial/factory, not a white-collar office.",
+    "name": "Olfa Press , SIA",
+    "types": "establishment,point_of_interest"
+  },
+  "ChIJAQAAAOHX7kYRxOWNkSF3mc4": {
+    "is_office": false,
+    "reason": "Company name ambiguous; address suggests industrial area, not a white-collar office.",
+    "name": "Dinair Filton SIA",
+    "types": "establishment,point_of_interest"
+  },
+  "ChIJQ5vtRYDR7kYRgCvIGln_WOw": {
+    "is_office": false,
+    "reason": "Company name ambiguous; address suggests industrial area, not a white-collar office.",
+    "name": "IMS Baltic SIA",
+    "types": "establishment,point_of_interest"
+  },
+  "ChIJA3K8ZePX7kYRr12p26IyHqg": {
+    "is_office": false,
+    "reason": "Health-related establishment, not a white-collar office.",
+    "name": "Olpha",
+    "types": "establishment,health,point_of_interest"
+  }
+}
