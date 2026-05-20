@@ -9,67 +9,68 @@ export default function About() {
 
   return (
     <div className="max-w-3xl mx-auto p-6 md:p-12">
-      <h1 className="text-3xl font-bold text-coffee-900 mb-6">About the Methodology</h1>
+      <h1 className="text-3xl font-bold text-coffee-900 mb-6">Par metodoloģiju</h1>
 
       <div className="prose prose-stone max-w-none">
         <p className="text-lg text-stone-600 leading-relaxed mb-8">
-          The <strong>Riga Coffee Navigator</strong> scores each Riga district on opportunity to open
-          a specialty cafe, using only public data. This is an MVP — the goal is honest, not magical.
+          <strong>Rīgas kafejnīcu navigators</strong> novērtē katru Rīgas rajonu pēc iespējām atvērt specialty kafejnīcu,
+          izmantojot tikai publiskos datus. Šis ir MVP — mērķis ir godīgums, nevis maģija.
         </p>
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-coffee-800 mb-4">Data Sources</h2>
+          <h2 className="text-xl font-bold text-coffee-800 mb-4">Datu avoti</h2>
           <ul className="list-disc pl-5 space-y-2 text-stone-600">
-            <li><strong>Google Places API</strong> — locations, ratings, review counts for all cafes within Riga's polygon boundaries (after filtering: <strong>{cafes}</strong> operational cafes with ≥5 reviews).</li>
-            <li><strong>OpenStreetMap district boundaries</strong> — {total} polygons covering Riga, used for spatial join and km² calculation.</li>
-            <li><strong>Google Places (POIs)</strong> — universities, parks, tourist attractions and bus/train transport hubs as proxies for daily demand.</li>
+            <li><strong>Google Places API</strong> — adreses, vērtējumi un atsauksmju skaits visām kafejnīcām Rīgas robežās (pēc filtrēšanas: <strong>{cafes}</strong> darbojošās kafejnīcas ar ≥5 atsauksmēm).</li>
+            <li><strong>OpenStreetMap rajonu robežas</strong> — {total} poligoni, kas aptver Rīgu, izmantoti telpiskajam savienojumam un km² aprēķinam.</li>
+            <li><strong>Google Places (POI)</strong> — universitātes, parki, tūrisma objekti un transporta mezgli kā ikdienas pieprasījuma starpniecības rādītāji.</li>
+            <li><strong>OpenStreetMap (Overpass)</strong> — biroju ēkas un biroju objekti rajona biroju blīvuma signālam.</li>
           </ul>
         </section>
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-coffee-800 mb-4">The Opportunity Score</h2>
+          <h2 className="text-xl font-bold text-coffee-800 mb-4">Iespējas vērtējums</h2>
           <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm">
             <p className="text-stone-600 mb-4">
-              Each district gets four scores in 0–10. Each input is min-max normalized across all districts,
-              and the final formula is:
+              Katrs rajons saņem četrus vērtējumus skalā 0–10. Katrs ievaddats tiek normalizēts min-max pāri visiem rajoniem,
+              un galīgā formula ir:
             </p>
             <div className="font-mono bg-stone-100 p-4 rounded text-sm text-stone-800 overflow-x-auto">
-              Opportunity = 0.4·Demand + 0.3·(1−Competition) + 0.3·Quality
+              Iespējas = 0.4·Pieprasījums + 0.3·(1−Konkurence) + 0.3·Kvalitāte
             </div>
             <ul className="text-sm text-stone-600 mt-4 list-disc pl-5 space-y-1">
-              <li><strong>Demand</strong> — POIs per km² (universities, parks, attractions, transport hubs).</li>
-              <li><strong>Competition</strong> — cafes per km².</li>
-              <li><strong>Quality</strong> — Bayesian-smoothed avg rating (small districts pulled toward city mean).</li>
+              <li><strong>Pieprasījums</strong> — POI uz km² plus biroju blīvums (no OSM). Logaritmiskā skala novērš pilsētas centra anomāliju iespiešanu visos pārējos rajonos pie nulles.</li>
+              <li><strong>Konkurence</strong> — visi kafijas pakalpojumu objekti uz km² (OSM: kafejnīcas + restorāni + ātrā ēdināšana). Plašāks par "tikai kafejnīcas", jo restorāni un ātrā ēdināšana arī pasniedz kafiju. Logaritmiskā skala tā pati iemesla dēļ.</li>
+              <li><strong>Kvalitāte</strong> — Bajesa izlīdzinātais vidējais vērtējums no Google Places (mazie rajoni tiek pievilkti pie pilsētas vidējā).</li>
             </ul>
           </div>
         </section>
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-coffee-800 mb-4">Cluster Type</h2>
+          <h2 className="text-xl font-bold text-coffee-800 mb-4">Rajona tips (klasteris)</h2>
           <p className="text-stone-600">
-            Rule-based for MVP (not K-Means yet). A district is classified <em>Tourist Center</em>,
-            <em> Student / Hipster</em>, <em>Business Hub</em>, <em>Residential</em>, or <em>Mixed</em>
-            from the dominant POI mix and density.
+            Rajonu arhetipus piešķir <strong>K-Means</strong> algoritms uz normalizētiem rajona raksturlielumiem
+            (kafejnīcu blīvums, POI sadalījums, biroju blīvums, kvalitāte un digitālās gatavības rādītāji), pēc tam
+            kartēti uz lasāmiem nosaukumiem kā <em>Tūristu zona</em>, <em>Studentu rajons</em>, <em>Biznesa centrs</em>,
+            <em>Jaukts rajons</em> un <em>Zaļā zona</em>.
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-coffee-800 mb-4">Confidence Flags</h2>
+          <h2 className="text-xl font-bold text-coffee-800 mb-4">Ticamības karodziņi</h2>
           <p className="text-stone-600">
-            Out of {total} districts, only <strong>{high}</strong> have ≥10 cafes and are treated as
-            high-confidence in the rankings. The rest are still shown on the map, marked grey, and
-            excluded from "Top picks" — a single 5-star micro-cafe shouldn't make a district the
-            best in Riga.
+            No {total} rajoniem tikai <strong>{high}</strong> ir pietiekami daudz datu un tiek uzskatīti par
+            augstas ticamības rajoniem rangos. Pārējie joprojām redzami kartē, atzīmēti pelēki, un izslēgti no
+            "Top ieteikumiem" — viena 5 zvaigžņu mikrokafejnīca nedrīkst padarīt rajonu par labāko Rīgā.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-coffee-800 mb-4">Known Limitations</h2>
+          <h2 className="text-xl font-bold text-coffee-800 mb-4">Zināmie ierobežojumi</h2>
           <ul className="list-disc pl-5 space-y-2 text-stone-600">
-            <li>Commercial real estate / rent prices are not in the model.</li>
-            <li>The "business_centers" Google Places layer is too noisy (returns hotels, shops, posts) and is excluded from demand on purpose.</li>
-            <li>POI density doesn't account for time-of-day footfall — an office area at 9am vs a tourist area at noon look the same here.</li>
-            <li>Ratings are a lagging signal: they reflect existing cafes, not unmet demand directly.</li>
+            <li>Komerciālā nekustamā īpašuma / īres cenas modelī nav iekļautas.</li>
+            <li>Biroju dati nāk no OpenStreetMap tagiem (kopienas rediģēti), tāpēc pārklājums un konsekvence var atšķirties pēc rajona.</li>
+            <li>POI blīvums neņem vērā diennakts klientu plūsmu — biroju rajons pulksten 9 no rīta un tūrisma rajons pusdienlaikā šeit izskatās vienādi.</li>
+            <li>Vērtējumi ir atpaliekoši signāli: tie atspoguļo esošās kafejnīcas, nevis neapmierināto pieprasījumu tieši.</li>
           </ul>
         </section>
       </div>

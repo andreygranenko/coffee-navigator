@@ -14,6 +14,7 @@ import re
 from pathlib import Path
 
 import geopandas as gpd
+import numpy as np
 import pandas as pd
 from shapely.geometry import Point
 from sklearn.cluster import KMeans
@@ -32,20 +33,35 @@ POI_LAYERS = {
     "tourist_attractions": RAW / "riga_tourist_attractions_20251026_122518.csv",
     "transport_hubs": RAW / "riga_transport_hubs_20251026_122518.csv",
 }
-# noisy raw layer + Gemini classification → real office buildings only
+# Primary office source: OSM Overpass export (see scripts/fetch_osm_offices.py)
+OSM_OFFICES_CSV = ROOT / "data" / "derived" / "osm_offices_riga.csv"
+# Transit stops (bus, tram, rail) and retail anchors from OSM
+OSM_TRANSIT_CSV = ROOT / "data" / "derived" / "osm_transit_riga.csv"
+OSM_MALLS_CSV = ROOT / "data" / "derived" / "osm_malls_riga.csv"
+# Broad competition layer: cafes + restaurants + fast_food (coffee-service venues)
+OSM_HOSPITALITY_CSV = ROOT / "data" / "derived" / "osm_hospitality_riga.csv"
+# Legacy fallback: noisy Google Places business_centers + Gemini classification
 BUSINESS_CENTERS_CSV = RAW / "riga_business_centers_20251026_122518.csv"
 BUSINESS_CENTERS_CLASSIFICATION = ROOT / "data" / "derived" / "business_centers_classification.json"
+EXCLUDED_OFFICE_TYPES = {
+    "government",
+    "diplomatic",
+    "ngo",
+    "religion",
+    "political_party",
+}
 
 VENDING_RE = re.compile(r"vending|automāt|automat", re.IGNORECASE)
 MIN_REVIEWS = 5
-LOW_CONFIDENCE_CAFES = 10
+LOW_CONFIDENCE_VENUES = 5   # OSM venue count threshold — reflects true market presence
+LOW_QUALITY_SAMPLE = 3      # Google Places rated cafes below this → quality score unreliable
 BAYES_PRIOR = 5  # smoothing weight for district quality score
 
 WEIGHTS = {"demand": 0.4, "competition": 0.3, "quality": 0.3}
 
 # K-Means: features used for unsupervised clustering of districts.
 CLUSTER_FEATURES = [
-    "cafes_per_km2",
+    "venues_per_km2",   # OSM cafe+restaurant+fast_food — complete competition signal
     "poi_per_km2",
     "offices_per_km2",
     "quality_smoothed",
@@ -54,7 +70,7 @@ CLUSTER_FEATURES = [
     "share_universities",
     "share_parks",
     "share_attractions",
-    "share_transport",
+    "transit_per_km2",   # OSM bus/tram stops (replaces low-signal Google transport_hubs)
     "share_offices",
 ]
 N_CLUSTERS = 5
@@ -71,6 +87,15 @@ def normalize(s: pd.Series) -> pd.Series:
     if s.empty or s.max() == s.min():
         return pd.Series([0.0] * len(s), index=s.index)
     return (s - s.min()) / (s.max() - s.min())
+
+
+def log_normalize(s: pd.Series) -> pd.Series:
+    """Log1p then min-max to [0, 1]. Reduces outlier suppression.
+
+    Without this, Centrs/Vecrīga dominate the linear scale and compress
+    every other district toward 0 — e.g. Skanste demand 1.4 instead of ~6.
+    """
+    return normalize(np.log1p(s))
 
 
 def name_clusters(centroids: pd.DataFrame) -> dict[int, str]:
@@ -101,17 +126,19 @@ def name_clusters(centroids: pd.DataFrame) -> dict[int, str]:
         centroids["share_attractions"],
         lambda c: c["share_attractions"] >= 0.5,
     )
-    # 2. Business Hub — only if the cluster actually has offices.
+    # 2. Business Hub — rank by raw offices_per_km2 (not combined z-score).
+    # share_offices alone inflates for low-POI industrial districts where offices
+    # happen to be the only POI type; absolute density is the reliable signal.
     claim(
         "Business Hub",
-        _zscore(centroids["offices_per_km2"]) + _zscore(centroids["share_offices"]),
-        lambda c: c["offices_per_km2"] >= 0.5 or c["share_offices"] >= 0.2,
+        centroids["offices_per_km2"],
+        lambda c: c["offices_per_km2"] >= 5.0,
     )
-    # 3. Student / Hipster — needs a real university footprint.
+    # 3. Student / Hipster — needs a genuine university footprint (>= 0.25 share).
     claim(
         "Student / Hipster",
         centroids["share_universities"],
-        lambda c: c["share_universities"] >= 0.15 and c["poi_per_km2"] >= 1.0,
+        lambda c: c["share_universities"] >= 0.25 and c["poi_per_km2"] >= 1.0,
     )
     # 4. For whatever is left, use density to distinguish urban vs suburban.
     #    Highest cafe density of remaining → Mixed Urban (Centrs-like).
@@ -120,7 +147,7 @@ def name_clusters(centroids: pd.DataFrame) -> dict[int, str]:
     if remaining:
         rem_centroids = centroids.loc[remaining]
         # Most urban remainder
-        urban_winner = int(rem_centroids["cafes_per_km2"].idxmax())
+        urban_winner = int(rem_centroids["venues_per_km2"].idxmax())
         names[urban_winner] = "Mixed Urban"
         claimed.add(urban_winner)
     for i in centroids.index:
@@ -204,9 +231,22 @@ def main() -> None:
     cafes_clean = cafes_joined[clean_mask].copy()
     print(f"  after cleaning: {len(cafes_clean)} cafes")
 
-    # --- 2b. Office buildings (Gemini-cleaned) ------------------------------------
+    # --- 2b. Office buildings -------------------------------------------------------
     office_counts: pd.Series = pd.Series(dtype=int)
-    if BUSINESS_CENTERS_CLASSIFICATION.exists():
+    if OSM_OFFICES_CSV.exists():
+        osm_raw = pd.read_csv(OSM_OFFICES_CSV).dropna(subset=["latitude", "longitude"])
+        office_tag = osm_raw.get("office", pd.Series(index=osm_raw.index, dtype=str)).fillna("").str.strip().str.lower()
+        building_tag = osm_raw.get("building", pd.Series(index=osm_raw.index, dtype=str)).fillna("").str.strip().str.lower()
+        # Keep office-like POIs and explicit office buildings, drop public-sector-heavy noise.
+        keep_mask = (~office_tag.isin(EXCLUDED_OFFICE_TYPES)) & ((office_tag != "") | (building_tag == "office"))
+        osm_offices = osm_raw[keep_mask].copy()
+        osm_gdf = to_gdf(osm_offices)
+        osm_joined = gpd.sjoin(
+            osm_gdf, districts[["district", "geometry"]], how="inner", predicate="within"
+        )
+        office_counts = osm_joined.groupby("district").size()
+        print(f"Offices (OSM filtered): {len(osm_offices)} → {len(osm_joined)} after Riga filter")
+    elif BUSINESS_CENTERS_CLASSIFICATION.exists():
         classification = json.loads(BUSINESS_CENTERS_CLASSIFICATION.read_text())
         office_ids = {pid for pid, v in classification.items() if v.get("is_office")}
         bc_raw = pd.read_csv(BUSINESS_CENTERS_CSV)
@@ -218,10 +258,58 @@ def main() -> None:
             bc_gdf, districts[["district", "geometry"]], how="inner", predicate="within"
         )
         office_counts = bc_joined.groupby("district").size()
-        print(f"Offices (Gemini-classified): {len(bc_offices)} → {len(bc_joined)} after Riga filter")
+        print(f"Offices (Gemini fallback): {len(bc_offices)} → {len(bc_joined)} after Riga filter")
     else:
-        print(f"WARNING: {BUSINESS_CENTERS_CLASSIFICATION.name} missing — offices feature will be 0.")
-        print("         Run scripts/clean_business_centers.py first for the real signal.")
+        print(f"WARNING: {OSM_OFFICES_CSV.name} missing and Gemini fallback unavailable — offices feature will be 0.")
+        print("         Run scripts/fetch_osm_offices.py (preferred) or scripts/clean_business_centers.py.")
+
+    # --- 2c. Transit stops (OSM bus/tram/rail) ------------------------------------
+    transit_counts: pd.Series = pd.Series(dtype=int)
+    if OSM_TRANSIT_CSV.exists():
+        transit_raw = pd.read_csv(OSM_TRANSIT_CSV).dropna(subset=["latitude", "longitude"])
+        # Keep only physical boarding stops — exclude route-only nodes (platforms tagged separately)
+        stop_mask = transit_raw["stop_type"].isin(
+            ["bus_stop", "tram_stop", "station", "halt", "bus_station"]
+        )
+        transit_clean = transit_raw[stop_mask].copy()
+        transit_gdf = to_gdf(transit_clean)
+        transit_joined = gpd.sjoin(
+            transit_gdf, districts[["district", "geometry"]], how="inner", predicate="within"
+        )
+        transit_counts = transit_joined.groupby("district").size()
+        print(f"Transit stops (OSM): {len(transit_clean)} → {len(transit_joined)} after Riga filter")
+    else:
+        print(f"WARNING: {OSM_TRANSIT_CSV.name} missing — run scripts/fetch_osm_transit_malls.py")
+
+    # --- 2d. Retail anchors (OSM malls / shopping centres / supermarkets) ---------
+    mall_counts: pd.Series = pd.Series(dtype=int)
+    if OSM_MALLS_CSV.exists():
+        malls_raw = pd.read_csv(OSM_MALLS_CSV).dropna(subset=["latitude", "longitude"])
+        malls_gdf = to_gdf(malls_raw)
+        malls_joined = gpd.sjoin(
+            malls_gdf, districts[["district", "geometry"]], how="inner", predicate="within"
+        )
+        mall_counts = malls_joined.groupby("district").size()
+        print(f"Retail anchors (OSM): {len(malls_raw)} → {len(malls_joined)} after Riga filter")
+    else:
+        print(f"WARNING: {OSM_MALLS_CSV.name} missing — run scripts/fetch_osm_transit_malls.py")
+
+    # --- 2e. OSM hospitality — broad competition layer ----------------------------
+    # amenity=cafe + restaurant + fast_food covers all realistic coffee-service venues.
+    # Used for competition scoring; Google Places cafes still drive quality scoring.
+    hospitality_counts: pd.Series = pd.Series(dtype=int)
+    hosp_joined_df: pd.DataFrame | None = None   # kept for venues.json output
+    if OSM_HOSPITALITY_CSV.exists():
+        hosp_raw = pd.read_csv(OSM_HOSPITALITY_CSV).dropna(subset=["latitude", "longitude"])
+        hosp_gdf = to_gdf(hosp_raw)
+        hosp_joined = gpd.sjoin(
+            hosp_gdf, districts[["district", "geometry"]], how="inner", predicate="within"
+        )
+        hosp_joined_df = hosp_joined.copy()
+        hospitality_counts = hosp_joined.groupby("district").size()
+        print(f"Hospitality venues (OSM): {len(hosp_raw)} → {len(hosp_joined)} after Riga filter")
+    else:
+        print(f"WARNING: {OSM_HOSPITALITY_CSV.name} missing — run scripts/fetch_osm_hospitality.py")
 
     # --- 3. Load and spatial-join POI layers --------------------------------------
     poi_counts_per_district: dict[str, pd.Series] = {}
@@ -251,6 +339,7 @@ def main() -> None:
     district_cafe_stats = pd.DataFrame({
         "total_cafes": grouped.size(),
         "avg_rating": grouped["rating"].mean(),
+        "rating_std_dev": grouped["rating"].std(),   # market fragmentation signal
         "total_reviews": grouped["user_ratings_total"].sum(),
         "avg_price_level": grouped["price_level"].mean(),
         "pct_with_website": grouped["website"].apply(lambda s: 100 * s.notna().sum() / len(s)),
@@ -266,11 +355,16 @@ def main() -> None:
         df[f"poi_{layer_name}"] = df["district"].map(counts).fillna(0).astype(int)
     df["poi_total"] = sum(df[f"poi_{k}"] for k in POI_LAYERS)
     df["office_count"] = df["district"].map(office_counts).fillna(0).astype(int)
+    df["transit_count"] = df["district"].map(transit_counts).fillna(0).astype(int)
+    df["mall_count"] = df["district"].map(mall_counts).fillna(0).astype(int)
+    df["venue_count"] = df["district"].map(hospitality_counts).fillna(0).astype(int)
 
     # density: per km²
     df["cafes_per_km2"] = df["total_cafes"] / df["area_km2"].clip(lower=0.01)
     df["poi_per_km2"] = df["poi_total"] / df["area_km2"].clip(lower=0.01)
     df["offices_per_km2"] = df["office_count"] / df["area_km2"].clip(lower=0.01)
+    df["transit_per_km2"] = df["transit_count"] / df["area_km2"].clip(lower=0.01)
+    df["venues_per_km2"] = df["venue_count"] / df["area_km2"].clip(lower=0.01)
 
     # POI mix as shares — cluster features. Districts with zero POIs get 0 shares.
     poi_total_safe = df["poi_total"].clip(lower=1)
@@ -288,11 +382,15 @@ def main() -> None:
     df["avg_price_level"] = df["avg_price_level"].fillna(2.0)
 
     # --- 6. Compute scores --------------------------------------------------------
-    df["competition_norm"] = normalize(df["cafes_per_km2"])
-    # Demand combines generic POIs (foot traffic) and offices (daily commuters).
-    # Equal weight is a deliberate MVP choice; tunable later.
+    # Competition: OSM venues/km² (cafe+restaurant+fast_food) — falls back to
+    # Google Places cafes if OSM data is unavailable. Log-scaled to prevent
+    # Vecrīga/Centrs from compressing all other districts toward zero.
+    competition_base = df["venues_per_km2"] if df["venue_count"].sum() > 0 else df["cafes_per_km2"]
+    df["competition_norm"] = log_normalize(competition_base)
+
+    # Demand: POI density + office density. Log-scaled for same outlier reason.
     df["demand_raw"] = df["poi_per_km2"] + df["offices_per_km2"]
-    df["demand_norm"] = normalize(df["demand_raw"])
+    df["demand_norm"] = log_normalize(df["demand_raw"])
 
     # Bayesian-smoothed quality: districts with few cafes pulled toward global mean
     df["quality_smoothed"] = (
@@ -315,7 +413,11 @@ def main() -> None:
 
     # --- 7. K-Means clustering + confidence flag ----------------------------------
     df, centroids = assign_clusters(df)
-    df["low_confidence"] = df["total_cafes"] < LOW_CONFIDENCE_CAFES
+    # Confidence now based on OSM venue count (complete) not Google Places cafe count (biased).
+    # Quality sample tracks rated cafes separately — quality can be uncertain even in a
+    # high-venue district (e.g. Skanste: 17 venues but only 1 Google-rated cafe).
+    df["low_confidence"] = df["venue_count"] < LOW_CONFIDENCE_VENUES
+    df["low_quality_sample"] = df["total_cafes"] < LOW_QUALITY_SAMPLE
 
     print("\n--- K-Means cluster centroids (unscaled, all features) ---")
     print(centroids.round(2).to_string())
@@ -357,6 +459,15 @@ def main() -> None:
             },
             "officeCount": int(row["office_count"]),
             "officesPerKm2": round(row["offices_per_km2"], 2),
+            "venueCount": int(row["venue_count"]),
+            "venuesPerKm2": round(row["venues_per_km2"], 2),
+            "transitCount": int(row["transit_count"]),
+            "transitPerKm2": round(row["transit_per_km2"], 2),
+            "mallCount": int(row["mall_count"]),
+            "qualitySampleSize": int(row["total_cafes"]),   # rated Google Places cafes
+            "lowQualitySample": bool(row["low_quality_sample"]),
+            "ratingStdDev": round(row["rating_std_dev"], 2) if pd.notna(row.get("rating_std_dev")) else None,
+            "avgPriceLevel": round(row["avg_price_level"], 2) if pd.notna(row.get("avg_price_level")) else None,
             "competitionScore": float(row["competition_score"]),
             "demandScore": float(row["demand_score"]),
             "qualityScore": float(row["quality_score"]),
@@ -405,7 +516,23 @@ def main() -> None:
     out_cafes.write_text(json.dumps(cafes_payload, ensure_ascii=False, indent=2))
     print(f"Wrote {out_cafes.relative_to(ROOT)}: {len(cafes_payload)} cafes")
 
-    # --- 10. Copy GeoJSON, attaching district id for frontend join ----------------
+    # --- 10. Output venues.json — all OSM hospitality venues for map layer ---------
+    venues_payload = []
+    if hosp_joined_df is not None:
+        for _, row in hosp_joined_df.iterrows():
+            venues_payload.append({
+                "id": str(row.get("osm_key", "")),
+                "name": str(row["name"]) if pd.notna(row.get("name")) else None,
+                "lat": float(row["latitude"]),
+                "lng": float(row["longitude"]),
+                "amenity": str(row.get("amenity", "")),
+                "districtId": district_to_id.get(row.get("district", ""), None),
+            })
+    out_venues = OUT / "venues.json"
+    out_venues.write_text(json.dumps(venues_payload, ensure_ascii=False, indent=2))
+    print(f"Wrote {out_venues.relative_to(ROOT)}: {len(venues_payload)} venues")
+
+    # --- 12. Copy GeoJSON, attaching district id for frontend join ----------------
     geo_out = json.loads(GEOJSON.read_text())
     for feat in geo_out["features"]:
         feat["properties"]["id"] = slugify(feat["properties"]["name"])
@@ -413,14 +540,16 @@ def main() -> None:
     out_geo.write_text(json.dumps(geo_out, ensure_ascii=False))
     print(f"Wrote {out_geo.relative_to(ROOT)}: {len(geo_out['features'])} polygons")
 
-    # --- 11. Summary --------------------------------------------------------------
+    # --- 13. Summary --------------------------------------------------------------
     print("\n--- Top 5 by opportunity (high-confidence only) ---")
     top = df[~df["low_confidence"]].head(5)
     print(top[["district", "cluster", "total_cafes", "opportunity_score",
               "competition_score", "demand_score", "quality_score"]].to_string(index=False))
 
-    print(f"\nDistricts with low_confidence (cafes < {LOW_CONFIDENCE_CAFES}): "
+    print(f"\nDistricts low confidence (venues < {LOW_CONFIDENCE_VENUES}): "
           f"{int(df['low_confidence'].sum())} / {len(df)}")
+    print(f"Districts low quality sample (rated cafes < {LOW_QUALITY_SAMPLE}): "
+          f"{int(df['low_quality_sample'].sum())} / {len(df)}")
 
 
 if __name__ == "__main__":

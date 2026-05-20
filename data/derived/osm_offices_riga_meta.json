@@ -1,0 +1,17 @@
+{
+  "source": "OpenStreetMap via Overpass",
+  "generated_at_unix": 1777213141,
+  "bbox": {
+    "south": 56.8573462,
+    "west": 23.9455434,
+    "north": 57.0861068,
+    "east": 24.3245042
+  },
+  "overpass_endpoints": [
+    "https://overpass-api.de/api/interpreter",
+    "https://lz4.overpass-api.de/api/interpreter"
+  ],
+  "elements_total": 1307,
+  "rows_written": 1307,
+  "query": "[out:json][timeout:180];\n(\n  node[\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n  way[\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n  relation[\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n  node[\"building\"=\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n  way[\"building\"=\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n  relation[\"building\"=\"office\"](56.8573462,23.9455434,57.0861068,24.3245042);\n);\nout center tags;"
+}

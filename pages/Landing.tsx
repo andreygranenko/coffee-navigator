@@ -22,10 +22,10 @@ export default function Landing() {
 
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-            Find the perfect district for your <span className="text-amber-400">specialty cafe</span>.
+            Atrodi piemērotāko rajonu savai <span className="text-amber-400">specialty kafejnīcai</span>.
           </h1>
           <p className="text-xl md:text-2xl text-coffee-200 mb-10 max-w-2xl font-light">
-            Data-driven insights on competition, demand, and opportunity across {totalDistricts || "Riga's"} districts. Stop guessing, start analyzing.
+            Datu analīze par konkurenci, pieprasījumu un iespējām visos {totalDistricts || "Rīgas"} rajonos. Beidz minēt — sāc analizēt.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -33,45 +33,45 @@ export default function Landing() {
               to="/explore"
               className="bg-amber-500 hover:bg-amber-400 text-coffee-950 font-bold py-4 px-8 rounded-full transition-transform hover:scale-105 flex items-center gap-2 shadow-lg shadow-amber-900/50"
             >
-              Explore Districts <ArrowRight size={20} />
+              Pārlūkot rajonus <ArrowRight size={20} />
             </Link>
             <Link
               to="/recommendations"
               className="bg-transparent border-2 border-coffee-200 text-coffee-100 hover:bg-white/10 font-semibold py-4 px-8 rounded-full transition-colors"
             >
-              See Recommendations
+              Skatīt ieteikumus
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Stats Cards */}
+      {/* Statistikas kartes */}
       <div className="max-w-6xl mx-auto px-6 -mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20">
-        <StatCard icon={MapPin} value={loading ? "…" : totalDistricts} label="Districts Analyzed" tone="amber" />
-        <StatCard icon={Users} value={loading ? "…" : totalPois.toLocaleString()} label="Demand Points (POIs)" tone="emerald" />
-        <StatCard icon={TrendingUp} value={loading ? "…" : `${totalCafes}+`} label="Cafes (operational, ≥5 reviews)" tone="indigo" />
+        <StatCard icon={MapPin} value={loading ? "…" : totalDistricts} label="Analizētie rajoni" tone="amber" />
+        <StatCard icon={Users} value={loading ? "…" : totalPois.toLocaleString()} label="Pieprasījuma punkti (POI)" tone="emerald" />
+        <StatCard icon={TrendingUp} value={loading ? "…" : `${totalCafes}+`} label="Kafejnīcas (darbojošās, ≥5 atsauksmes)" tone="indigo" />
       </div>
 
-      {/* Value Prop */}
+      {/* Vērtības piedāvājums */}
       <div className="max-w-5xl mx-auto mt-24 px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-coffee-900 mb-4">Why data matters for your cafe</h2>
+          <h2 className="text-3xl font-bold text-coffee-900 mb-4">Kāpēc dati ir svarīgi kafejnīcai</h2>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            Opening a specialty coffee shop is a high-risk investment. We score every district by competition, demand and quality so you can pick a location with eyes open.
+            Specialty kafejnīcas atvēršana ir augsta riska investīcija. Mēs izvērtējam katru rajonu pēc konkurences, pieprasījuma un kvalitātes, lai izvēle būtu apzināta.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <Step n={1} title={'Identify "Blue Oceans"'} body="Find districts with high demand (offices, students, attractions) but low competition density." />
-            <Step n={2} title="Benchmark Performance" body="Compare candidate locations against city-wide benchmarks for ratings and footfall." />
-            <Step n={3} title="Honest Confidence Flags" body="Districts with too few cafes are flagged so single-cafe outliers don't drive a recommendation." />
+            <Step n={1} title="Atrodi brīvās nišas" body="Atrod rajonus ar augstu pieprasījumu (biroji, studenti, apskates objekti), bet zemu konkurences blīvumu." />
+            <Step n={2} title="Salīdzini ar pilsētas vidējo" body="Salīdzini potenciālās lokācijas ar pilsētas vidējiem rādītājiem pēc vērtējumiem un klientu plūsmas." />
+            <Step n={3} title="Godīgi ticamības signāli" body="Rajoni ar pārāk maz kafejnīcām tiek atzīmēti, lai viena outlier kafejnīca neizkropļotu ieteikumus." />
           </div>
           <div className="bg-coffee-100 rounded-3xl p-8 aspect-square flex items-center justify-center relative">
              <div className="absolute inset-4 border-2 border-dashed border-coffee-300 rounded-2xl"></div>
              <div className="text-center">
                 <span className="block text-6xl mb-2">☕</span>
-                <span className="font-serif text-2xl text-coffee-800 italic">"Location, location,<br/>and data."</span>
+                <span className="font-serif text-2xl text-coffee-800 italic">"Lokācija, lokācija<br/>un dati."</span>
              </div>
           </div>
         </div>

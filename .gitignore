@@ -24,3 +24,14 @@ dist-ssr
 *.sw?
 .venv/
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+backend/venv/
+*.egg-info/
+
+# Env / secrets (covered by *.local above, but explicit for clarity)
+.env
+.env.*
+!.env.example

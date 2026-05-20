@@ -1,0 +1,160 @@
+[
+  {
+    "clusterId": 0,
+    "name": "Suburban",
+    "size": 23,
+    "members": [
+      "Berģi",
+      "Pētersala-Andrejsala",
+      "Čiekurkalns",
+      "Bišumuiža",
+      "Rumbula",
+      "Mangaļsala",
+      "Mežciems",
+      "Brekši",
+      "Dārziņi",
+      "Mūkupurvs",
+      "Bolderāja",
+      "Daugavgrīva",
+      "Kleisti",
+      "Trīsciems",
+      "Vecmīlgrāvis",
+      "Voleri",
+      "Jaunciems",
+      "Vecāķi",
+      "Mīlgrāvis",
+      "Jugla",
+      "Rītabuļļi",
+      "Mežaparks",
+      "Latgale"
+    ],
+    "centroid": {
+      "venues_per_km2": 0.701,
+      "poi_per_km2": 1.528,
+      "offices_per_km2": 0.462,
+      "quality_smoothed": 4.22,
+      "pct_with_website": 9.746,
+      "avg_price_level": 2.0,
+      "share_universities": 0.02,
+      "share_parks": 0.318,
+      "share_attractions": 0.418,
+      "transit_per_km2": 2.558,
+      "share_offices": 0.098
+    }
+  },
+  {
+    "clusterId": 1,
+    "name": "Green / Parks",
+    "size": 11,
+    "members": [
+      "Salas",
+      "Dreiliņi",
+      "Bukulti",
+      "Zolitūde",
+      "Kundziņsala",
+      "Suži",
+      "Pļavnieki",
+      "Beberbeķi",
+      "Katlakalns",
+      "Vecdaugava",
+      "Spilve"
+    ],
+    "centroid": {
+      "venues_per_km2": 1.206,
+      "poi_per_km2": 1.245,
+      "offices_per_km2": 0.728,
+      "quality_smoothed": 4.273,
+      "pct_with_website": 59.848,
+      "avg_price_level": 1.955,
+      "share_universities": 0.0,
+      "share_parks": 0.871,
+      "share_attractions": 0.084,
+      "transit_per_km2": 3.381,
+      "share_offices": 0.223
+    }
+  },
+  {
+    "clusterId": 2,
+    "name": "Mixed Urban",
+    "size": 4,
+    "members": [
+      "Dzirciems",
+      "Atgāzene",
+      "Dārzciems",
+      "Šķirotava"
+    ],
+    "centroid": {
+      "venues_per_km2": 3.183,
+      "poi_per_km2": 4.632,
+      "offices_per_km2": 7.088,
+      "quality_smoothed": 4.337,
+      "pct_with_website": 67.917,
+      "avg_price_level": 1.083,
+      "share_universities": 0.245,
+      "share_parks": 0.225,
+      "share_attractions": 0.284,
+      "transit_per_km2": 7.342,
+      "share_offices": 0.698
+    }
+  },
+  {
+    "clusterId": 3,
+    "name": "Business Hub",
+    "size": 18,
+    "members": [
+      "Šampēteris",
+      "Brasa",
+      "Grīziņkalns",
+      "Āgenskalns",
+      "Torņakalns",
+      "Zasulauks",
+      "Skanste",
+      "Ķīpsala",
+      "Avoti",
+      "Teika",
+      "Pleskodāle",
+      "Sarkandaugava",
+      "Ķengarags",
+      "Bieriņi",
+      "Iļģuciems",
+      "Imanta",
+      "Purvciems",
+      "Ziepniekkalns"
+    ],
+    "centroid": {
+      "venues_per_km2": 8.098,
+      "poi_per_km2": 6.871,
+      "offices_per_km2": 7.636,
+      "quality_smoothed": 4.236,
+      "pct_with_website": 68.754,
+      "avg_price_level": 1.971,
+      "share_universities": 0.142,
+      "share_parks": 0.335,
+      "share_attractions": 0.461,
+      "transit_per_km2": 11.384,
+      "share_offices": 0.511
+    }
+  },
+  {
+    "clusterId": 4,
+    "name": "Tourist Center",
+    "size": 2,
+    "members": [
+      "Centrs",
+      "Vecrīga"
+    ],
+    "centroid": {
+      "venues_per_km2": 113.662,
+      "poi_per_km2": 62.009,
+      "offices_per_km2": 47.719,
+      "quality_smoothed": 4.388,
+      "pct_with_website": 92.0,
+      "avg_price_level": 1.974,
+      "share_universities": 0.128,
+      "share_parks": 0.092,
+      "share_attractions": 0.773,
+      "transit_per_km2": 19.333,
+      "share_offices": 0.441
+    }
+  }
+]

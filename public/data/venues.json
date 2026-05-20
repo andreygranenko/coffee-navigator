@@ -1,0 +1,8610 @@
+[
+  {
+    "id": "node/293885033",
+    "name": "Osīriss",
+    "lat": 56.9537589,
+    "lng": 24.1260107,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/382937760",
+    "name": "Rozengrāls",
+    "lat": 56.9484815,
+    "lng": 24.1061513,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/429230627",
+    "name": "Delicio",
+    "lat": 56.9552913,
+    "lng": 24.1242923,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429230628",
+    "name": "Meat Chef",
+    "lat": 56.9557759,
+    "lng": 24.1253193,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429244069",
+    "name": "Pīrādziņi",
+    "lat": 56.9608863,
+    "lng": 24.1030131,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429595275",
+    "name": "Lapsas māja",
+    "lat": 56.9546913,
+    "lng": 24.1236243,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429595279",
+    "name": "Pica LuLū",
+    "lat": 56.9549397,
+    "lng": 24.1224854,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429595280",
+    "name": "Costa",
+    "lat": 56.9550369,
+    "lng": 24.1223636,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/429595281",
+    "name": "Chaihana Sato",
+    "lat": 56.9548667,
+    "lng": 24.1225728,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/445460298",
+    "name": "Bistro Iesmi",
+    "lat": 56.9541494,
+    "lng": 24.1234739,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/445460330",
+    "name": "Zula",
+    "lat": 56.948853,
+    "lng": 24.1124748,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/445460349",
+    "name": "Salve",
+    "lat": 56.9471768,
+    "lng": 24.1073634,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/445460355",
+    "name": "Gastro pub abbey",
+    "lat": 56.9485291,
+    "lng": 24.1084435,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/445460357",
+    "name": "Moor",
+    "lat": 56.9490709,
+    "lng": 24.1088301,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/445460372",
+    "name": "Key to Riga",
+    "lat": 56.9500079,
+    "lng": 24.1056709,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/445460383",
+    "name": "Caffeine",
+    "lat": 56.949777,
+    "lng": 24.1114939,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/448033500",
+    "name": "Hesburger",
+    "lat": 56.9567448,
+    "lng": 24.1223611,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/452517375",
+    "name": "McDonald's",
+    "lat": 56.9504003,
+    "lng": 24.1112673,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/452517379",
+    "name": "Lāsīte",
+    "lat": 56.9499088,
+    "lng": 24.102426,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/452517380",
+    "name": "Costa Coffee",
+    "lat": 56.9497898,
+    "lng": 24.1109815,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/452522629",
+    "name": "Soraksans",
+    "lat": 56.9493776,
+    "lng": 24.102602,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/452544296",
+    "name": "Pētergailis",
+    "lat": 56.9473367,
+    "lng": 24.1105407,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/452595575",
+    "name": "McDonald's",
+    "lat": 56.9482192,
+    "lng": 24.1198044,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/452610878",
+    "name": "B Bārs Restorāns",
+    "lat": 56.9492595,
+    "lng": 24.1037103,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/455884849",
+    "name": "Niklāvs",
+    "lat": 56.9469333,
+    "lng": 24.1104264,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/470042248",
+    "name": "Daily",
+    "lat": 56.9528347,
+    "lng": 24.113097,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/471413275",
+    "name": "Vecmeita ar kaķi",
+    "lat": 56.9505865,
+    "lng": 24.1022499,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/472352636",
+    "name": "Caffeine",
+    "lat": 56.9488097,
+    "lng": 24.1134637,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/493398552",
+    "name": "Cielo",
+    "lat": 56.9527901,
+    "lng": 24.1306518,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/494257386",
+    "name": "Italissimo",
+    "lat": 56.9574801,
+    "lng": 24.1204934,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/494257389",
+    "name": "Pusdienu meistars, Raušu meistars",
+    "lat": 56.9575019,
+    "lng": 24.121958,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/494257396",
+    "name": "Lidojošā varde",
+    "lat": 56.958114,
+    "lng": 24.1105961,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/494381226",
+    "name": "Casa Nostra",
+    "lat": 56.9575394,
+    "lng": 24.1112707,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/494393411",
+    "name": "Fabrikas restorāns",
+    "lat": 56.9579971,
+    "lng": 24.0846537,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/501606070",
+    "name": "Yakuza Sushi & Asian Fusion",
+    "lat": 56.9577654,
+    "lng": 24.1108132,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/501609071",
+    "name": "Sokrāts",
+    "lat": 56.958733,
+    "lng": 24.1052776,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/502863002",
+    "name": "Pica LuLū",
+    "lat": 56.9713972,
+    "lng": 24.1332113,
+    "amenity": "fast_food",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/502863008",
+    "name": "Old Shanghai",
+    "lat": 56.9672898,
+    "lng": 24.1301484,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/510780893",
+    "name": "Mārtiņa beķereja",
+    "lat": 56.9479534,
+    "lng": 24.1133845,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/534752835",
+    "name": "Lido Vērmanītis",
+    "lat": 56.952793,
+    "lng": 24.1199078,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/535632571",
+    "name": "Sunny",
+    "lat": 56.9507006,
+    "lng": 24.2173383,
+    "amenity": "restaurant",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "node/554166273",
+    "name": "Čili Pizza",
+    "lat": 56.9417596,
+    "lng": 24.2061719,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/569925823",
+    "name": "Hesburger",
+    "lat": 56.9486966,
+    "lng": 24.1080503,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/571467868",
+    "name": "Sale&Pepe",
+    "lat": 56.9491178,
+    "lng": 24.1113454,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/649358718",
+    "name": "Ghetto Pietura",
+    "lat": 56.9682191,
+    "lng": 24.1800895,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/687049872",
+    "name": "Pietura",
+    "lat": 56.9617664,
+    "lng": 24.1225944,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/722731957",
+    "name": null,
+    "lat": 56.9604687,
+    "lng": 24.1307074,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/740794932",
+    "name": null,
+    "lat": 56.9480466,
+    "lng": 24.1956069,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/771460554",
+    "name": "Black Buffalo",
+    "lat": 56.9491245,
+    "lng": 24.1020938,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/846549887",
+    "name": "Picu darbnīca",
+    "lat": 56.9535225,
+    "lng": 24.1293342,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/886748934",
+    "name": "Brēmenes Muzikanti Krogs",
+    "lat": 56.9478063,
+    "lng": 24.1100271,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/908084080",
+    "name": "Trinat",
+    "lat": 56.9694497,
+    "lng": 24.0138893,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/908084090",
+    "name": null,
+    "lat": 56.9710065,
+    "lng": 24.0313196,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/908149990",
+    "name": "Zem spārna",
+    "lat": 56.9814064,
+    "lng": 24.151498,
+    "amenity": "restaurant",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/908150011",
+    "name": null,
+    "lat": 56.980733,
+    "lng": 24.1518173,
+    "amenity": "cafe",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/914621654",
+    "name": "Montekristo",
+    "lat": 56.9561084,
+    "lng": 24.1252929,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/928749157",
+    "name": "strEAT Riga",
+    "lat": 56.9545069,
+    "lng": 24.1333641,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/929068004",
+    "name": "Lūša miltu darbnīca",
+    "lat": 56.955495,
+    "lng": 24.1352235,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/945930379",
+    "name": "Mīļā",
+    "lat": 56.9662518,
+    "lng": 24.1824197,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1016838106",
+    "name": null,
+    "lat": 56.9375149,
+    "lng": 24.1004592,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/1016838211",
+    "name": null,
+    "lat": 56.9347295,
+    "lng": 24.100997,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/1040724526",
+    "name": "Pop-up Stūris",
+    "lat": 56.9602392,
+    "lng": 24.1091616,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1056515727",
+    "name": "Hesburger",
+    "lat": 56.9058272,
+    "lng": 24.1907457,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/1086534018",
+    "name": null,
+    "lat": 56.9839536,
+    "lng": 24.1349018,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1100541811",
+    "name": "Kafejnīca",
+    "lat": 56.9536083,
+    "lng": 24.2210896,
+    "amenity": "restaurant",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "node/1160802917",
+    "name": "Mednis",
+    "lat": 56.9613775,
+    "lng": 24.1077261,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1166261293",
+    "name": "Apšeron",
+    "lat": 56.9592798,
+    "lng": 24.100542,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1188274344",
+    "name": "Vairāk saules",
+    "lat": 56.9543067,
+    "lng": 24.0376016,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/1199080551",
+    "name": "Grīvas krogs",
+    "lat": 57.0387759,
+    "lng": 24.087945,
+    "amenity": "restaurant",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/1199080592",
+    "name": "Nika",
+    "lat": 57.0355378,
+    "lng": 24.1184216,
+    "amenity": "restaurant",
+    "districtId": "trisciems"
+  },
+  {
+    "id": "node/1199317715",
+    "name": "Dūmu krogs",
+    "lat": 56.870758,
+    "lng": 24.2715767,
+    "amenity": "restaurant",
+    "districtId": "darzini"
+  },
+  {
+    "id": "node/1199492627",
+    "name": "Nice!",
+    "lat": 56.9611756,
+    "lng": 24.1408794,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/1199532613",
+    "name": "Bilera",
+    "lat": 57.0784523,
+    "lng": 24.1104179,
+    "amenity": "restaurant",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1199532614",
+    "name": "Saules mednieks",
+    "lat": 57.0815776,
+    "lng": 24.1090088,
+    "amenity": "restaurant",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1211126967",
+    "name": "Dvīņi",
+    "lat": 56.9602509,
+    "lng": 24.1240724,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1212802215",
+    "name": "Jazz Sushi Bar",
+    "lat": 56.9598315,
+    "lng": 24.1027839,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1215235873",
+    "name": "Mazā Luna",
+    "lat": 56.9592539,
+    "lng": 24.100972,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1215236092",
+    "name": "Shōyu",
+    "lat": 56.9622057,
+    "lng": 24.1004793,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1215416515",
+    "name": null,
+    "lat": 56.9704991,
+    "lng": 24.1515137,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/1215416536",
+    "name": "Café 1919",
+    "lat": 56.9710662,
+    "lng": 24.1604952,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1215416998",
+    "name": "23 kitchen",
+    "lat": 56.9741825,
+    "lng": 24.1381874,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/1216775086",
+    "name": "A.l.l. Cappuccino",
+    "lat": 56.9614321,
+    "lng": 24.1016653,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1225295534",
+    "name": "Da Roberta",
+    "lat": 56.9547538,
+    "lng": 24.1342744,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/1294724329",
+    "name": "Plov_Station",
+    "lat": 56.9421368,
+    "lng": 24.0622342,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/1295521973",
+    "name": "Food and Beverages",
+    "lat": 56.9488062,
+    "lng": 24.0896158,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/1295698000",
+    "name": "Loja",
+    "lat": 56.9642004,
+    "lng": 24.1320993,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1300047024",
+    "name": "Monterosso",
+    "lat": 56.9502468,
+    "lng": 24.1103128,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1301976144",
+    "name": "Pasaka",
+    "lat": 56.9487439,
+    "lng": 24.1254817,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/1301976161",
+    "name": "Kebab House",
+    "lat": 56.9493141,
+    "lng": 24.1249852,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/1302050501",
+    "name": "Hesburger",
+    "lat": 56.9818887,
+    "lng": 24.1921976,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1302059692",
+    "name": "Melnie vārti",
+    "lat": 56.9776272,
+    "lng": 24.181874,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1302059693",
+    "name": "Lauvas nams",
+    "lat": 56.9591645,
+    "lng": 24.1274612,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1302059694",
+    "name": "Ēlande",
+    "lat": 56.9777338,
+    "lng": 24.1807168,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1304882557",
+    "name": "Gan bei",
+    "lat": 56.9873299,
+    "lng": 24.1317839,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1305051950",
+    "name": null,
+    "lat": 57.009062,
+    "lng": 24.1240778,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1305059669",
+    "name": "Bim-bom",
+    "lat": 57.0060971,
+    "lng": 24.1282502,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1305304555",
+    "name": null,
+    "lat": 57.0051447,
+    "lng": 24.1281012,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1305739519",
+    "name": "Jūrnieks",
+    "lat": 56.9994317,
+    "lng": 24.1200304,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1306856187",
+    "name": null,
+    "lat": 56.9943649,
+    "lng": 24.1175592,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1307009341",
+    "name": "Lido Ģertrūde",
+    "lat": 56.9522316,
+    "lng": 24.1316755,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/1307021368",
+    "name": "Lido Dzirnavas",
+    "lat": 56.952287,
+    "lng": 24.122206,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1307021370",
+    "name": "Delicio",
+    "lat": 56.951007,
+    "lng": 24.1259434,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1309386146",
+    "name": "Libertá",
+    "lat": 56.9498237,
+    "lng": 24.1105834,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1316193214",
+    "name": "Elizabete",
+    "lat": 57.0132149,
+    "lng": 24.1595458,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/1388988806",
+    "name": "Amplua",
+    "lat": 56.9490545,
+    "lng": 24.1095315,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1416716914",
+    "name": "Voodoo Grill Restaurant",
+    "lat": 56.9555295,
+    "lng": 24.1186264,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1429066038",
+    "name": "Domini Canes",
+    "lat": 56.9479306,
+    "lng": 24.1096864,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1437604873",
+    "name": "Julieta",
+    "lat": 56.9480725,
+    "lng": 24.133557,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/1438919763",
+    "name": "Erebuni",
+    "lat": 56.9507214,
+    "lng": 24.1767478,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/1444544128",
+    "name": "Ēdnīca",
+    "lat": 56.9590283,
+    "lng": 24.165208,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/1446562262",
+    "name": null,
+    "lat": 56.958812,
+    "lng": 24.094837,
+    "amenity": "cafe",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/1446598679",
+    "name": "V. Ķuzes kafejnīca",
+    "lat": 56.9518576,
+    "lng": 24.1053964,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1448465331",
+    "name": null,
+    "lat": 56.9734293,
+    "lng": 24.075987,
+    "amenity": "cafe",
+    "districtId": "spilve"
+  },
+  {
+    "id": "node/1448465902",
+    "name": "La Kanna",
+    "lat": 56.9534644,
+    "lng": 24.1203597,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1476319893",
+    "name": "Tējnīca Magonīte",
+    "lat": 56.9541123,
+    "lng": 24.1259607,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1492575105",
+    "name": "Da Sergio",
+    "lat": 56.9581924,
+    "lng": 24.1306619,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1493809245",
+    "name": "Alus arsenāls",
+    "lat": 56.9508934,
+    "lng": 24.1026978,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1545704737",
+    "name": "Teika",
+    "lat": 56.9778418,
+    "lng": 24.1855036,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1598419176",
+    "name": "Iberija",
+    "lat": 56.951487,
+    "lng": 24.0430052,
+    "amenity": "restaurant",
+    "districtId": "zasulauks"
+  },
+  {
+    "id": "node/1613184175",
+    "name": "Jautrais maiznieks",
+    "lat": 56.9576314,
+    "lng": 24.1116949,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1643954342",
+    "name": "Pica LuLū",
+    "lat": 56.9656026,
+    "lng": 24.1310191,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1655515503",
+    "name": null,
+    "lat": 56.9323371,
+    "lng": 24.1948416,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/1660692758",
+    "name": "Trīs lūši",
+    "lat": 56.953492,
+    "lng": 24.1253954,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1668198282",
+    "name": "Mego",
+    "lat": 56.9267028,
+    "lng": 24.2024725,
+    "amenity": "cafe",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/1676040585",
+    "name": "Ave Luna",
+    "lat": 56.9553395,
+    "lng": 24.1010708,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1676128974",
+    "name": "Daily Special",
+    "lat": 56.9479305,
+    "lng": 24.1065717,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1676128975",
+    "name": "Daily Special",
+    "lat": 56.9479217,
+    "lng": 24.1064188,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1676135520",
+    "name": "Zilā govs",
+    "lat": 56.9492904,
+    "lng": 24.1086222,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1677146110",
+    "name": "Caffeine",
+    "lat": 56.9469173,
+    "lng": 24.1199361,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1704580061",
+    "name": null,
+    "lat": 56.943821,
+    "lng": 24.0309041,
+    "amenity": "restaurant",
+    "districtId": "sampeteris"
+  },
+  {
+    "id": "node/1704580072",
+    "name": "76",
+    "lat": 56.9447738,
+    "lng": 24.0184966,
+    "amenity": "cafe",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/1706906853",
+    "name": "Pipars",
+    "lat": 56.9546012,
+    "lng": 24.0990862,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1709099473",
+    "name": "Vinotēka",
+    "lat": 56.9598616,
+    "lng": 24.1083598,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1709102942",
+    "name": "Sienna",
+    "lat": 56.9593052,
+    "lng": 24.1072804,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1713433641",
+    "name": "M’archers",
+    "lat": 56.9588981,
+    "lng": 24.1064223,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1716459537",
+    "name": "Zaļā kafejnīca",
+    "lat": 57.0285152,
+    "lng": 24.1098941,
+    "amenity": "cafe",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/1726517784",
+    "name": "Waves",
+    "lat": 57.0758959,
+    "lng": 24.1135125,
+    "amenity": "cafe",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1727026311",
+    "name": null,
+    "lat": 56.9675015,
+    "lng": 24.1650972,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1735696087",
+    "name": "Garāža",
+    "lat": 56.9509724,
+    "lng": 24.1064839,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1735696091",
+    "name": "Tēvocis Vaņa",
+    "lat": 56.9507222,
+    "lng": 24.1075121,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1738079851",
+    "name": "Hesburger",
+    "lat": 56.9468408,
+    "lng": 24.1184562,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1741783789",
+    "name": "Cafeterius",
+    "lat": 56.9559841,
+    "lng": 24.1255103,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1741837507",
+    "name": "Riviera",
+    "lat": 56.9591819,
+    "lng": 24.1126865,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1761369381",
+    "name": "AC Lounge",
+    "lat": 56.9586263,
+    "lng": 24.1134256,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1769033730",
+    "name": "Expo cafe",
+    "lat": 56.9544164,
+    "lng": 24.0801494,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/1770518091",
+    "name": null,
+    "lat": 57.040124,
+    "lng": 24.0875491,
+    "amenity": "cafe",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/1798257604",
+    "name": "Mr. Bobs",
+    "lat": 56.9585158,
+    "lng": 24.1197646,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1808499442",
+    "name": "Hesburger",
+    "lat": 56.9475923,
+    "lng": 24.1942563,
+    "amenity": "fast_food",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/1808934500",
+    "name": "Daily",
+    "lat": 56.9493002,
+    "lng": 24.1038001,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1810155162",
+    "name": "Cadets de Gascogne",
+    "lat": 56.9517702,
+    "lng": 24.1091506,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1817178406",
+    "name": null,
+    "lat": 56.9916328,
+    "lng": 24.1192429,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/1824576778",
+    "name": "Tea & Hookah club",
+    "lat": 56.9502048,
+    "lng": 24.1094428,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1826001038",
+    "name": "Costa Coffee",
+    "lat": 56.947885,
+    "lng": 24.1069596,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1826011343",
+    "name": "Desiderata",
+    "lat": 56.9482944,
+    "lng": 24.1075764,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/1835377979",
+    "name": "Lage",
+    "lat": 56.9475272,
+    "lng": 24.1211596,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1891204790",
+    "name": "MiiT Coffee",
+    "lat": 56.9566883,
+    "lng": 24.1204261,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1907007816",
+    "name": "Grill'n'Chill",
+    "lat": 57.0793706,
+    "lng": 24.1093606,
+    "amenity": "restaurant",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1907007826",
+    "name": null,
+    "lat": 57.0800958,
+    "lng": 24.1053645,
+    "amenity": "cafe",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1907007866",
+    "name": "Saules mednieks",
+    "lat": 57.08061,
+    "lng": 24.1054331,
+    "amenity": "fast_food",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/1909174210",
+    "name": "Tower Cafe",
+    "lat": 56.9340907,
+    "lng": 24.0430971,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/1926575441",
+    "name": "Garāža",
+    "lat": 56.9502478,
+    "lng": 24.1223869,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1926581654",
+    "name": "Tinto",
+    "lat": 56.9539175,
+    "lng": 24.1187286,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1930510084",
+    "name": "Makss un Morics",
+    "lat": 56.9698018,
+    "lng": 24.182732,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1930510258",
+    "name": "Oregano",
+    "lat": 56.9765088,
+    "lng": 24.1766331,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/1941384805",
+    "name": "Rāma",
+    "lat": 56.954728,
+    "lng": 24.1286393,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/1992372393",
+    "name": "Cantine",
+    "lat": 56.9755204,
+    "lng": 24.1347957,
+    "amenity": "fast_food",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/2012923871",
+    "name": "Trešā brīvdiena",
+    "lat": 56.9654448,
+    "lng": 24.1541757,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/2015122729",
+    "name": null,
+    "lat": 56.932164,
+    "lng": 24.0665533,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2015122752",
+    "name": null,
+    "lat": 56.931313,
+    "lng": 24.0658442,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2015122756",
+    "name": null,
+    "lat": 56.9324551,
+    "lng": 24.0676125,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2038207379",
+    "name": "Karjala",
+    "lat": 56.946917,
+    "lng": 24.1129732,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2041593806",
+    "name": "Arcada",
+    "lat": 56.9462191,
+    "lng": 24.1099153,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2041593818",
+    "name": "Latvijas pirmā rokkafejnīca",
+    "lat": 56.9468866,
+    "lng": 24.1106498,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2049517245",
+    "name": "Late Night Munchies",
+    "lat": 56.9461122,
+    "lng": 24.1076223,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2049517273",
+    "name": "Alaverdi",
+    "lat": 56.9469503,
+    "lng": 24.1096813,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2076182970",
+    "name": "Hartvik",
+    "lat": 56.9715278,
+    "lng": 24.1619936,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2076219122",
+    "name": "Sunny",
+    "lat": 56.9717012,
+    "lng": 24.1600242,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2089245617",
+    "name": "Ēdnīca",
+    "lat": 56.965789,
+    "lng": 24.1497504,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/2094858552",
+    "name": "Wok to Walk",
+    "lat": 56.9478903,
+    "lng": 24.1141204,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/2148082825",
+    "name": null,
+    "lat": 56.9220858,
+    "lng": 24.0863975,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/2148111393",
+    "name": null,
+    "lat": 57.0023916,
+    "lng": 24.1713372,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/2150906273",
+    "name": "Picu darbnīca",
+    "lat": 56.9779399,
+    "lng": 24.1856122,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2162467710",
+    "name": "Cafe 31",
+    "lat": 56.9674307,
+    "lng": 24.1422553,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/2171640869",
+    "name": "House of Light",
+    "lat": 56.9269274,
+    "lng": 24.0621327,
+    "amenity": "restaurant",
+    "districtId": "bierini"
+  },
+  {
+    "id": "node/2175808407",
+    "name": "Gan Bei",
+    "lat": 56.9253724,
+    "lng": 24.1052521,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/2175813957",
+    "name": "Čili Pica",
+    "lat": 56.926157,
+    "lng": 24.1024284,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/2188936042",
+    "name": "GUSTAV beķereja",
+    "lat": 56.9572482,
+    "lng": 24.1850936,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/2203589598",
+    "name": "Domino's",
+    "lat": 56.9485733,
+    "lng": 24.1873484,
+    "amenity": "fast_food",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/2244972203",
+    "name": "Karbonādes",
+    "lat": 56.9537001,
+    "lng": 24.1459214,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/2247841319",
+    "name": "Pho Plus",
+    "lat": 56.9570616,
+    "lng": 24.117705,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2280858624",
+    "name": "Kebab Corner",
+    "lat": 56.9370601,
+    "lng": 24.2103376,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/2292134949",
+    "name": "Ciemakukulis",
+    "lat": 56.9428475,
+    "lng": 24.0774744,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2306678737",
+    "name": "Osta",
+    "lat": 56.9663082,
+    "lng": 24.0819361,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/2321145278",
+    "name": "Fazenda",
+    "lat": 56.9433809,
+    "lng": 24.0781292,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2321152060",
+    "name": "Illuseum",
+    "lat": 56.9624232,
+    "lng": 24.1307345,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2329163669",
+    "name": null,
+    "lat": 57.0369661,
+    "lng": 24.1012992,
+    "amenity": "cafe",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/2386843235",
+    "name": "Restaurant Islande Hotel",
+    "lat": 56.9513098,
+    "lng": 24.0840346,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/2387110970",
+    "name": "Pamatskolas \"Harmonija\" ednīca",
+    "lat": 56.9691288,
+    "lng": 24.1584481,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2390433962",
+    "name": "Smakoliki",
+    "lat": 56.9566594,
+    "lng": 24.1237638,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2394550443",
+    "name": "Abra",
+    "lat": 56.9583377,
+    "lng": 24.1206551,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2422098289",
+    "name": "Vairāk saules",
+    "lat": 56.9665184,
+    "lng": 24.1619631,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2427902173",
+    "name": "Armenia",
+    "lat": 56.9542735,
+    "lng": 24.1202367,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2427902176",
+    "name": "Vairāk saules",
+    "lat": 56.9543797,
+    "lng": 24.1201048,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2451468107",
+    "name": "Vairāk saules",
+    "lat": 56.9742611,
+    "lng": 24.1370612,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/2461462317",
+    "name": null,
+    "lat": 56.9542574,
+    "lng": 24.2279546,
+    "amenity": "restaurant",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "node/2482133059",
+    "name": "The Botanist Riga",
+    "lat": 56.955657,
+    "lng": 24.1198957,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2524148696",
+    "name": "Ēdnīca \"Busiņš\"",
+    "lat": 56.9322692,
+    "lng": 24.0938552,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/2556620231",
+    "name": "Hao Li",
+    "lat": 56.9509096,
+    "lng": 24.1335053,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/2569414381",
+    "name": "Cup&Cino",
+    "lat": 56.9399206,
+    "lng": 24.0008613,
+    "amenity": "cafe",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/2571008568",
+    "name": "Caffeine",
+    "lat": 56.9521532,
+    "lng": 24.1228046,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2571018814",
+    "name": "Cuba coffee room",
+    "lat": 56.9566144,
+    "lng": 24.1244284,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2613257632",
+    "name": "Ķirsons Māja Bistro",
+    "lat": 56.9597816,
+    "lng": 24.1873399,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/2619566798",
+    "name": "Ēdnīca Busiņš",
+    "lat": 56.942111,
+    "lng": 24.1658129,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/2653551422",
+    "name": "La Cantina",
+    "lat": 56.9558377,
+    "lng": 24.11854,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2677631847",
+    "name": "Lido Domina",
+    "lat": 56.9668579,
+    "lng": 24.1619249,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2698479920",
+    "name": "Kūkdari",
+    "lat": 56.944151,
+    "lng": 24.0792255,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2702775751",
+    "name": "Jēriņš",
+    "lat": 56.8922163,
+    "lng": 24.2235764,
+    "amenity": "cafe",
+    "districtId": "rumbula"
+  },
+  {
+    "id": "node/2780675166",
+    "name": "Banketu zāle / Restorāns EIROPA",
+    "lat": 56.9173181,
+    "lng": 24.1689775,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/2781284678",
+    "name": "Pieci",
+    "lat": 56.9437505,
+    "lng": 24.078654,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2781284681",
+    "name": "Gaida",
+    "lat": 56.9431652,
+    "lng": 24.0783354,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2878915450",
+    "name": "Hesburger",
+    "lat": 56.9598711,
+    "lng": 24.1300083,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/2900997408",
+    "name": "Miltu stāsti",
+    "lat": 56.9418278,
+    "lng": 24.09464,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2917878605",
+    "name": "Lulu",
+    "lat": 56.9724292,
+    "lng": 24.1648359,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/2954334935",
+    "name": "Cantine",
+    "lat": 56.9447255,
+    "lng": 24.0798631,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/2954334958",
+    "name": "Cepiens",
+    "lat": 56.944054,
+    "lng": 24.0798225,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3006787848",
+    "name": "Polaris",
+    "lat": 56.9659747,
+    "lng": 24.1603503,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3015385863",
+    "name": "Picu darbnīca",
+    "lat": 56.945346,
+    "lng": 24.0637584,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3024014484",
+    "name": "Kebab Factory Āgenskalns",
+    "lat": 56.9458664,
+    "lng": 24.0627402,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3029283653",
+    "name": "Extra Pizza",
+    "lat": 56.9687129,
+    "lng": 24.0598849,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/3039641383",
+    "name": "Puncis",
+    "lat": 56.9718908,
+    "lng": 24.1642919,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3047158702",
+    "name": "McCafé",
+    "lat": 56.9483269,
+    "lng": 24.1197564,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3048685035",
+    "name": "Misters Bobs",
+    "lat": 56.9833179,
+    "lng": 24.1771683,
+    "amenity": "cafe",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/3049653453",
+    "name": "Pusdienotava \"Jāņoga\"",
+    "lat": 56.932354,
+    "lng": 24.1813274,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/3059038516",
+    "name": "Caffeine",
+    "lat": 56.9666315,
+    "lng": 24.1638857,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3059038517",
+    "name": "bao",
+    "lat": 56.9666491,
+    "lng": 24.1640439,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3070658888",
+    "name": "Hesburger",
+    "lat": 56.9655554,
+    "lng": 24.1170489,
+    "amenity": "fast_food",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/3142081948",
+    "name": "Vikbolds",
+    "lat": 56.9910964,
+    "lng": 24.1276018,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/3145513866",
+    "name": "Picas meistars",
+    "lat": 56.9423044,
+    "lng": 24.0959464,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3152321155",
+    "name": "Ēdnīca Biķernieki - Mājas virtuve",
+    "lat": 56.972137,
+    "lng": 24.1716717,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3157668318",
+    "name": "Labas pusdienas",
+    "lat": 56.9715484,
+    "lng": 24.1746325,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3158038178",
+    "name": "Wok Street",
+    "lat": 56.9741013,
+    "lng": 24.16891,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3162866335",
+    "name": "Kaukāza kebabs",
+    "lat": 56.9703609,
+    "lng": 24.1792407,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3172202148",
+    "name": "Neiburgs",
+    "lat": 56.9485105,
+    "lng": 24.1056638,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3172202159",
+    "name": "DOM",
+    "lat": 56.9487056,
+    "lng": 24.1055905,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3172202363",
+    "name": "Mākonis",
+    "lat": 56.9549032,
+    "lng": 24.1309951,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3178442165",
+    "name": "Ciemakukulis",
+    "lat": 56.9510429,
+    "lng": 24.0653243,
+    "amenity": "cafe",
+    "districtId": "dzirciems"
+  },
+  {
+    "id": "node/3224735699",
+    "name": null,
+    "lat": 56.9705891,
+    "lng": 24.1703413,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3244893574",
+    "name": "Elda",
+    "lat": 56.9744545,
+    "lng": 24.166315,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3251630407",
+    "name": "Bistro",
+    "lat": 56.9561725,
+    "lng": 24.1349145,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3304009876",
+    "name": "Gan Bei",
+    "lat": 56.9478113,
+    "lng": 24.1224431,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3304009893",
+    "name": "Čili pica",
+    "lat": 56.9468819,
+    "lng": 24.1191531,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3313981779",
+    "name": "Tējnīca",
+    "lat": 56.9573839,
+    "lng": 24.1156991,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3318762702",
+    "name": "Boniks",
+    "lat": 56.9776761,
+    "lng": 24.1719745,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/3320917266",
+    "name": "Caffeine",
+    "lat": 56.9498727,
+    "lng": 24.0829779,
+    "amenity": "cafe",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917272",
+    "name": "Hesburger",
+    "lat": 56.9497775,
+    "lng": 24.0827133,
+    "amenity": "fast_food",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917276",
+    "name": "KebabsFIX",
+    "lat": 56.9497243,
+    "lng": 24.0823247,
+    "amenity": "fast_food",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917279",
+    "name": "Pankūkas",
+    "lat": 56.949762,
+    "lng": 24.0826003,
+    "amenity": "fast_food",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917281",
+    "name": "Pipars",
+    "lat": 56.949792,
+    "lng": 24.0828438,
+    "amenity": "fast_food",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917286",
+    "name": "Tikai karotes",
+    "lat": 56.9497077,
+    "lng": 24.0822034,
+    "amenity": "fast_food",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3320917350",
+    "name": "Čili Pica",
+    "lat": 56.9498627,
+    "lng": 24.0832708,
+    "amenity": "restaurant",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/3321136767",
+    "name": "Artishok",
+    "lat": 56.9557312,
+    "lng": 24.1222604,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3358299790",
+    "name": "Street Pizza",
+    "lat": 56.9439971,
+    "lng": 24.080371,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3366790044",
+    "name": "Mācību kafejnīca Starpbrīdis",
+    "lat": 56.9528342,
+    "lng": 24.1738925,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/3424521621",
+    "name": "Gustavbeķereja",
+    "lat": 56.9605122,
+    "lng": 24.012569,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/3448457961",
+    "name": "Gardums",
+    "lat": 56.9828265,
+    "lng": 24.1638991,
+    "amenity": "cafe",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/3481923674",
+    "name": "Ēdnīca Busiņš",
+    "lat": 56.9722169,
+    "lng": 24.0646047,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/3488750208",
+    "name": "Street burgers",
+    "lat": 56.9440135,
+    "lng": 24.0802239,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/3520977648",
+    "name": "Resto 65",
+    "lat": 56.9498461,
+    "lng": 24.1846072,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/3575097196",
+    "name": "Lido Alus sēta",
+    "lat": 56.9482411,
+    "lng": 24.1063981,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3654578435",
+    "name": "\"Russkij kučer\" traktieris",
+    "lat": 56.9139604,
+    "lng": 24.0984716,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/3674501141",
+    "name": "Express Pizza",
+    "lat": 56.9598823,
+    "lng": 24.1380111,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3689213195",
+    "name": "City Souls",
+    "lat": 57.0008371,
+    "lng": 24.159756,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/3713323440",
+    "name": "Tapas tapas",
+    "lat": 56.9463616,
+    "lng": 24.1140061,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3716528266",
+    "name": "Gan Bei",
+    "lat": 56.954694,
+    "lng": 24.1203519,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3720374448",
+    "name": "Nirvana",
+    "lat": 56.9582642,
+    "lng": 24.1197851,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3720374449",
+    "name": "pippa waffles",
+    "lat": 56.9568138,
+    "lng": 24.1172697,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3720374450",
+    "name": "Old Hong Kong",
+    "lat": 56.9562342,
+    "lng": 24.1177769,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3720374453",
+    "name": "ExLibris",
+    "lat": 56.9567041,
+    "lng": 24.117364,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3720374455",
+    "name": "Pizza e Caffé Piccolo Uno",
+    "lat": 56.9585299,
+    "lng": 24.1202695,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3733401844",
+    "name": "RamenRiga",
+    "lat": 56.957813,
+    "lng": 24.1249122,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3737854727",
+    "name": "Indian Raja",
+    "lat": 56.9478421,
+    "lng": 24.1086887,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3752086953",
+    "name": "Pica LuLū",
+    "lat": 56.9659839,
+    "lng": 24.1258447,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3752443087",
+    "name": "Astor",
+    "lat": 56.9512785,
+    "lng": 24.1099444,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3752443088",
+    "name": "Daily",
+    "lat": 56.9510831,
+    "lng": 24.1103834,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3757024599",
+    "name": "Saules virtuve",
+    "lat": 56.9673592,
+    "lng": 24.2452901,
+    "amenity": "cafe",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/3765024543",
+    "name": "Hesburger",
+    "lat": 56.9490942,
+    "lng": 24.1194941,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3765024545",
+    "name": "Subway",
+    "lat": 56.9492024,
+    "lng": 24.1193766,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3773007425",
+    "name": "Arabella",
+    "lat": 56.9649868,
+    "lng": 24.0634798,
+    "amenity": "restaurant",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/3773007590",
+    "name": "Kawaii Sushi",
+    "lat": 56.9647523,
+    "lng": 24.069357,
+    "amenity": "restaurant",
+    "districtId": "dzirciems"
+  },
+  {
+    "id": "node/3804548995",
+    "name": "Caffeine",
+    "lat": 56.9578148,
+    "lng": 24.1142082,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3808238931",
+    "name": "KALVE Espresso Room",
+    "lat": 56.9512901,
+    "lng": 24.109668,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3812635619",
+    "name": "Kebabs",
+    "lat": 56.9689894,
+    "lng": 24.0591958,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/3836111441",
+    "name": "Milda",
+    "lat": 56.9460521,
+    "lng": 24.1096304,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/3840832533",
+    "name": "Spilve",
+    "lat": 56.9734823,
+    "lng": 24.062516,
+    "amenity": "cafe",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/3903319391",
+    "name": "delicio",
+    "lat": 56.9568442,
+    "lng": 24.1165891,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/3917034543",
+    "name": "Black Walnut",
+    "lat": 56.9767853,
+    "lng": 24.1351356,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/3988018482",
+    "name": null,
+    "lat": 56.933704,
+    "lng": 24.1948058,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/3988018519",
+    "name": null,
+    "lat": 56.934542,
+    "lng": 24.1946177,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4082632791",
+    "name": "Šarms GD",
+    "lat": 56.9741247,
+    "lng": 24.1128335,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/4106228790",
+    "name": "Gan bei",
+    "lat": 56.966737,
+    "lng": 24.1619557,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4106237290",
+    "name": "Costa",
+    "lat": 56.9659775,
+    "lng": 24.1618277,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4126457223",
+    "name": "Caffeine",
+    "lat": 56.9581783,
+    "lng": 24.1248742,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4141056889",
+    "name": "Narvik",
+    "lat": 56.953858,
+    "lng": 24.1701968,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4142796895",
+    "name": "Varde",
+    "lat": 56.9543678,
+    "lng": 24.1748038,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4142853489",
+    "name": "Stargorod",
+    "lat": 56.9530432,
+    "lng": 24.099329,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4143004692",
+    "name": "Daily",
+    "lat": 56.9606906,
+    "lng": 24.1949336,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4156058690",
+    "name": "Alma",
+    "lat": 56.9568998,
+    "lng": 24.1918932,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4159456003",
+    "name": "Sushi crab",
+    "lat": 56.9578119,
+    "lng": 24.1762931,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4167838990",
+    "name": "Džuljeta",
+    "lat": 56.9483413,
+    "lng": 24.1856305,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4167885089",
+    "name": "Šašliku pagasts",
+    "lat": 56.9440627,
+    "lng": 24.1822363,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4170581989",
+    "name": "Gardum gardi",
+    "lat": 56.9517171,
+    "lng": 24.1875249,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4181545495",
+    "name": "Lungo",
+    "lat": 56.9514445,
+    "lng": 24.1845958,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4181662526",
+    "name": "Jūlija",
+    "lat": 56.9472302,
+    "lng": 24.1946972,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4183754243",
+    "name": "edosushi.lv",
+    "lat": 56.9707112,
+    "lng": 24.1772086,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4187613609",
+    "name": "Sushi club",
+    "lat": 56.9616869,
+    "lng": 24.1762449,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4189590995",
+    "name": "Pie Alika",
+    "lat": 57.0406597,
+    "lng": 24.0877789,
+    "amenity": "restaurant",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/4191523086",
+    "name": "Inuļa",
+    "lat": 56.9587824,
+    "lng": 24.0608072,
+    "amenity": "cafe",
+    "districtId": "dzirciems"
+  },
+  {
+    "id": "node/4191523088",
+    "name": "Tu Re Kā",
+    "lat": 56.9598876,
+    "lng": 24.0588605,
+    "amenity": "cafe",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/4193801309",
+    "name": "Rātes picērija",
+    "lat": 56.9580387,
+    "lng": 24.1788351,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4194778090",
+    "name": "Easy Wine & Pizza",
+    "lat": 56.9469989,
+    "lng": 24.1121514,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4197307788",
+    "name": "Mājas kūku darbnīca",
+    "lat": 56.9703217,
+    "lng": 24.1795509,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4210624894",
+    "name": "Gardā Pupa",
+    "lat": 56.9461692,
+    "lng": 24.0824282,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/4227158812",
+    "name": "La Bella",
+    "lat": 56.9690978,
+    "lng": 24.0577947,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/4230442092",
+    "name": "Centrāle 33",
+    "lat": 56.9562923,
+    "lng": 24.1532203,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4233681989",
+    "name": "Rosemarine",
+    "lat": 56.9526294,
+    "lng": 24.1247652,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4234090989",
+    "name": "Picburg",
+    "lat": 56.9560768,
+    "lng": 24.1490716,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4234091489",
+    "name": "Buls Bakery",
+    "lat": 56.9557626,
+    "lng": 24.1501923,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4234142596",
+    "name": "Ķīniešu bistro",
+    "lat": 56.9592424,
+    "lng": 24.1430754,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4234142794",
+    "name": "AM Sushi",
+    "lat": 56.9583838,
+    "lng": 24.1447138,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4241927705",
+    "name": "Hačapurčik",
+    "lat": 56.9494675,
+    "lng": 24.1810076,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4242358706",
+    "name": null,
+    "lat": 56.9533409,
+    "lng": 24.1535306,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4244510405",
+    "name": "Lebanese Shawarma",
+    "lat": 56.9598218,
+    "lng": 24.1425242,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4248541364",
+    "name": "Bulkotava",
+    "lat": 56.9533823,
+    "lng": 24.1465455,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4251200703",
+    "name": "Angre",
+    "lat": 56.9703045,
+    "lng": 24.0491369,
+    "amenity": "cafe",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/4262485590",
+    "name": null,
+    "lat": 57.0369183,
+    "lng": 24.0216149,
+    "amenity": "restaurant",
+    "districtId": "daugavgriva"
+  },
+  {
+    "id": "node/4273401431",
+    "name": "Hasana kebabs",
+    "lat": 56.965966,
+    "lng": 24.1445041,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/4281500390",
+    "name": "Easy wine",
+    "lat": 56.9471016,
+    "lng": 24.1111338,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4294897789",
+    "name": "Province",
+    "lat": 56.9476084,
+    "lng": 24.1077054,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4312766620",
+    "name": "Melnā Bite",
+    "lat": 56.9470982,
+    "lng": 24.1124839,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4319823290",
+    "name": "Rocket Bean",
+    "lat": 56.9549241,
+    "lng": 24.1219727,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4338682389",
+    "name": "Lido",
+    "lat": 56.9287772,
+    "lng": 24.0351825,
+    "amenity": "restaurant",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/4344405642",
+    "name": "Buberts",
+    "lat": 56.960427,
+    "lng": 24.1095561,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4356147690",
+    "name": "Time out",
+    "lat": 56.9526706,
+    "lng": 24.1844253,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4378941089",
+    "name": "Sēta",
+    "lat": 56.9561872,
+    "lng": 24.1202235,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4379387592",
+    "name": "Lielais Kristaps",
+    "lat": 56.9551881,
+    "lng": 24.1370161,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4385414402",
+    "name": "Raibu raibi",
+    "lat": 56.9555891,
+    "lng": 24.1347709,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4387011392",
+    "name": "Picas meistars",
+    "lat": 56.9581681,
+    "lng": 24.122219,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4387306204",
+    "name": "Divi dolāri",
+    "lat": 56.950254,
+    "lng": 24.1406849,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4387309310",
+    "name": "Kafejnīca",
+    "lat": 56.951091,
+    "lng": 24.1389906,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4388909990",
+    "name": null,
+    "lat": 56.9526316,
+    "lng": 24.1314762,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4392117294",
+    "name": "Mārtiņa pica",
+    "lat": 56.9494592,
+    "lng": 24.1366866,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4393565494",
+    "name": "Big Bad Bagels",
+    "lat": 56.9564178,
+    "lng": 24.1191478,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4397752589",
+    "name": "Boar BBQ",
+    "lat": 56.9524931,
+    "lng": 24.1409252,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4409076791",
+    "name": "UniCon",
+    "lat": 56.9547185,
+    "lng": 24.1337523,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4411712494",
+    "name": "Cofyz",
+    "lat": 56.9542909,
+    "lng": 24.1329719,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4414665933",
+    "name": "Coffee Tower",
+    "lat": 56.9575261,
+    "lng": 24.0963438,
+    "amenity": "cafe",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/4414667574",
+    "name": "Coffee Tower",
+    "lat": 56.9476915,
+    "lng": 24.1147073,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4414687840",
+    "name": "Coffee Tower",
+    "lat": 56.9546109,
+    "lng": 24.1208196,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4414690357",
+    "name": "Coffee Tower",
+    "lat": 56.9497764,
+    "lng": 24.0825355,
+    "amenity": "cafe",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/4415137692",
+    "name": "Singh's",
+    "lat": 56.9549112,
+    "lng": 24.126844,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4423457489",
+    "name": "Kebabs Fix",
+    "lat": 56.9270634,
+    "lng": 24.1033382,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/4424973084",
+    "name": "Bibliotēka №1 Restorāns",
+    "lat": 56.9519639,
+    "lng": 24.1168947,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4424973085",
+    "name": "Forest",
+    "lat": 56.9500027,
+    "lng": 24.1164292,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4425073746",
+    "name": "Street Food Points",
+    "lat": 56.9520345,
+    "lng": 24.1147475,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4427680489",
+    "name": "Pipars",
+    "lat": 56.9270759,
+    "lng": 24.1032183,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/4428569792",
+    "name": "Taškenta",
+    "lat": 56.9568359,
+    "lng": 24.1308038,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4429199818",
+    "name": "Golden Coffee",
+    "lat": 56.9474984,
+    "lng": 24.1079394,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4429286059",
+    "name": "Crumble Cake",
+    "lat": 56.9473746,
+    "lng": 24.1110846,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4429374341",
+    "name": "Melnie mūki",
+    "lat": 56.9479225,
+    "lng": 24.1112215,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4429374344",
+    "name": "The Sherlock Holmes",
+    "lat": 56.947142,
+    "lng": 24.1109199,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4437034626",
+    "name": "Domino's",
+    "lat": 56.966252,
+    "lng": 24.1306299,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4448983628",
+    "name": "Paradīze",
+    "lat": 57.0426738,
+    "lng": 24.0360848,
+    "amenity": "cafe",
+    "districtId": "daugavgriva"
+  },
+  {
+    "id": "node/4459666178",
+    "name": "Rione",
+    "lat": 56.9525712,
+    "lng": 24.1236797,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4460832895",
+    "name": "Domino's",
+    "lat": 56.960582,
+    "lng": 24.0368055,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/4473942979",
+    "name": "\"Diva\"",
+    "lat": 57.0337478,
+    "lng": 24.0499724,
+    "amenity": "cafe",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/4474017982",
+    "name": "Ēdnīca",
+    "lat": 57.019496,
+    "lng": 24.0548626,
+    "amenity": "restaurant",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/4474922213",
+    "name": "RS ēdnīca",
+    "lat": 56.9422328,
+    "lng": 24.1787807,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4474922214",
+    "name": "Osvalds Pupa",
+    "lat": 56.9346454,
+    "lng": 24.1737383,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4476658550",
+    "name": null,
+    "lat": 56.9369127,
+    "lng": 24.1810713,
+    "amenity": "fast_food",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/4484288096",
+    "name": "Himalaya",
+    "lat": 56.9611091,
+    "lng": 24.1332306,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4489024090",
+    "name": "Bufetērija K&P",
+    "lat": 56.9655644,
+    "lng": 24.1038898,
+    "amenity": "cafe",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/4496468949",
+    "name": "Uzbegims",
+    "lat": 56.957491,
+    "lng": 24.1113595,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4496480514",
+    "name": "Foodbox",
+    "lat": 56.9573521,
+    "lng": 24.1102131,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4496480515",
+    "name": "A.L.L. Cappuccino",
+    "lat": 56.9582461,
+    "lng": 24.1108404,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4504677429",
+    "name": "Caffeine",
+    "lat": 56.9258308,
+    "lng": 24.1050434,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/4504762300",
+    "name": "Caffeine",
+    "lat": 56.9579581,
+    "lng": 24.131095,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4504772642",
+    "name": "Caffeine",
+    "lat": 56.9550041,
+    "lng": 24.1217373,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4504777599",
+    "name": "Caffeine",
+    "lat": 56.949891,
+    "lng": 24.1188891,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4527951448",
+    "name": "Pica LuLū",
+    "lat": 56.9632268,
+    "lng": 24.0319468,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/4530036495",
+    "name": "Parunāsim",
+    "lat": 56.9506449,
+    "lng": 24.10468,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4551376189",
+    "name": "Kūkotava",
+    "lat": 56.9534434,
+    "lng": 24.120924,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4568162090",
+    "name": "Locale",
+    "lat": 56.9469641,
+    "lng": 24.1095413,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4578964062",
+    "name": "Jēriņš",
+    "lat": 56.9284046,
+    "lng": 24.1023208,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/4610270966",
+    "name": "Lahori Tarka",
+    "lat": 56.9476257,
+    "lng": 24.1141769,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4625138054",
+    "name": "Bulka",
+    "lat": 56.9242991,
+    "lng": 24.0559828,
+    "amenity": "cafe",
+    "districtId": "bierini"
+  },
+  {
+    "id": "node/4660561290",
+    "name": "Can Can pizza",
+    "lat": 56.9288502,
+    "lng": 24.0251742,
+    "amenity": "fast_food",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/4691152891",
+    "name": "Kolonāde",
+    "lat": 56.9505468,
+    "lng": 24.1123702,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4692383689",
+    "name": "Ferma",
+    "lat": 56.962458,
+    "lng": 24.1022867,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4693490237",
+    "name": "10 Hits",
+    "lat": 56.9767022,
+    "lng": 24.1652001,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4693490238",
+    "name": "Noonbox",
+    "lat": 56.9771451,
+    "lng": 24.1650602,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4718448090",
+    "name": "Misty Moon",
+    "lat": 56.9477507,
+    "lng": 24.1337633,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4728971290",
+    "name": "Rocket Bean grauzdētava",
+    "lat": 56.9638992,
+    "lng": 24.1318988,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4728980389",
+    "name": "Pienene",
+    "lat": 56.9471475,
+    "lng": 24.1076875,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4732514252",
+    "name": "Mr. Bobs",
+    "lat": 56.973572,
+    "lng": 24.1348057,
+    "amenity": "cafe",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/4737523224",
+    "name": "Bad Boy",
+    "lat": 56.9631899,
+    "lng": 24.1236491,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4747623422",
+    "name": "Vilana",
+    "lat": 57.0340426,
+    "lng": 24.0469849,
+    "amenity": "cafe",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/4757993486",
+    "name": "Peter's Brewhouse",
+    "lat": 56.9480878,
+    "lng": 24.1087803,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4758346528",
+    "name": "Pizzatime",
+    "lat": 56.9506327,
+    "lng": 24.1071686,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4758354381",
+    "name": "Little lane",
+    "lat": 56.9513691,
+    "lng": 24.105919,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4758354382",
+    "name": "Bad Burrito",
+    "lat": 56.9511554,
+    "lng": 24.1062485,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4779360374",
+    "name": "T7",
+    "lat": 56.9478696,
+    "lng": 24.1073716,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4795304623",
+    "name": "Lage",
+    "lat": 56.9480881,
+    "lng": 24.1121465,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4795470033",
+    "name": "Rock & Rolls",
+    "lat": 56.9488883,
+    "lng": 24.1023279,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4795470036",
+    "name": "Al Qasr",
+    "lat": 56.9465899,
+    "lng": 24.1071793,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4795706002",
+    "name": "Fire Wood",
+    "lat": 56.9487421,
+    "lng": 24.1063994,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4805302122",
+    "name": "Le Dome",
+    "lat": 56.949709,
+    "lng": 24.1032543,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4812766221",
+    "name": "Vilavi",
+    "lat": 56.9708097,
+    "lng": 24.2311886,
+    "amenity": "cafe",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/4816482224",
+    "name": "Caffeine",
+    "lat": 56.9560916,
+    "lng": 24.1180672,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4824879351",
+    "name": "Uno Sushi",
+    "lat": 56.9562174,
+    "lng": 24.1187997,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4826756029",
+    "name": "Wine&Dine",
+    "lat": 56.9643068,
+    "lng": 24.121855,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/4829938302",
+    "name": "Gurķītis",
+    "lat": 56.9433127,
+    "lng": 24.068464,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/4832541294",
+    "name": "Calabria",
+    "lat": 56.9514612,
+    "lng": 24.1084882,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4832550339",
+    "name": "3 Pavāru restorāns",
+    "lat": 56.9515213,
+    "lng": 24.1075435,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4846736499",
+    "name": "Pica LuLū",
+    "lat": 56.9556251,
+    "lng": 24.1897256,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/4848703168",
+    "name": "Cadets de Gascogne",
+    "lat": 56.949358,
+    "lng": 24.1295998,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/4864892822",
+    "name": "Yohji",
+    "lat": 56.9741511,
+    "lng": 24.1719403,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/4888127222",
+    "name": "Laba Pica",
+    "lat": 56.9437732,
+    "lng": 24.2175064,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/4917056098",
+    "name": "Singh’s",
+    "lat": 56.9578552,
+    "lng": 24.110031,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4936631421",
+    "name": "Innocent",
+    "lat": 56.9518761,
+    "lng": 24.1257094,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/4950720121",
+    "name": "Kebab Town",
+    "lat": 56.9470931,
+    "lng": 24.1103657,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4982396422",
+    "name": null,
+    "lat": 56.9471293,
+    "lng": 24.1121104,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4984729424",
+    "name": "Strada",
+    "lat": 56.9475859,
+    "lng": 24.1113121,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/4988793222",
+    "name": "Rīgas ķirsis",
+    "lat": 56.9470743,
+    "lng": 24.1117454,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/5001893325",
+    "name": "Grill Garden",
+    "lat": 56.9374386,
+    "lng": 24.0719162,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/5046791112",
+    "name": "CASA DELLA PASTA",
+    "lat": 56.9487817,
+    "lng": 24.1086389,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/5051941167",
+    "name": "Bocca Buona",
+    "lat": 56.9466187,
+    "lng": 24.0770739,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/5053702625",
+    "name": "Gan Bei",
+    "lat": 56.9535793,
+    "lng": 24.1263693,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5066168721",
+    "name": "Fei-Fei",
+    "lat": 56.9784446,
+    "lng": 24.1845201,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/5104205322",
+    "name": "Has kebabs",
+    "lat": 56.9485905,
+    "lng": 24.1252188,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/5104205337",
+    "name": "Costa Coffee",
+    "lat": 56.9519154,
+    "lng": 24.1222697,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5111482424",
+    "name": "Daily",
+    "lat": 56.9482203,
+    "lng": 24.1293522,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/5124850511",
+    "name": "Street Food",
+    "lat": 56.9515658,
+    "lng": 24.1093803,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/5176066233",
+    "name": "Kebabu Studija",
+    "lat": 56.9425809,
+    "lng": 24.0964077,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/5197174357",
+    "name": "Billi",
+    "lat": 56.9629597,
+    "lng": 24.0091328,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/5206429922",
+    "name": "Lido",
+    "lat": 56.9537995,
+    "lng": 24.0372061,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/5217862927",
+    "name": "Best Kebabs",
+    "lat": 56.9718788,
+    "lng": 24.1630272,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/5222033758",
+    "name": "Doner King",
+    "lat": 56.9583721,
+    "lng": 24.1054247,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5223808122",
+    "name": "Kebab Factory",
+    "lat": 56.9774027,
+    "lng": 24.1811549,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/5254418878",
+    "name": "Pica LuLū",
+    "lat": 56.9371566,
+    "lng": 24.0051243,
+    "amenity": "fast_food",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/5267443721",
+    "name": "Bento",
+    "lat": 56.9658787,
+    "lng": 24.1303685,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5272795021",
+    "name": "Deli Dose",
+    "lat": 56.9481574,
+    "lng": 24.1076575,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/5284839421",
+    "name": "Rasols",
+    "lat": 56.9598907,
+    "lng": 24.1084928,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5294386127",
+    "name": null,
+    "lat": 56.9660465,
+    "lng": 24.1019662,
+    "amenity": "cafe",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/5297440455",
+    "name": null,
+    "lat": 56.9602645,
+    "lng": 24.1112636,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5321967122",
+    "name": "Ogle",
+    "lat": 56.9483427,
+    "lng": 24.1082483,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/5323296830",
+    "name": "Flavo",
+    "lat": 56.9587074,
+    "lng": 24.1237749,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5343058224",
+    "name": "Der Bruder",
+    "lat": 56.956029,
+    "lng": 24.1258604,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5382867922",
+    "name": "Ze Donats",
+    "lat": 56.9575386,
+    "lng": 24.1159922,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5491080059",
+    "name": "Lage",
+    "lat": 56.9468105,
+    "lng": 24.1206943,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5491080068",
+    "name": "Lido Origo",
+    "lat": 56.9470481,
+    "lng": 24.119618,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5515943949",
+    "name": "Kļavas lapa",
+    "lat": 56.9466336,
+    "lng": 24.1206027,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5612928559",
+    "name": "Boom Cafe",
+    "lat": 56.966378,
+    "lng": 24.1420515,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/5618087521",
+    "name": "Zaļajs Darzs",
+    "lat": 56.9118235,
+    "lng": 24.0963151,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/5631905521",
+    "name": "Cydonia",
+    "lat": 56.9509658,
+    "lng": 24.1228563,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5646244287",
+    "name": "Banana Leaf",
+    "lat": 56.9497257,
+    "lng": 24.1260275,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/5650491970",
+    "name": "Mežmala",
+    "lat": 56.9551187,
+    "lng": 24.0079701,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/5660836101",
+    "name": "Zvaigzne Cafe",
+    "lat": 56.9546615,
+    "lng": 24.1091225,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5667849375",
+    "name": "Rolli",
+    "lat": 56.9552298,
+    "lng": 24.0079781,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/5667849376",
+    "name": "Mārtiņa beķereja",
+    "lat": 56.9600627,
+    "lng": 24.0126733,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/5692972921",
+    "name": "Tresor Grill",
+    "lat": 56.9539803,
+    "lng": 24.129068,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5709322844",
+    "name": null,
+    "lat": 57.0177792,
+    "lng": 24.1224012,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/5731115656",
+    "name": null,
+    "lat": 56.9383053,
+    "lng": 24.0022731,
+    "amenity": "cafe",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/5768451253",
+    "name": "Mio",
+    "lat": 56.9534331,
+    "lng": 24.1242978,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5774810075",
+    "name": "Pippa cafe",
+    "lat": 56.9657774,
+    "lng": 24.143997,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/5774900754",
+    "name": "Entresol",
+    "lat": 56.9497325,
+    "lng": 24.1219203,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5799122054",
+    "name": "Kebab house",
+    "lat": 56.9607922,
+    "lng": 24.1751722,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/5802073754",
+    "name": "Kebab Eat's",
+    "lat": 56.9491485,
+    "lng": 24.1844725,
+    "amenity": "fast_food",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/5808687708",
+    "name": "Naples",
+    "lat": 56.9612755,
+    "lng": 24.0970658,
+    "amenity": "restaurant",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/5809096240",
+    "name": "Yummy Kebabs",
+    "lat": 56.9487695,
+    "lng": 24.1242111,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5811700487",
+    "name": "Muzeja restorāns",
+    "lat": 56.9559245,
+    "lng": 24.1134946,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5831987643",
+    "name": "Istabas Bufete",
+    "lat": 56.9541144,
+    "lng": 24.1267512,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5865477985",
+    "name": "Daily",
+    "lat": 56.9183416,
+    "lng": 24.091202,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/5887812585",
+    "name": "Bez nosaukuma",
+    "lat": 56.9631093,
+    "lng": 24.1447014,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/5906277786",
+    "name": "YogaCafe NIRVANA",
+    "lat": 56.9586418,
+    "lng": 24.120679,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5952321828",
+    "name": "Singhs",
+    "lat": 56.9590081,
+    "lng": 24.1058282,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/5975181707",
+    "name": "Baltā zāle",
+    "lat": 56.9829251,
+    "lng": 24.1661288,
+    "amenity": "restaurant",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/6002999006",
+    "name": "VC kafe",
+    "lat": 56.9642816,
+    "lng": 24.1460713,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/6032496367",
+    "name": "Rubin RUB",
+    "lat": 56.9558008,
+    "lng": 24.1301978,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6109616208",
+    "name": "Mazā Terapija",
+    "lat": 56.9565511,
+    "lng": 24.1188699,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6111646684",
+    "name": "Stockpot XLs",
+    "lat": 56.9590784,
+    "lng": 24.119259,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6127850151",
+    "name": "Kingu",
+    "lat": 56.9352038,
+    "lng": 24.0722998,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/6127850152",
+    "name": "Pica LuLū",
+    "lat": 56.935172,
+    "lng": 24.0723913,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/6127850153",
+    "name": "Indiešu kebabs",
+    "lat": 56.9352643,
+    "lng": 24.0721306,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/6131458018",
+    "name": "Mr Fox",
+    "lat": 56.9583669,
+    "lng": 24.113125,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6184035085",
+    "name": "Dzīvoklis 76",
+    "lat": 56.9422655,
+    "lng": 24.195915,
+    "amenity": "cafe",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/6188052686",
+    "name": "Himalaya",
+    "lat": 56.9504058,
+    "lng": 24.1047784,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6242671596",
+    "name": "Daily Teodors",
+    "lat": 56.976265,
+    "lng": 24.1654164,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/6283450232",
+    "name": "Sala",
+    "lat": 56.9568928,
+    "lng": 24.1226627,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6289393920",
+    "name": "Melnais ķiploks",
+    "lat": 56.950214,
+    "lng": 24.1057545,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6327351648",
+    "name": "Café del Mar Riga",
+    "lat": 57.0810819,
+    "lng": 24.1077556,
+    "amenity": "cafe",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/6401359920",
+    "name": "Sushi Family",
+    "lat": 56.9617182,
+    "lng": 23.9993405,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/6401983977",
+    "name": "Chef's Corner",
+    "lat": 56.9580005,
+    "lng": 24.1138239,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6401988777",
+    "name": "Mulberry",
+    "lat": 56.9578969,
+    "lng": 24.1140398,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6401999939",
+    "name": "arbOOz cafe",
+    "lat": 56.9582882,
+    "lng": 24.1132828,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6402005738",
+    "name": "The Catch",
+    "lat": 56.9586268,
+    "lng": 24.1125869,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6402011865",
+    "name": "Rossini",
+    "lat": 56.9592805,
+    "lng": 24.1128099,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6415202113",
+    "name": "McDonald's",
+    "lat": 56.9241495,
+    "lng": 24.1751194,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/6428118723",
+    "name": "Piazza Italiana",
+    "lat": 56.9494639,
+    "lng": 24.1022864,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6478458186",
+    "name": "Beef Eater’s",
+    "lat": 56.9625831,
+    "lng": 24.1232834,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6484346485",
+    "name": "Extra Pizza",
+    "lat": 56.9617308,
+    "lng": 23.9984573,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/6489458846",
+    "name": "Kairi",
+    "lat": 56.9452266,
+    "lng": 24.0725501,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/6491405937",
+    "name": "TRE Riga",
+    "lat": 56.9566364,
+    "lng": 24.1331679,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6512054522",
+    "name": "Picu darbnīca",
+    "lat": 56.915265,
+    "lng": 24.1858569,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/6512054526",
+    "name": null,
+    "lat": 56.9149136,
+    "lng": 24.1855001,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/6533311686",
+    "name": "Runa Tearoom",
+    "lat": 56.9501229,
+    "lng": 24.1097385,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6572702597",
+    "name": "Ēdnīca",
+    "lat": 56.9473439,
+    "lng": 24.113751,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6572702606",
+    "name": "Hesburger",
+    "lat": 56.9473698,
+    "lng": 24.113328,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6573229967",
+    "name": "Monte Kristo",
+    "lat": 56.9465792,
+    "lng": 24.1130749,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6575115288",
+    "name": null,
+    "lat": 56.9478899,
+    "lng": 24.1134228,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6575115290",
+    "name": "Šokolādes māja",
+    "lat": 56.9476948,
+    "lng": 24.1135287,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6576490815",
+    "name": "Amber",
+    "lat": 56.9491234,
+    "lng": 24.1124881,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6583806605",
+    "name": "Zivju lete",
+    "lat": 56.9578037,
+    "lng": 24.1147457,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6609606994",
+    "name": "Ikos olivia",
+    "lat": 56.9573674,
+    "lng": 24.115008,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6609606999",
+    "name": "LOWINE",
+    "lat": 56.9572258,
+    "lng": 24.1158326,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6609806477",
+    "name": "Ausmeņa kebabs",
+    "lat": 56.9570181,
+    "lng": 24.1176299,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6612073447",
+    "name": "Rocket Bean",
+    "lat": 56.9579289,
+    "lng": 24.1144416,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6612125464",
+    "name": "Hesburger",
+    "lat": 56.9537597,
+    "lng": 24.1267537,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6616399851",
+    "name": "Pica LuLū",
+    "lat": 57.0335055,
+    "lng": 24.1051142,
+    "amenity": "fast_food",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/6616413249",
+    "name": "Picu darbnīca",
+    "lat": 57.033252,
+    "lng": 24.1050665,
+    "amenity": "fast_food",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/6617343796",
+    "name": "Burger Corner",
+    "lat": 56.9491031,
+    "lng": 24.1064769,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6644608277",
+    "name": "Old City",
+    "lat": 56.9486259,
+    "lng": 24.1123108,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6644608279",
+    "name": "Street Fries Kitchen",
+    "lat": 56.9484479,
+    "lng": 24.1122162,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6691122961",
+    "name": "Cebureki",
+    "lat": 57.0786787,
+    "lng": 24.109666,
+    "amenity": "fast_food",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/6702830785",
+    "name": "Paprika",
+    "lat": 56.9401042,
+    "lng": 24.0049381,
+    "amenity": "restaurant",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/6708126743",
+    "name": "Zaļais Maksis",
+    "lat": 56.9642241,
+    "lng": 24.1403499,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/6713012131",
+    "name": "Lāči",
+    "lat": 56.9674791,
+    "lng": 24.2442331,
+    "amenity": "cafe",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/6718352385",
+    "name": "Cadets de Gascogne",
+    "lat": 56.9588872,
+    "lng": 24.1255199,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6723697885",
+    "name": "67 Grill & Lounge",
+    "lat": 56.9544161,
+    "lng": 24.1207038,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6731808475",
+    "name": "Route 88",
+    "lat": 56.9780571,
+    "lng": 24.1366757,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/6740360371",
+    "name": "Cup&Cino",
+    "lat": 56.9866965,
+    "lng": 24.1326688,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/6768620685",
+    "name": "Kurts",
+    "lat": 56.9515839,
+    "lng": 24.1094162,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/6792711471",
+    "name": "Nokroko",
+    "lat": 56.9533997,
+    "lng": 24.1041662,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6832247881",
+    "name": "8 Lounge",
+    "lat": 56.9548283,
+    "lng": 24.1269958,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6832249889",
+    "name": "Wok n Kurry",
+    "lat": 56.9544099,
+    "lng": 24.128337,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6832553470",
+    "name": "Milo Cafe",
+    "lat": 56.9562542,
+    "lng": 24.1366229,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/6844925536",
+    "name": "Caffeine",
+    "lat": 56.9440855,
+    "lng": 24.079555,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/6868956268",
+    "name": "Bāka",
+    "lat": 56.9566863,
+    "lng": 24.1280525,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6873343484",
+    "name": "Lielais Ķīnas mūris",
+    "lat": 56.9578123,
+    "lng": 24.1210964,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6873375788",
+    "name": "Bistro Balts",
+    "lat": 56.9560523,
+    "lng": 24.1253981,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6873375789",
+    "name": "Uguns",
+    "lat": 56.9559527,
+    "lng": 24.1267505,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6878052504",
+    "name": "Singh's",
+    "lat": 56.987134,
+    "lng": 24.1320868,
+    "amenity": "restaurant",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/6881938150",
+    "name": "Sushi express",
+    "lat": 56.9663901,
+    "lng": 24.1417464,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/6937409952",
+    "name": "Antalya Kebab & Grill",
+    "lat": 56.9536249,
+    "lng": 24.1268967,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6966392370",
+    "name": "Cofyz",
+    "lat": 56.9589277,
+    "lng": 24.1057973,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/6974584245",
+    "name": "SuVide",
+    "lat": 56.9371274,
+    "lng": 24.1018274,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/6974845885",
+    "name": "Roi",
+    "lat": 56.9599067,
+    "lng": 24.1221826,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7002939485",
+    "name": "STOP, ēd",
+    "lat": 56.9536827,
+    "lng": 24.1296061,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7055692349",
+    "name": "Zviedru vārti",
+    "lat": 56.9516643,
+    "lng": 24.1057375,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/7056239967",
+    "name": "Parliaments",
+    "lat": 56.952698,
+    "lng": 24.1051471,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/7056256295",
+    "name": "Snob",
+    "lat": 56.9534661,
+    "lng": 24.1109572,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7069938553",
+    "name": "1/2 dienas",
+    "lat": 56.9209788,
+    "lng": 24.1698892,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/7113226521",
+    "name": null,
+    "lat": 56.9198472,
+    "lng": 24.0879978,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/7116736085",
+    "name": "Spināti un sviests",
+    "lat": 56.9495109,
+    "lng": 24.102873,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/7118003885",
+    "name": null,
+    "lat": 56.9229918,
+    "lng": 24.1064242,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/7118005885",
+    "name": "KALVE Espresso Room",
+    "lat": 56.9552052,
+    "lng": 24.1304133,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7118013785",
+    "name": "2 Eat",
+    "lat": 56.9549813,
+    "lng": 24.1285317,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7118020485",
+    "name": "Doctor Chef",
+    "lat": 56.9529094,
+    "lng": 24.1298291,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7124942563",
+    "name": "McDonald's",
+    "lat": 56.9291422,
+    "lng": 24.0349184,
+    "amenity": "fast_food",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7124942564",
+    "name": "McDonald's",
+    "lat": 56.9287775,
+    "lng": 24.0232319,
+    "amenity": "fast_food",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7124942567",
+    "name": "McDonald's",
+    "lat": 56.9504008,
+    "lng": 24.1849838,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/7124942568",
+    "name": "McDonald's",
+    "lat": 56.9310095,
+    "lng": 24.1986161,
+    "amenity": "fast_food",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/7139403742",
+    "name": "Space Falafel",
+    "lat": 56.9582535,
+    "lng": 24.1115762,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7140841885",
+    "name": "\"Taverna\"",
+    "lat": 57.0335894,
+    "lng": 24.0484578,
+    "amenity": "cafe",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/7216287912",
+    "name": "Grill Garden Pizza",
+    "lat": 56.9370295,
+    "lng": 24.0714857,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/7229920513",
+    "name": "Restaurant/café",
+    "lat": 56.9407497,
+    "lng": 24.0973429,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/7230005844",
+    "name": "Sushi Sam",
+    "lat": 56.9791638,
+    "lng": 24.1868967,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/7291730478",
+    "name": "Has kebabs",
+    "lat": 56.9355793,
+    "lng": 24.0696863,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/7356598869",
+    "name": "Costa",
+    "lat": 56.9475541,
+    "lng": 24.1223649,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7398545570",
+    "name": null,
+    "lat": 56.8997472,
+    "lng": 24.0916228,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/7419090424",
+    "name": "sushibars.lv",
+    "lat": 56.96655,
+    "lng": 24.1451781,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/7454741319",
+    "name": "Sushi Factory",
+    "lat": 56.9774525,
+    "lng": 24.18131,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/7490583216",
+    "name": "Pica LuLū",
+    "lat": 56.9040874,
+    "lng": 24.1920742,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/7490583217",
+    "name": "Pica LuLū",
+    "lat": 56.9339581,
+    "lng": 24.2010633,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/7490583226",
+    "name": "Pica LuLū",
+    "lat": 56.9078754,
+    "lng": 24.0818519,
+    "amenity": "fast_food",
+    "districtId": "atgazene"
+  },
+  {
+    "id": "node/7490583227",
+    "name": "Pica LuLū",
+    "lat": 56.9525555,
+    "lng": 24.117389,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7534541169",
+    "name": "Bento",
+    "lat": 56.8969367,
+    "lng": 24.0787099,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/7580327142",
+    "name": "Kebab Factory Food Court",
+    "lat": 56.9555688,
+    "lng": 24.1255769,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7620642211",
+    "name": "Two More Beers",
+    "lat": 56.9481785,
+    "lng": 24.1107236,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/7623077085",
+    "name": null,
+    "lat": 57.007972,
+    "lng": 24.1635745,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/7626044867",
+    "name": "Pie Lailas",
+    "lat": 56.9855784,
+    "lng": 24.1693222,
+    "amenity": "cafe",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/7644240766",
+    "name": "Bulka",
+    "lat": 56.9190927,
+    "lng": 24.0749497,
+    "amenity": "cafe",
+    "districtId": "bierini"
+  },
+  {
+    "id": "node/7644240767",
+    "name": "Ansamblis",
+    "lat": 56.9222152,
+    "lng": 24.0777717,
+    "amenity": "cafe",
+    "districtId": "bierini"
+  },
+  {
+    "id": "node/7653472863",
+    "name": "Barn.fries",
+    "lat": 56.949006,
+    "lng": 24.1073298,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/7702744837",
+    "name": "Pakistānas kebabs",
+    "lat": 56.9505361,
+    "lng": 24.1254374,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/7746610777",
+    "name": null,
+    "lat": 56.9667043,
+    "lng": 24.1466911,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/7761558485",
+    "name": null,
+    "lat": 56.9673479,
+    "lng": 24.1464487,
+    "amenity": "cafe",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/7773731556",
+    "name": "Costa",
+    "lat": 56.9289104,
+    "lng": 24.0350577,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7773731558",
+    "name": "Vairāk Saules",
+    "lat": 56.9291903,
+    "lng": 24.0346595,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7773731561",
+    "name": "Gan Bei",
+    "lat": 56.9291601,
+    "lng": 24.0347861,
+    "amenity": "restaurant",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7773731576",
+    "name": "Caffeine",
+    "lat": 56.9298767,
+    "lng": 24.0372507,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/7813155685",
+    "name": "Amalija",
+    "lat": 56.9514189,
+    "lng": 24.1205648,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/7934431538",
+    "name": "Stešavi",
+    "lat": 56.9516348,
+    "lng": 24.0240478,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/7937611696",
+    "name": null,
+    "lat": 56.9359544,
+    "lng": 24.0970918,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/7977155185",
+    "name": "Hot kebabs",
+    "lat": 56.9523188,
+    "lng": 24.1231634,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/8013100372",
+    "name": "Hesburger",
+    "lat": 56.9272213,
+    "lng": 24.1785792,
+    "amenity": "fast_food",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/8220754551",
+    "name": "Express pizza",
+    "lat": 56.9267731,
+    "lng": 24.0907615,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/8220754552",
+    "name": "Express pizza",
+    "lat": 56.959752,
+    "lng": 24.0215868,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/8222536147",
+    "name": "Kebab City",
+    "lat": 56.911676,
+    "lng": 24.0856564,
+    "amenity": "fast_food",
+    "districtId": "atgazene"
+  },
+  {
+    "id": "node/8244874074",
+    "name": "Motopica",
+    "lat": 56.9221203,
+    "lng": 24.1018045,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/8245938906",
+    "name": "Elizabete",
+    "lat": 57.0105054,
+    "lng": 24.1504894,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/8262687199",
+    "name": "Caffeine",
+    "lat": 56.9471809,
+    "lng": 24.1127996,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/8296210858",
+    "name": null,
+    "lat": 56.9539339,
+    "lng": 23.9849868,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/8411700834",
+    "name": "Picas meistars",
+    "lat": 56.9608103,
+    "lng": 24.1752863,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/8421296068",
+    "name": "Aleksandrs",
+    "lat": 56.9362278,
+    "lng": 24.0707105,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/8421296111",
+    "name": "Karsti virtuļi",
+    "lat": 56.9356036,
+    "lng": 24.0694638,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/8421296178",
+    "name": "Šah Dag",
+    "lat": 56.9366473,
+    "lng": 24.0622768,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/8425765284",
+    "name": "Mr. Bobs",
+    "lat": 56.967378,
+    "lng": 24.1054456,
+    "amenity": "restaurant",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/8425765290",
+    "name": "Green Pumpkin",
+    "lat": 56.9675977,
+    "lng": 24.1058607,
+    "amenity": "restaurant",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/8482666717",
+    "name": "Cafe Barev",
+    "lat": 56.9490953,
+    "lng": 24.1285778,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/8538370175",
+    "name": "Mochi",
+    "lat": 56.9630864,
+    "lng": 24.144638,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/8538370176",
+    "name": "Unagi inu",
+    "lat": 56.9576585,
+    "lng": 24.1144716,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/8602776701",
+    "name": "Seoul City",
+    "lat": 56.9289355,
+    "lng": 24.051528,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/8636455677",
+    "name": "Coffee STOP Valdemāra",
+    "lat": 56.9583243,
+    "lng": 24.1167619,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/8639600115",
+    "name": "Arena Sushi",
+    "lat": 56.9695079,
+    "lng": 24.1839867,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/8665325217",
+    "name": "cafe 22",
+    "lat": 56.9579738,
+    "lng": 24.1168076,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/8715492110",
+    "name": "BambooK Ocean",
+    "lat": 56.9493183,
+    "lng": 23.9994712,
+    "amenity": "restaurant",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/8763518963",
+    "name": "sushibars.lv",
+    "lat": 56.963977,
+    "lng": 24.0209203,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/8763618471",
+    "name": "sushibars.lv",
+    "lat": 56.9577761,
+    "lng": 24.1909219,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/8925099781",
+    "name": "Bastejs",
+    "lat": 56.9520738,
+    "lng": 24.1094146,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/8989450701",
+    "name": "Burger King",
+    "lat": 56.9474408,
+    "lng": 24.1129087,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/9017960988",
+    "name": "Briāna kebabs",
+    "lat": 56.96484,
+    "lng": 24.1316752,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9017983405",
+    "name": "#hashtag",
+    "lat": 56.9217883,
+    "lng": 24.2009891,
+    "amenity": "cafe",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/9022621166",
+    "name": "Kozy Eats",
+    "lat": 56.9519943,
+    "lng": 24.1255821,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9024858945",
+    "name": "Steaks",
+    "lat": 56.957697,
+    "lng": 24.110354,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9100737891",
+    "name": null,
+    "lat": 56.9539817,
+    "lng": 24.0055803,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/9103861917",
+    "name": "O'Sole Mio",
+    "lat": 56.9524078,
+    "lng": 24.1221386,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9140037998",
+    "name": "Senās Tradicijas",
+    "lat": 56.9482725,
+    "lng": 24.1089438,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/9325257143",
+    "name": "Čili Pica",
+    "lat": 56.9078181,
+    "lng": 24.0942439,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/9373127459",
+    "name": "Lage",
+    "lat": 56.9535294,
+    "lng": 24.0381404,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/9421210423",
+    "name": "Captain sushi",
+    "lat": 56.9597838,
+    "lng": 24.0214512,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/9422981330",
+    "name": "Kebabs king",
+    "lat": 56.961777,
+    "lng": 23.9984882,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/9433739550",
+    "name": "Hoku Sushi",
+    "lat": 57.000127,
+    "lng": 24.1233286,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/9458519783",
+    "name": "Sushi Meistars",
+    "lat": 56.9470989,
+    "lng": 24.053764,
+    "amenity": "restaurant",
+    "districtId": "zasulauks"
+  },
+  {
+    "id": "node/9458519786",
+    "name": "Briedīši",
+    "lat": 56.9470369,
+    "lng": 24.0521247,
+    "amenity": "cafe",
+    "districtId": "zasulauks"
+  },
+  {
+    "id": "node/9458519792",
+    "name": "Pica Guru",
+    "lat": 56.9450278,
+    "lng": 24.072841,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/9579278317",
+    "name": "Tikai karotes",
+    "lat": 56.9272425,
+    "lng": 24.1035225,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/9579278417",
+    "name": "My plov",
+    "lat": 56.9272878,
+    "lng": 24.1035377,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/9579278517",
+    "name": "Asia Express",
+    "lat": 56.9273607,
+    "lng": 24.1035517,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/9579278617",
+    "name": "MySushi",
+    "lat": 56.9275252,
+    "lng": 24.1033288,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/9588070342",
+    "name": "Kebabs 81",
+    "lat": 56.95759,
+    "lng": 24.1318955,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9605069608",
+    "name": "Kafejnīca 42",
+    "lat": 56.9592593,
+    "lng": 24.1519234,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/9724595517",
+    "name": "Mils",
+    "lat": 56.9707905,
+    "lng": 24.1249512,
+    "amenity": "cafe",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/9724624117",
+    "name": null,
+    "lat": 56.9674523,
+    "lng": 24.125053,
+    "amenity": "cafe",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/9767763384",
+    "name": "Kotlešu Lietus",
+    "lat": 56.9494613,
+    "lng": 23.9997081,
+    "amenity": "fast_food",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/9795753217",
+    "name": "Barents",
+    "lat": 56.9505138,
+    "lng": 24.1076352,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/9825678192",
+    "name": "Pie Karīnas",
+    "lat": 56.9608936,
+    "lng": 24.1294708,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9839117680",
+    "name": "COLOMBO",
+    "lat": 56.9611348,
+    "lng": 24.1296591,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9846626642",
+    "name": "Sala",
+    "lat": 56.9479249,
+    "lng": 24.1124805,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/9846727789",
+    "name": "Burger King",
+    "lat": 56.9664555,
+    "lng": 24.1616347,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/9846727790",
+    "name": "KFC",
+    "lat": 56.9665237,
+    "lng": 24.1616451,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/9865519460",
+    "name": "Pipars",
+    "lat": 56.9668641,
+    "lng": 24.1339074,
+    "amenity": "cafe",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/9873831224",
+    "name": "KALVE Espresso Room",
+    "lat": 56.956462,
+    "lng": 24.1187486,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9874782792",
+    "name": "Kebabcity",
+    "lat": 56.9581348,
+    "lng": 24.1170582,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9883620317",
+    "name": "Martinelli",
+    "lat": 56.9586489,
+    "lng": 24.1225272,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9885570622",
+    "name": "Snatch",
+    "lat": 56.9574942,
+    "lng": 24.1120805,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9885570623",
+    "name": null,
+    "lat": 56.9621527,
+    "lng": 24.1175385,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/9887962763",
+    "name": "Bezē",
+    "lat": 56.9542522,
+    "lng": 24.1233145,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/9890488288",
+    "name": "Bangers",
+    "lat": 56.95078,
+    "lng": 24.1337071,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/9891691245",
+    "name": "Kop4ma",
+    "lat": 56.964577,
+    "lng": 24.1193189,
+    "amenity": "fast_food",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/9956520136",
+    "name": null,
+    "lat": 57.0800491,
+    "lng": 24.1055032,
+    "amenity": "fast_food",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/9956608817",
+    "name": "Sushi & pizzas bar",
+    "lat": 57.0325491,
+    "lng": 24.0486889,
+    "amenity": "fast_food",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/9993603505",
+    "name": "Casa Argentina",
+    "lat": 56.9480522,
+    "lng": 24.1114693,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10046653083",
+    "name": "Asagi",
+    "lat": 56.9358253,
+    "lng": 24.071621,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653084",
+    "name": "Bao Burger & Poke Bowl",
+    "lat": 56.935847,
+    "lng": 24.0716869,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653085",
+    "name": "Vīnkalni",
+    "lat": 56.9358946,
+    "lng": 24.0718537,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653086",
+    "name": "Bravo Johnny",
+    "lat": 56.9359183,
+    "lng": 24.0719387,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653087",
+    "name": "Hačapurija",
+    "lat": 56.9357504,
+    "lng": 24.0720909,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653088",
+    "name": "SuVide",
+    "lat": 56.9356654,
+    "lng": 24.0717901,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653089",
+    "name": "Borščs",
+    "lat": 56.9356968,
+    "lng": 24.0718781,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10046653091",
+    "name": "Fei-Fei",
+    "lat": 56.9357301,
+    "lng": 24.0719953,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10047623194",
+    "name": null,
+    "lat": 56.9606302,
+    "lng": 23.9973841,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/10051144567",
+    "name": "Ausmeņa kebabs",
+    "lat": 56.9358723,
+    "lng": 24.0717615,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10115202250",
+    "name": "Čilli Pica",
+    "lat": 56.968524,
+    "lng": 24.2362514,
+    "amenity": "fast_food",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/10139347107",
+    "name": "KFC",
+    "lat": 56.9273602,
+    "lng": 24.1025817,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/10149027410",
+    "name": "Oak'A Burger",
+    "lat": 56.9535867,
+    "lng": 24.1461212,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/10154371345",
+    "name": "Wall St Burgers",
+    "lat": 56.9524781,
+    "lng": 24.1408184,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/10186244188",
+    "name": "Echo Sound Bar",
+    "lat": 56.9539005,
+    "lng": 24.1365142,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/10186244189",
+    "name": "Ziedonis",
+    "lat": 56.9571613,
+    "lng": 24.1400643,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/10192025381",
+    "name": "Kaļķu vārti",
+    "lat": 56.9485884,
+    "lng": 24.1053849,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10225687806",
+    "name": "Cofyz",
+    "lat": 56.9586169,
+    "lng": 24.1404527,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10232785105",
+    "name": "Ezīša kofīšops",
+    "lat": 56.9513211,
+    "lng": 24.1210882,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10259288166",
+    "name": "Bite Box",
+    "lat": 56.965297,
+    "lng": 24.0707923,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/10265900152",
+    "name": "Domino's",
+    "lat": 56.9353527,
+    "lng": 24.0724309,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10287370695",
+    "name": "Buržujs",
+    "lat": 56.9510632,
+    "lng": 24.1231178,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10297629033",
+    "name": "Burger King",
+    "lat": 56.9243908,
+    "lng": 24.173809,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/10297629039",
+    "name": "KFC",
+    "lat": 56.9246922,
+    "lng": 24.1743534,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/10311258994",
+    "name": "Re-start",
+    "lat": 56.9762106,
+    "lng": 24.1313759,
+    "amenity": "fast_food",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/10687842574",
+    "name": "Green Burger",
+    "lat": 56.9271469,
+    "lng": 24.1034818,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/10687842575",
+    "name": "Turkebab",
+    "lat": 56.9271911,
+    "lng": 24.1035039,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/10690238106",
+    "name": "Mīkla",
+    "lat": 56.9492147,
+    "lng": 24.1123418,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10703993828",
+    "name": "Vapiano",
+    "lat": 56.9477873,
+    "lng": 24.1211223,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10704592049",
+    "name": "De cafe",
+    "lat": 56.9581373,
+    "lng": 24.0371926,
+    "amenity": "cafe",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/10704645477",
+    "name": "Meat Daddy",
+    "lat": 56.9564428,
+    "lng": 24.1278132,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10704645478",
+    "name": "Ezītis miglā",
+    "lat": 56.9570214,
+    "lng": 24.1281093,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10704645479",
+    "name": "Kafija",
+    "lat": 56.9576272,
+    "lng": 24.1285598,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10709927450",
+    "name": "Angārs Street food",
+    "lat": 56.9637615,
+    "lng": 24.1341521,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10709927454",
+    "name": "LAIMS",
+    "lat": 56.9635358,
+    "lng": 24.1360818,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10713031536",
+    "name": "Olafs",
+    "lat": 56.9605968,
+    "lng": 24.1067524,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10713031561",
+    "name": "Caffeine",
+    "lat": 56.958773,
+    "lng": 24.1057382,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10725985122",
+    "name": "Hospitāļu kebabs",
+    "lat": 56.9711842,
+    "lng": 24.1357315,
+    "amenity": "fast_food",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/10746448494",
+    "name": "Hesburger",
+    "lat": 56.9157631,
+    "lng": 24.118911,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/10746980932",
+    "name": "Tīģera Coffee Shop",
+    "lat": 56.969429,
+    "lng": 24.1357117,
+    "amenity": "cafe",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/10755402205",
+    "name": "SUSHIbars.lv",
+    "lat": 56.9631717,
+    "lng": 24.1297033,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10765520368",
+    "name": "FUDIKO Sushi",
+    "lat": 56.9650515,
+    "lng": 24.177634,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/10768570147",
+    "name": "Divi Labi",
+    "lat": 56.958442,
+    "lng": 24.1178429,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10790721601",
+    "name": "Mājīgā oāze",
+    "lat": 56.9942928,
+    "lng": 24.1254752,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/10856144823",
+    "name": "Vecmīlgrāvis",
+    "lat": 57.0275012,
+    "lng": 24.1036538,
+    "amenity": "cafe",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/10867455205",
+    "name": "AM Sushi",
+    "lat": 56.9765748,
+    "lng": 24.176895,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/10933969524",
+    "name": "Jackie",
+    "lat": 56.9623656,
+    "lng": 24.1011574,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10933969525",
+    "name": "John",
+    "lat": 56.9623967,
+    "lng": 24.1011665,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10935073249",
+    "name": "I Lunch",
+    "lat": 56.9739013,
+    "lng": 24.1642239,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/10936794192",
+    "name": "Zupas stacija",
+    "lat": 56.9450587,
+    "lng": 24.0751594,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/10939589235",
+    "name": "Jūsu pica",
+    "lat": 56.9697869,
+    "lng": 24.0489189,
+    "amenity": "restaurant",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/10959294952",
+    "name": "Rokot",
+    "lat": 56.9471241,
+    "lng": 24.1097442,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10960213244",
+    "name": "3 Seasons",
+    "lat": 56.9472539,
+    "lng": 24.1130586,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10961455639",
+    "name": "Rocket Bean",
+    "lat": 56.9517708,
+    "lng": 24.1144146,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10961455647",
+    "name": "Laika bulvāris",
+    "lat": 56.948225,
+    "lng": 24.1184537,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10963821940",
+    "name": "Turku kafejnīca",
+    "lat": 56.9463814,
+    "lng": 24.1101115,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/10969119661",
+    "name": "Elizete",
+    "lat": 56.9583814,
+    "lng": 24.1080364,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10969178009",
+    "name": "Fifii",
+    "lat": 56.9563679,
+    "lng": 24.1103724,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/10978331631",
+    "name": "Fresco Land",
+    "lat": 56.9516864,
+    "lng": 24.1372279,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/10992263829",
+    "name": "Riga Crepes",
+    "lat": 56.9564977,
+    "lng": 24.1526684,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/11018090605",
+    "name": "Ali Baba",
+    "lat": 56.9581091,
+    "lng": 24.1276921,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11018101308",
+    "name": "Erti",
+    "lat": 56.9577249,
+    "lng": 24.1305112,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11024155497",
+    "name": "Sangak Letlandoner",
+    "lat": 56.9588702,
+    "lng": 24.1326181,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11024155504",
+    "name": "Karsti virtuļi",
+    "lat": 56.9587722,
+    "lng": 24.1324132,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11024172405",
+    "name": "RIIS",
+    "lat": 56.9588175,
+    "lng": 24.1324843,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11039348505",
+    "name": "Lazy Cats",
+    "lat": 56.9544414,
+    "lng": 24.1253051,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11039477206",
+    "name": "Osvalds Pupa",
+    "lat": 56.9278157,
+    "lng": 24.1936388,
+    "amenity": "fast_food",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/11041736202",
+    "name": "Bite Me",
+    "lat": 56.9565427,
+    "lng": 24.144,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/11044350626",
+    "name": "KALVE Espresso Room",
+    "lat": 56.9626306,
+    "lng": 24.1309277,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11048264606",
+    "name": "Caffeine",
+    "lat": 56.9630491,
+    "lng": 24.1246814,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11052683805",
+    "name": "SP (Sporta Pagalms)",
+    "lat": 56.9625866,
+    "lng": 24.119058,
+    "amenity": "cafe",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/11060229906",
+    "name": "Restorāns RED",
+    "lat": 56.9642675,
+    "lng": 24.1341873,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11069305205",
+    "name": "Street Fries Kitchen",
+    "lat": 56.9607105,
+    "lng": 24.0998713,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11070630554",
+    "name": "Curry express",
+    "lat": 56.9598952,
+    "lng": 24.1428374,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/11070676996",
+    "name": "Grāpis",
+    "lat": 56.9545473,
+    "lng": 24.1528971,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/11081368970",
+    "name": "Lido",
+    "lat": 56.9569602,
+    "lng": 24.0365124,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/11093746394",
+    "name": "Kebab Corner",
+    "lat": 56.9568994,
+    "lng": 24.1330732,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11099314866",
+    "name": "This Place Doesn't Need A Name - Summer Garden",
+    "lat": 56.9735173,
+    "lng": 24.1430574,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/11104446270",
+    "name": "Conta specialty coffee",
+    "lat": 56.9490731,
+    "lng": 24.1085754,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/11104489804",
+    "name": "Yolkhaüs",
+    "lat": 56.9568715,
+    "lng": 24.1155435,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11107299315",
+    "name": "Purch",
+    "lat": 56.9580865,
+    "lng": 24.1910012,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/11112431705",
+    "name": null,
+    "lat": 56.9480317,
+    "lng": 24.1957021,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/11112463306",
+    "name": null,
+    "lat": 56.9693526,
+    "lng": 24.2320806,
+    "amenity": "fast_food",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/11112493405",
+    "name": null,
+    "lat": 56.9592538,
+    "lng": 24.2392712,
+    "amenity": "restaurant",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/11112525505",
+    "name": null,
+    "lat": 56.9689102,
+    "lng": 24.1809975,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/11112553306",
+    "name": null,
+    "lat": 56.9310109,
+    "lng": 24.2047183,
+    "amenity": "fast_food",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/11112562405",
+    "name": null,
+    "lat": 56.9311712,
+    "lng": 24.2085381,
+    "amenity": "cafe",
+    "districtId": "skirotava"
+  },
+  {
+    "id": "node/11112569605",
+    "name": null,
+    "lat": 56.9368963,
+    "lng": 24.2101792,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/11112569606",
+    "name": null,
+    "lat": 56.9409566,
+    "lng": 24.2040275,
+    "amenity": "cafe",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/11112657805",
+    "name": null,
+    "lat": 56.9388135,
+    "lng": 24.20513,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/11112657806",
+    "name": "Šašliks nr.1",
+    "lat": 56.9464931,
+    "lng": 24.2186355,
+    "amenity": "restaurant",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "node/11114234808",
+    "name": null,
+    "lat": 56.9481835,
+    "lng": 24.1950978,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/11152321389",
+    "name": "Gastrobārs Miers",
+    "lat": 57.0503104,
+    "lng": 24.0675065,
+    "amenity": "restaurant",
+    "districtId": "mangalsala"
+  },
+  {
+    "id": "node/11154658960",
+    "name": "Hooligaan",
+    "lat": 56.9478042,
+    "lng": 24.1138919,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/11154674343",
+    "name": "Madam brioš",
+    "lat": 56.9507176,
+    "lng": 24.1205894,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11154674344",
+    "name": "Bubble Tea Riga",
+    "lat": 56.9507531,
+    "lng": 24.1206434,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11263922477",
+    "name": "Draugu darbnīca",
+    "lat": 56.9581826,
+    "lng": 24.1099617,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11289325415",
+    "name": "Mr. Bļinčiks",
+    "lat": 56.9504915,
+    "lng": 24.1240937,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11290477770",
+    "name": "Get Moore Food",
+    "lat": 56.9304125,
+    "lng": 24.0376111,
+    "amenity": "restaurant",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/11290477771",
+    "name": "Coffee STOP",
+    "lat": 56.9304832,
+    "lng": 24.0377354,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/11291151054",
+    "name": "Nespresso",
+    "lat": 56.9290914,
+    "lng": 24.0348532,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "node/11295607369",
+    "name": "Gio VIET",
+    "lat": 56.9665764,
+    "lng": 24.1452773,
+    "amenity": "fast_food",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/11343455807",
+    "name": "Eleven",
+    "lat": 56.9603612,
+    "lng": 24.1054324,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11347157058",
+    "name": "Nāc un ēd",
+    "lat": 56.987122,
+    "lng": 24.1220877,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/11366672512",
+    "name": "Max Cekot Kitchen",
+    "lat": 56.9299536,
+    "lng": 24.099002,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/11379821777",
+    "name": "Burger Temple",
+    "lat": 56.9433456,
+    "lng": 24.0182418,
+    "amenity": "restaurant",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "node/11409740791",
+    "name": "Pinot",
+    "lat": 56.9466805,
+    "lng": 24.1075263,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/11514234725",
+    "name": "KALVE Mini Market",
+    "lat": 56.935706,
+    "lng": 24.0716918,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/11514235996",
+    "name": "Sho",
+    "lat": 56.9584215,
+    "lng": 24.1244943,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11516180469",
+    "name": null,
+    "lat": 56.949899,
+    "lng": 24.082751,
+    "amenity": "cafe",
+    "districtId": "kipsala"
+  },
+  {
+    "id": "node/11584949347",
+    "name": "Lulū pizza",
+    "lat": 56.9569447,
+    "lng": 24.2398454,
+    "amenity": "fast_food",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "node/11592262669",
+    "name": "Tbilisi",
+    "lat": 56.9539049,
+    "lng": 24.129219,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11603220362",
+    "name": "Daudz laša",
+    "lat": 56.9517602,
+    "lng": 24.1375744,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/11603230981",
+    "name": "Cofyz",
+    "lat": 56.9517331,
+    "lng": 24.1381716,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/11608139229",
+    "name": "Austrumu virtuve",
+    "lat": 56.9632588,
+    "lng": 24.0315757,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/11610109059",
+    "name": "Cofyz",
+    "lat": 56.9251567,
+    "lng": 24.1747664,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/11610959311",
+    "name": null,
+    "lat": 56.9658144,
+    "lng": 24.0698424,
+    "amenity": "restaurant",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/11613118671",
+    "name": "Kūkotava",
+    "lat": 56.9582958,
+    "lng": 24.1109641,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11638015974",
+    "name": "Kafejnīca Marija",
+    "lat": 56.9056646,
+    "lng": 24.1908984,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/11645627164",
+    "name": "Karote @ dakša",
+    "lat": 56.9395072,
+    "lng": 24.0577301,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/11663652996",
+    "name": "Burger King",
+    "lat": 56.9484361,
+    "lng": 24.1202612,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11673843954",
+    "name": "Cofyz",
+    "lat": 56.9616787,
+    "lng": 24.1224452,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11687739314",
+    "name": "Kebab corner",
+    "lat": 56.9351687,
+    "lng": 24.0718526,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/11701964996",
+    "name": "Flauta",
+    "lat": 56.9620204,
+    "lng": 24.1176915,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/11708966757",
+    "name": "Buono Buono pizza",
+    "lat": 56.9612487,
+    "lng": 24.1301199,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11738908705",
+    "name": "Boo the Burger",
+    "lat": 56.9592128,
+    "lng": 24.1119412,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11747575389",
+    "name": "Bea Basil",
+    "lat": 56.957709,
+    "lng": 24.1465512,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/11752342538",
+    "name": "Kebab Eat’s",
+    "lat": 56.9415692,
+    "lng": 24.055554,
+    "amenity": "fast_food",
+    "districtId": "zasulauks"
+  },
+  {
+    "id": "node/11752788048",
+    "name": "Cafe \"Miers\"",
+    "lat": 57.0789739,
+    "lng": 24.0979867,
+    "amenity": "cafe",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "node/11778489139",
+    "name": "Čili Pizza",
+    "lat": 56.9513407,
+    "lng": 24.1217828,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11816674069",
+    "name": "Bella Napoli",
+    "lat": 56.9536163,
+    "lng": 24.1213216,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11834871915",
+    "name": "Caffeine",
+    "lat": 56.9239593,
+    "lng": 24.1749866,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/11834871916",
+    "name": "Sala",
+    "lat": 56.9230814,
+    "lng": 24.1766882,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/11878587744",
+    "name": "Pie Gabriēla",
+    "lat": 56.9525606,
+    "lng": 24.1541376,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/11882149256",
+    "name": "Befrites",
+    "lat": 56.9623054,
+    "lng": 24.1646848,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/11897112056",
+    "name": "Umami Wok N Roll",
+    "lat": 56.9666982,
+    "lng": 24.1615763,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/11897127890",
+    "name": "Lage gastronomija",
+    "lat": 56.9669286,
+    "lng": 24.1647968,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/11897417729",
+    "name": "Hooligaan",
+    "lat": 56.966376,
+    "lng": 24.1614816,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/11925288400",
+    "name": "Aleksandrs",
+    "lat": 56.9454396,
+    "lng": 24.2085102,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/11926135879",
+    "name": "Barons",
+    "lat": 56.9601675,
+    "lng": 24.1395219,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11929942777",
+    "name": "Sensei",
+    "lat": 56.9636041,
+    "lng": 24.1673732,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/11931149684",
+    "name": "Kūre",
+    "lat": 56.958539,
+    "lng": 24.1488611,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/11939294266",
+    "name": null,
+    "lat": 56.9471693,
+    "lng": 24.1495165,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/11953590833",
+    "name": "Mushusse",
+    "lat": 56.9454642,
+    "lng": 24.1072321,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/11958906043",
+    "name": "Cofyz",
+    "lat": 56.9500962,
+    "lng": 24.1243259,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11964360974",
+    "name": "SuVide",
+    "lat": 56.9577018,
+    "lng": 24.1149639,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11964360975",
+    "name": "Lage Gastronomija",
+    "lat": 56.9580984,
+    "lng": 24.1142024,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11964360977",
+    "name": "Chambao Riga",
+    "lat": 56.9585875,
+    "lng": 24.1122242,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11968423249",
+    "name": "Sushi bowl",
+    "lat": 56.9567388,
+    "lng": 24.0363795,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/11968423250",
+    "name": "Morning Picarina",
+    "lat": 56.9567344,
+    "lng": 24.0365416,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/11978330243",
+    "name": "BABO",
+    "lat": 56.956823,
+    "lng": 24.1159272,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/11989732941",
+    "name": null,
+    "lat": 56.9701719,
+    "lng": 24.0983764,
+    "amenity": "cafe",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/12012076418",
+    "name": "Chilli Pepper",
+    "lat": 56.967783,
+    "lng": 24.1510412,
+    "amenity": "fast_food",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/12038043877",
+    "name": "Caffeine",
+    "lat": 56.9476948,
+    "lng": 24.1218025,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12055492869",
+    "name": "Sushi Crab",
+    "lat": 56.9491488,
+    "lng": 24.1268619,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/12059083069",
+    "name": "HuMMus",
+    "lat": 56.9512105,
+    "lng": 24.1093691,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12066201472",
+    "name": "Ozija",
+    "lat": 56.9489196,
+    "lng": 24.1107195,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12076737197",
+    "name": "Raw bubbles",
+    "lat": 56.9584603,
+    "lng": 24.1119243,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12084411361",
+    "name": "Kurts",
+    "lat": 56.9568381,
+    "lng": 24.1283663,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12084718595",
+    "name": "The Craft Burger",
+    "lat": 56.9544698,
+    "lng": 24.1199949,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12090207300",
+    "name": "Lage",
+    "lat": 56.9547774,
+    "lng": 24.1214306,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12090207301",
+    "name": "Lido",
+    "lat": 56.9547509,
+    "lng": 24.1213217,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12090207302",
+    "name": "Bistro balts",
+    "lat": 56.9547203,
+    "lng": 24.1212227,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12102722311",
+    "name": "The Ned",
+    "lat": 56.96044,
+    "lng": 24.1076592,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12103281352",
+    "name": "Čeburečki",
+    "lat": 57.0326059,
+    "lng": 24.0480248,
+    "amenity": "fast_food",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/12103281353",
+    "name": "Šašliki",
+    "lat": 57.0319536,
+    "lng": 24.044315,
+    "amenity": "fast_food",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/12104171112",
+    "name": "Dārziņu virtuļu namiņš",
+    "lat": 56.9123875,
+    "lng": 24.1765557,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12114500102",
+    "name": null,
+    "lat": 56.9471536,
+    "lng": 24.1121404,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12116815105",
+    "name": "Cruffins",
+    "lat": 56.9483994,
+    "lng": 24.1100697,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12118497101",
+    "name": null,
+    "lat": 56.9703602,
+    "lng": 24.2279341,
+    "amenity": "cafe",
+    "districtId": "mezciems"
+  },
+  {
+    "id": "node/12121940601",
+    "name": "Vegstop",
+    "lat": 56.947706,
+    "lng": 24.1123588,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12121944359",
+    "name": "Terra",
+    "lat": 56.9653221,
+    "lng": 24.1178045,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/12128310901",
+    "name": "Cadets de Gascogne",
+    "lat": 56.9480136,
+    "lng": 24.1140614,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12131342202",
+    "name": "Gulbis",
+    "lat": 56.9524412,
+    "lng": 24.1102868,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12133758134",
+    "name": "Hartvik F",
+    "lat": 56.9867457,
+    "lng": 24.1319301,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/12133758135",
+    "name": "Bistro balts",
+    "lat": 56.9866722,
+    "lng": 24.1320238,
+    "amenity": "cafe",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "node/12155963740",
+    "name": "Kingu",
+    "lat": 56.9553451,
+    "lng": 24.124403,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12159699869",
+    "name": "Kafejnica",
+    "lat": 56.9304026,
+    "lng": 24.0881885,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12161627845",
+    "name": "Chaatwala",
+    "lat": 56.955941,
+    "lng": 24.1295462,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12161648065",
+    "name": "Mamma Mia",
+    "lat": 56.9588209,
+    "lng": 24.1183296,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12179759901",
+    "name": "Mr. Bunny Kitchen",
+    "lat": 56.9548554,
+    "lng": 24.1200852,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12183532001",
+    "name": "Mollto Coffe",
+    "lat": 56.9588277,
+    "lng": 24.1176019,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12184611216",
+    "name": "Picu darbnīca",
+    "lat": 57.0418233,
+    "lng": 24.0313569,
+    "amenity": "fast_food",
+    "districtId": "daugavgriva"
+  },
+  {
+    "id": "node/12192672664",
+    "name": "Costa",
+    "lat": 56.9243541,
+    "lng": 24.1737093,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12237757156",
+    "name": "Manna",
+    "lat": 56.9766393,
+    "lng": 24.1298866,
+    "amenity": "fast_food",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/12287995156",
+    "name": "Kaspara Dilana konditoreja",
+    "lat": 56.9319878,
+    "lng": 24.0650554,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12293777394",
+    "name": "Lāči",
+    "lat": 56.9413376,
+    "lng": 24.2061532,
+    "amenity": "cafe",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/12293802535",
+    "name": "Gustavbeķereja",
+    "lat": 56.9476304,
+    "lng": 24.1933194,
+    "amenity": "cafe",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/12293955684",
+    "name": "Claudz",
+    "lat": 56.9665569,
+    "lng": 24.1640175,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/12298985046",
+    "name": "KITSCHen",
+    "lat": 56.9554801,
+    "lng": 24.120316,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12300542502",
+    "name": null,
+    "lat": 56.946928,
+    "lng": 24.0258752,
+    "amenity": "fast_food",
+    "districtId": "sampeteris"
+  },
+  {
+    "id": "node/12330724434",
+    "name": "Kotoffski. Cat cafe",
+    "lat": 56.9491523,
+    "lng": 24.1025778,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12336483786",
+    "name": "Anatolia",
+    "lat": 56.9562222,
+    "lng": 24.1354216,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12347482087",
+    "name": "Anatolia",
+    "lat": 56.9569984,
+    "lng": 24.1237268,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12349041485",
+    "name": "Indian Raja Express",
+    "lat": 56.935229,
+    "lng": 24.0722128,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12349075709",
+    "name": "Caffeine",
+    "lat": 56.9353958,
+    "lng": 24.0720005,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12365399057",
+    "name": "Marmelāde",
+    "lat": 56.9357067,
+    "lng": 24.0715897,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12375770875",
+    "name": "Hooligaan",
+    "lat": 56.9239011,
+    "lng": 24.1743607,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12382031916",
+    "name": "Hāgenskalna Puto kūkas",
+    "lat": 56.9386186,
+    "lng": 24.0725662,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12382090979",
+    "name": null,
+    "lat": 56.9171123,
+    "lng": 24.1722611,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12382090980",
+    "name": null,
+    "lat": 56.9170861,
+    "lng": 24.172301,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12385067720",
+    "name": "Philadelphia",
+    "lat": 56.958664,
+    "lng": 24.1793605,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/12385067722",
+    "name": "The Hungry Kebab",
+    "lat": 56.9586276,
+    "lng": 24.1795134,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/12412784667",
+    "name": "Dosa House",
+    "lat": 56.9559696,
+    "lng": 24.1249624,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12473342501",
+    "name": "Chat",
+    "lat": 56.9243806,
+    "lng": 24.1734305,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12473342502",
+    "name": "Chi",
+    "lat": 56.9245565,
+    "lng": 24.1734914,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12473342503",
+    "name": "Khinkalnya",
+    "lat": 56.9237156,
+    "lng": 24.1752804,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12473342504",
+    "name": "Gan bei",
+    "lat": 56.9237813,
+    "lng": 24.1754073,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12473342505",
+    "name": "Grill London",
+    "lat": 56.9245191,
+    "lng": 24.1740592,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12484733191",
+    "name": "Bistro Balts",
+    "lat": 56.9519374,
+    "lng": 24.1223693,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12492392401",
+    "name": "KALVE Living Room",
+    "lat": 56.9561695,
+    "lng": 24.1123274,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12533817889",
+    "name": "Lunch house",
+    "lat": 56.9046885,
+    "lng": 24.190937,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12545045187",
+    "name": "Domino's",
+    "lat": 56.9242745,
+    "lng": 24.1747977,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12545045188",
+    "name": "Lage",
+    "lat": 56.9243295,
+    "lng": 24.1746141,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12545045189",
+    "name": "Čili pizza",
+    "lat": 56.9244213,
+    "lng": 24.1744612,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12545045190",
+    "name": "mysushi",
+    "lat": 56.924555,
+    "lng": 24.1742738,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12545045191",
+    "name": "Vairāk saules",
+    "lat": 56.9244423,
+    "lng": 24.1739496,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12548692226",
+    "name": "Priedes krogs",
+    "lat": 56.9947227,
+    "lng": 24.2710402,
+    "amenity": "restaurant",
+    "districtId": "bergi"
+  },
+  {
+    "id": "node/12564889833",
+    "name": "Marija",
+    "lat": 56.9580533,
+    "lng": 24.1780793,
+    "amenity": "cafe",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/12570885437",
+    "name": "Olafs",
+    "lat": 56.8946898,
+    "lng": 24.2133256,
+    "amenity": "restaurant",
+    "districtId": "rumbula"
+  },
+  {
+    "id": "node/12571054298",
+    "name": "Kebab Corner Iļģuciems",
+    "lat": 56.9652851,
+    "lng": 24.0558664,
+    "amenity": "fast_food",
+    "districtId": "ilguciems"
+  },
+  {
+    "id": "node/12573871286",
+    "name": "Vasiko",
+    "lat": 56.9178379,
+    "lng": 24.1724635,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12574223655",
+    "name": "Šašliki",
+    "lat": 56.9175644,
+    "lng": 24.172172,
+    "amenity": "fast_food",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12581935826",
+    "name": null,
+    "lat": 56.9380516,
+    "lng": 24.2021638,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/12600609063",
+    "name": "Mr.po",
+    "lat": 56.933871,
+    "lng": 24.2023749,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/12600609065",
+    "name": "Crispy Hut",
+    "lat": 56.9337031,
+    "lng": 24.20232,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/12600861078",
+    "name": null,
+    "lat": 56.9344824,
+    "lng": 24.1740813,
+    "amenity": "fast_food",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/12639630011",
+    "name": "Delicio",
+    "lat": 56.93457,
+    "lng": 24.1026516,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12645735935",
+    "name": "Kawaii",
+    "lat": 56.96035,
+    "lng": 24.148285,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "node/12647435387",
+    "name": "Coffee society",
+    "lat": 56.9583668,
+    "lng": 24.1321223,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12660841820",
+    "name": "Marijas virtuve",
+    "lat": 56.9057853,
+    "lng": 24.1030847,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/12666572924",
+    "name": "Lage",
+    "lat": 56.9268987,
+    "lng": 24.1025896,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12666609305",
+    "name": "Lido",
+    "lat": 56.9274654,
+    "lng": 24.10278,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12670294681",
+    "name": "Pippa Waffles",
+    "lat": 56.9568053,
+    "lng": 24.117248,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12684371424",
+    "name": "Kūūk",
+    "lat": 56.9530278,
+    "lng": 24.121492,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12688769652",
+    "name": "Costa Coffee",
+    "lat": 56.9262739,
+    "lng": 24.1032153,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12690324596",
+    "name": "Kafijas banka",
+    "lat": 56.9269269,
+    "lng": 24.10285,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12690338135",
+    "name": "Formosa",
+    "lat": 56.9271368,
+    "lng": 24.1030001,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12690338137",
+    "name": "Chi express",
+    "lat": 56.92742,
+    "lng": 24.1033002,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12690338139",
+    "name": "Le Trésor Pizza",
+    "lat": 56.9270771,
+    "lng": 24.1034487,
+    "amenity": "fast_food",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12703495914",
+    "name": "my sushi",
+    "lat": 56.9474561,
+    "lng": 24.1221732,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12703495927",
+    "name": "Sala",
+    "lat": 56.9475702,
+    "lng": 24.1211687,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12703495932",
+    "name": "Inchin's",
+    "lat": 56.9470026,
+    "lng": 24.1213725,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12738878762",
+    "name": "CoffeeLovers",
+    "lat": 56.9428261,
+    "lng": 24.0669343,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/12752179650",
+    "name": "Domino club",
+    "lat": 56.9452281,
+    "lng": 24.1727809,
+    "amenity": "restaurant",
+    "districtId": "darzciems"
+  },
+  {
+    "id": "node/12752514761",
+    "name": "Kingu",
+    "lat": 56.9764881,
+    "lng": 24.1662149,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/12757835560",
+    "name": "Caffeine",
+    "lat": 56.9272757,
+    "lng": 24.0900845,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/12803894818",
+    "name": "KFC",
+    "lat": 56.9558546,
+    "lng": 24.0363478,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/12806152487",
+    "name": "Latte Happens",
+    "lat": 56.950776,
+    "lng": 24.1273289,
+    "amenity": "cafe",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/12806302953",
+    "name": "Coffee Stop",
+    "lat": 56.9707661,
+    "lng": 24.1221685,
+    "amenity": "cafe",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/12809443751",
+    "name": "Mon Chéri",
+    "lat": 56.9570984,
+    "lng": 24.1235638,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12818750683",
+    "name": "Am sushi",
+    "lat": 56.9130736,
+    "lng": 24.1901081,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12818765959",
+    "name": null,
+    "lat": 56.9131987,
+    "lng": 24.188171,
+    "amenity": "restaurant",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "node/12825332617",
+    "name": "Himalaya",
+    "lat": 56.954195,
+    "lng": 24.1228896,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12825332618",
+    "name": "Raunas dārzs",
+    "lat": 56.9539649,
+    "lng": 24.1231685,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12830273997",
+    "name": "La Strada Pizza Spot",
+    "lat": 56.9590248,
+    "lng": 24.1372566,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12830924301",
+    "name": "Hačapuri Bistro",
+    "lat": 56.9478093,
+    "lng": 24.1121683,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/12848886350",
+    "name": "Doner king",
+    "lat": 57.0353424,
+    "lng": 24.094928,
+    "amenity": "fast_food",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/12849014398",
+    "name": "Aleksandrs",
+    "lat": 57.0314583,
+    "lng": 24.1107615,
+    "amenity": "restaurant",
+    "districtId": "vecmilgravis"
+  },
+  {
+    "id": "node/12873581539",
+    "name": "Kofeman",
+    "lat": 56.9482265,
+    "lng": 24.1222699,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12875333012",
+    "name": "And Bubble Tea",
+    "lat": 56.9517449,
+    "lng": 24.1231681,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12875726601",
+    "name": "Pikniks",
+    "lat": 56.9602642,
+    "lng": 24.1373147,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12879242002",
+    "name": "Miera Maize",
+    "lat": 56.9728263,
+    "lng": 24.1411081,
+    "amenity": "cafe",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/12880911672",
+    "name": "The Taco Embassy",
+    "lat": 56.9527169,
+    "lng": 24.1307848,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/12886499834",
+    "name": "LIVI cafe",
+    "lat": 56.9548761,
+    "lng": 24.1275512,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12898951491",
+    "name": "Artisian",
+    "lat": 56.9512857,
+    "lng": 24.126396,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/12995615502",
+    "name": "And Bubble Tea",
+    "lat": 56.9487151,
+    "lng": 24.1112477,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13003578318",
+    "name": "Troubadour Gourmand",
+    "lat": 56.9565852,
+    "lng": 24.1323971,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13009717168",
+    "name": "Vegan Brunch",
+    "lat": 56.9529315,
+    "lng": 24.1298514,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13060104283",
+    "name": "Rīgas Valsts 2. ģimnāzijas ēdnīca",
+    "lat": 56.9544187,
+    "lng": 24.1060546,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13062159701",
+    "name": "Pizzeria Frego Napoletana",
+    "lat": 56.9496387,
+    "lng": 24.1031288,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13063128012",
+    "name": "Simple Kebab",
+    "lat": 56.9148844,
+    "lng": 24.1122512,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13077597992",
+    "name": "Kafejnīca Kase",
+    "lat": 56.9595893,
+    "lng": 24.1269075,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13087620458",
+    "name": "Sala",
+    "lat": 56.9817197,
+    "lng": 24.1935879,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/13092580906",
+    "name": "Turība cafe",
+    "lat": 56.9098006,
+    "lng": 24.0809706,
+    "amenity": "fast_food",
+    "districtId": "atgazene"
+  },
+  {
+    "id": "node/13095718685",
+    "name": "Big Sushi",
+    "lat": 56.9518897,
+    "lng": 24.1403517,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/13100731924",
+    "name": "Mr. Chef",
+    "lat": 56.9514368,
+    "lng": 24.1161555,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13167299914",
+    "name": "Elpa",
+    "lat": 56.9792465,
+    "lng": 24.1871799,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "node/13194450186",
+    "name": "My sushi",
+    "lat": 56.9558374,
+    "lng": 24.0365468,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/13194450187",
+    "name": "Chi",
+    "lat": 56.9558332,
+    "lng": 24.036704,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "node/13197433394",
+    "name": "Re>start",
+    "lat": 56.9708714,
+    "lng": 24.1218237,
+    "amenity": "cafe",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/13202624150",
+    "name": "Rolli",
+    "lat": 56.9495316,
+    "lng": 24.1249229,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/13239061240",
+    "name": "Oak'A Burgers",
+    "lat": 56.9355332,
+    "lng": 24.070158,
+    "amenity": "fast_food",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/13251197186",
+    "name": "LIDO AS[H]AIS",
+    "lat": 56.9478171,
+    "lng": 24.1210529,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13257319028",
+    "name": "Elpa",
+    "lat": 56.9092631,
+    "lng": 24.1540035,
+    "amenity": "cafe",
+    "districtId": "katlakalns"
+  },
+  {
+    "id": "node/13264901053",
+    "name": "SMOR Modern Bistro",
+    "lat": 56.9575355,
+    "lng": 24.1153167,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13267450001",
+    "name": "Roberta’s picērija",
+    "lat": 56.9489498,
+    "lng": 24.1066745,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13279261742",
+    "name": "Bao Burger & Poke Bowl",
+    "lat": 56.9477151,
+    "lng": 24.1228226,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13279261743",
+    "name": "Bao Burger & Poke Bowl",
+    "lat": 56.9479135,
+    "lng": 24.111867,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13279261744",
+    "name": "Abra. Burgers and beer",
+    "lat": 56.9478858,
+    "lng": 24.1121822,
+    "amenity": "fast_food",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13282907377",
+    "name": "stūrītis",
+    "lat": 56.9188054,
+    "lng": 24.0930208,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13283269742",
+    "name": "Poke World",
+    "lat": 56.9534378,
+    "lng": 24.1272947,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13311831188",
+    "name": null,
+    "lat": 57.0084819,
+    "lng": 24.1610632,
+    "amenity": "restaurant",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "node/13319027602",
+    "name": "Tiny Giant",
+    "lat": 56.9580673,
+    "lng": 24.1286375,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13326009059",
+    "name": "This Place Doesn't Need A Name The Breakfast Club",
+    "lat": 56.9565189,
+    "lng": 24.1275798,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13332459975",
+    "name": "Pasēdnīca",
+    "lat": 56.9451372,
+    "lng": 24.2093682,
+    "amenity": "cafe",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "node/13344316989",
+    "name": "Has kebabs",
+    "lat": 56.9030599,
+    "lng": 24.0976129,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13344316990",
+    "name": "Čajhana",
+    "lat": 56.8997412,
+    "lng": 24.091621,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13344316991",
+    "name": "Sushi crab",
+    "lat": 56.9033206,
+    "lng": 24.1029476,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13344316992",
+    "name": "Junge.lv",
+    "lat": 56.8963908,
+    "lng": 24.0790613,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13356730559",
+    "name": "Pūnīte",
+    "lat": 56.9916722,
+    "lng": 24.2760636,
+    "amenity": "cafe",
+    "districtId": "bergi"
+  },
+  {
+    "id": "node/13360934201",
+    "name": null,
+    "lat": 56.9660578,
+    "lng": 24.1042266,
+    "amenity": "restaurant",
+    "districtId": "petersala-andrejsala"
+  },
+  {
+    "id": "node/13360934301",
+    "name": "SMOR",
+    "lat": 56.9575193,
+    "lng": 24.1152932,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13367729507",
+    "name": "Caffiano",
+    "lat": 56.9519673,
+    "lng": 24.1260955,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13388357623",
+    "name": "FAV",
+    "lat": 56.9233691,
+    "lng": 24.0965435,
+    "amenity": "cafe",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/13390056901",
+    "name": "Kebab Factory",
+    "lat": 56.9476973,
+    "lng": 24.2016636,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "node/13399626286",
+    "name": "Iļģuciema maiznīca konditoreja",
+    "lat": 57.0327657,
+    "lng": 24.0482466,
+    "amenity": "cafe",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "node/13448541836",
+    "name": "Doner King",
+    "lat": 57.0409114,
+    "lng": 24.0304373,
+    "amenity": "fast_food",
+    "districtId": "daugavgriva"
+  },
+  {
+    "id": "node/13470358350",
+    "name": "Kool",
+    "lat": 56.9850056,
+    "lng": 24.1924907,
+    "amenity": "cafe",
+    "districtId": "ciekurkalns"
+  },
+  {
+    "id": "node/13474075645",
+    "name": "Kebab Garoza",
+    "lat": 56.9076298,
+    "lng": 24.0942505,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "node/13482896852",
+    "name": "Delicio",
+    "lat": 56.9643918,
+    "lng": 24.1220113,
+    "amenity": "restaurant",
+    "districtId": "skanste"
+  },
+  {
+    "id": "node/13500883818",
+    "name": "KFC",
+    "lat": 56.9471598,
+    "lng": 24.1211261,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13545329268",
+    "name": "Olafs",
+    "lat": 56.9757309,
+    "lng": 24.1365555,
+    "amenity": "restaurant",
+    "districtId": "brasa"
+  },
+  {
+    "id": "node/13556631521",
+    "name": "Makss un Morics picērija",
+    "lat": 56.9265431,
+    "lng": 24.0928665,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "node/13603524231",
+    "name": "Petri Pizza & Pasta",
+    "lat": 56.9579171,
+    "lng": 24.12546,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13611848301",
+    "name": "Amigo",
+    "lat": 56.952705,
+    "lng": 24.1306578,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/13615271076",
+    "name": "Clos[er]",
+    "lat": 56.9590457,
+    "lng": 24.1231682,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13622889653",
+    "name": "Northern Grip",
+    "lat": 56.9538232,
+    "lng": 24.1269003,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13630347689",
+    "name": "Angel's Share",
+    "lat": 57.0381336,
+    "lng": 24.1758109,
+    "amenity": "cafe",
+    "districtId": "jaunciems"
+  },
+  {
+    "id": "node/13630433501",
+    "name": "Nurme Pizza",
+    "lat": 56.949993,
+    "lng": 24.150849,
+    "amenity": "fast_food",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/13691708750",
+    "name": "Maijas Brasērija",
+    "lat": 56.9429088,
+    "lng": 24.0779122,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "node/13722711895",
+    "name": "Kaiō",
+    "lat": 56.948516,
+    "lng": 24.1296436,
+    "amenity": "restaurant",
+    "districtId": "avoti"
+  },
+  {
+    "id": "node/13731594116",
+    "name": "The Sofra",
+    "lat": 56.9540608,
+    "lng": 24.1222606,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "node/13738263707",
+    "name": "Dilettante",
+    "lat": 56.9484649,
+    "lng": 24.1119117,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "node/13781197274",
+    "name": "Iļģuciema",
+    "lat": 56.9155633,
+    "lng": 24.1742885,
+    "amenity": "cafe",
+    "districtId": "kengarags"
+  },
+  {
+    "id": "way/49434317",
+    "name": "Hesburger",
+    "lat": 56.9647674,
+    "lng": 24.1674521,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "way/87384851",
+    "name": "Hesburger",
+    "lat": 56.9168987,
+    "lng": 24.0871385,
+    "amenity": "fast_food",
+    "districtId": "atgazene"
+  },
+  {
+    "id": "way/93420756",
+    "name": "Rallija krogs L-4!",
+    "lat": 56.9647806,
+    "lng": 24.1658265,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "way/110790821",
+    "name": "MILO Cafe",
+    "lat": 56.9489133,
+    "lng": 23.9616326,
+    "amenity": "restaurant",
+    "districtId": "beberbeki"
+  },
+  {
+    "id": "way/110791197",
+    "name": "Zelta pakavs",
+    "lat": 56.9529931,
+    "lng": 24.0078907,
+    "amenity": "restaurant",
+    "districtId": "imanta"
+  },
+  {
+    "id": "way/110792641",
+    "name": "RedBus.lv",
+    "lat": 56.9499582,
+    "lng": 23.9986415,
+    "amenity": "cafe",
+    "districtId": "zolitude"
+  },
+  {
+    "id": "way/110797623",
+    "name": "Latvijas kebabs un bistro",
+    "lat": 56.9570087,
+    "lng": 23.9971311,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "way/114615081",
+    "name": "Kafijas namiņš",
+    "lat": 56.9679217,
+    "lng": 24.150557,
+    "amenity": "cafe",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "way/114615454",
+    "name": "Bella Bella",
+    "lat": 57.0048381,
+    "lng": 24.1558768,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "way/115769437",
+    "name": "Tabu Tea House",
+    "lat": 56.9517718,
+    "lng": 24.1202019,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/118630971",
+    "name": "Habibty",
+    "lat": 56.9146375,
+    "lng": 24.112621,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/120729625",
+    "name": "Čebureki lukss",
+    "lat": 56.9481823,
+    "lng": 24.1944897,
+    "amenity": "fast_food",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "way/123154908",
+    "name": "Draugu seta",
+    "lat": 56.9370009,
+    "lng": 24.2050234,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "way/123154927",
+    "name": null,
+    "lat": 56.9370422,
+    "lng": 24.2048012,
+    "amenity": "restaurant",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "way/130003538",
+    "name": "Brucciato",
+    "lat": 56.9497427,
+    "lng": 24.1098765,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "way/132181633",
+    "name": "Mārupes Pizza",
+    "lat": 56.9708846,
+    "lng": 24.1792128,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/135232964",
+    "name": "Piķis un zēģele",
+    "lat": 56.9448992,
+    "lng": 24.0847052,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "way/146899600",
+    "name": null,
+    "lat": 56.8937112,
+    "lng": 24.0849465,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/155043239",
+    "name": "Street Pizza",
+    "lat": 56.9579489,
+    "lng": 24.109502,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/160697136",
+    "name": "Tējo",
+    "lat": 56.9486518,
+    "lng": 24.1168896,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/162715953",
+    "name": null,
+    "lat": 56.9567514,
+    "lng": 24.1197295,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/171930698",
+    "name": "Gongu",
+    "lat": 56.9478142,
+    "lng": 24.1040797,
+    "amenity": "restaurant",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "way/193465770",
+    "name": "Sala",
+    "lat": 56.945868,
+    "lng": 24.1138497,
+    "amenity": "cafe",
+    "districtId": "vecriga"
+  },
+  {
+    "id": "way/200436865",
+    "name": "9. korpuss",
+    "lat": 56.9615141,
+    "lng": 24.126538,
+    "amenity": "restaurant",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/203396155",
+    "name": "\"ATPŪTA\" kalna kafejnīca",
+    "lat": 57.0088968,
+    "lng": 24.1643615,
+    "amenity": "cafe",
+    "districtId": "mezaparks"
+  },
+  {
+    "id": "way/219097876",
+    "name": "Picu darbnīca",
+    "lat": 56.9484603,
+    "lng": 24.1973368,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "way/219530618",
+    "name": "ZB Shaurma restorāns",
+    "lat": 56.953247,
+    "lng": 24.0528137,
+    "amenity": "restaurant",
+    "districtId": "dzirciems"
+  },
+  {
+    "id": "way/220197239",
+    "name": "Hesburger",
+    "lat": 56.9044527,
+    "lng": 24.082735,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/220569106",
+    "name": "McDonald's",
+    "lat": 56.9070008,
+    "lng": 24.0828521,
+    "amenity": "fast_food",
+    "districtId": "atgazene"
+  },
+  {
+    "id": "way/233342795",
+    "name": "Garšas Namiņš",
+    "lat": 56.957935,
+    "lng": 24.1454568,
+    "amenity": "restaurant",
+    "districtId": "grizinkalns"
+  },
+  {
+    "id": "way/258742668",
+    "name": "Interneta Salons",
+    "lat": 57.0330855,
+    "lng": 24.0479043,
+    "amenity": "cafe",
+    "districtId": "bolderaja"
+  },
+  {
+    "id": "way/262127752",
+    "name": "Promenāde",
+    "lat": 57.079968,
+    "lng": 24.1084232,
+    "amenity": "cafe",
+    "districtId": "vecaki"
+  },
+  {
+    "id": "way/291504971",
+    "name": "Māja",
+    "lat": 56.9432112,
+    "lng": 24.0658962,
+    "amenity": "restaurant",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "way/314688213",
+    "name": "McDonald's",
+    "lat": 56.9590384,
+    "lng": 24.0361956,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "way/365280060",
+    "name": "Adana kebab",
+    "lat": 56.9327228,
+    "lng": 24.2003068,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "way/386936660",
+    "name": "Annas Dārzs",
+    "lat": 56.9344191,
+    "lng": 24.1044154,
+    "amenity": "restaurant",
+    "districtId": "tornakalns"
+  },
+  {
+    "id": "way/403470531",
+    "name": "Citi",
+    "lat": 56.9940089,
+    "lng": 24.2831927,
+    "amenity": "cafe",
+    "districtId": "bergi"
+  },
+  {
+    "id": "way/404900710",
+    "name": "Kebab City Sarkandugava",
+    "lat": 56.9951319,
+    "lng": 24.1294981,
+    "amenity": "fast_food",
+    "districtId": "sarkandaugava"
+  },
+  {
+    "id": "way/412546308",
+    "name": "Ķirsons Māja",
+    "lat": 56.9598319,
+    "lng": 24.1872492,
+    "amenity": "restaurant",
+    "districtId": "purvciems"
+  },
+  {
+    "id": "way/493890026",
+    "name": "Yakuza Sushi",
+    "lat": 56.9571765,
+    "lng": 24.2386916,
+    "amenity": "restaurant",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "way/501386208",
+    "name": null,
+    "lat": 56.9351876,
+    "lng": 24.0359713,
+    "amenity": "cafe",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "way/561281056",
+    "name": "Hesburger",
+    "lat": 56.9428337,
+    "lng": 24.2064047,
+    "amenity": "fast_food",
+    "districtId": "plavnieki"
+  },
+  {
+    "id": "way/711128667",
+    "name": "Hesburger",
+    "lat": 56.9537864,
+    "lng": 23.9983051,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "way/722316593",
+    "name": "Caffeine",
+    "lat": 56.9830129,
+    "lng": 24.2026287,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/755755392",
+    "name": "Turku Shawarma",
+    "lat": 56.9013129,
+    "lng": 24.0935626,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/755755393",
+    "name": "SUSHI CLUB.LV",
+    "lat": 56.9016841,
+    "lng": 24.0936532,
+    "amenity": "cafe",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/762689898",
+    "name": "ZaNaZaN",
+    "lat": 56.9267363,
+    "lng": 24.0407188,
+    "amenity": "restaurant",
+    "districtId": "bierini"
+  },
+  {
+    "id": "way/772895371",
+    "name": "Zaļais dārzs",
+    "lat": 56.9282031,
+    "lng": 24.0618378,
+    "amenity": "restaurant",
+    "districtId": "pleskodale"
+  },
+  {
+    "id": "way/813455509",
+    "name": "Euro doner kebab",
+    "lat": 56.9020453,
+    "lng": 24.0938197,
+    "amenity": "fast_food",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/813455511",
+    "name": "Extra Pizza",
+    "lat": 56.90188,
+    "lng": 24.0936493,
+    "amenity": "restaurant",
+    "districtId": "ziepniekkalns"
+  },
+  {
+    "id": "way/905376549",
+    "name": "Ansamblis",
+    "lat": 56.922226,
+    "lng": 24.0776999,
+    "amenity": "cafe",
+    "districtId": "bierini"
+  },
+  {
+    "id": "way/1016517118",
+    "name": "Sala",
+    "lat": 56.9562016,
+    "lng": 24.1138657,
+    "amenity": "cafe",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/1024680009",
+    "name": null,
+    "lat": 57.0549558,
+    "lng": 24.1046099,
+    "amenity": "cafe",
+    "districtId": "vecdaugava"
+  },
+  {
+    "id": "way/1063022654",
+    "name": "Mr. Blinchiks",
+    "lat": 56.9766619,
+    "lng": 24.0730522,
+    "amenity": "cafe",
+    "districtId": "spilve"
+  },
+  {
+    "id": "way/1083424769",
+    "name": "Burger King",
+    "lat": 56.9648459,
+    "lng": 24.1162513,
+    "amenity": "fast_food",
+    "districtId": "skanste"
+  },
+  {
+    "id": "way/1089726404",
+    "name": "Čebureki",
+    "lat": 56.8856594,
+    "lng": 24.2367894,
+    "amenity": "fast_food",
+    "districtId": "rumbula"
+  },
+  {
+    "id": "way/1109212675",
+    "name": "Burger King",
+    "lat": 56.9527846,
+    "lng": 24.0362335,
+    "amenity": "fast_food",
+    "districtId": "imanta"
+  },
+  {
+    "id": "way/1132544060",
+    "name": "Rīgas kebabs",
+    "lat": 56.9628899,
+    "lng": 24.1243833,
+    "amenity": "fast_food",
+    "districtId": "centrs"
+  },
+  {
+    "id": "way/1158492990",
+    "name": "McDonald's",
+    "lat": 56.9544219,
+    "lng": 24.2512603,
+    "amenity": "fast_food",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "way/1158492991",
+    "name": "KFC",
+    "lat": 56.9541607,
+    "lng": 24.2511363,
+    "amenity": "fast_food",
+    "districtId": "dreilini"
+  },
+  {
+    "id": "way/1230970336",
+    "name": "Hesburger",
+    "lat": 56.982228,
+    "lng": 24.2056657,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231128426",
+    "name": "Coffee Garden",
+    "lat": 56.9825854,
+    "lng": 24.2055932,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231128430",
+    "name": "KFC",
+    "lat": 56.9823353,
+    "lng": 24.2056684,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231365247",
+    "name": "Costa Coffee",
+    "lat": 56.9826537,
+    "lng": 24.2033712,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231365248",
+    "name": "Lage",
+    "lat": 56.9826799,
+    "lng": 24.2030335,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231565235",
+    "name": "McDonald's",
+    "lat": 56.9833059,
+    "lng": 24.2044608,
+    "amenity": "fast_food",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1231576978",
+    "name": "Hooligaan",
+    "lat": 56.9819343,
+    "lng": 24.2044408,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1232009355",
+    "name": "Lido",
+    "lat": 56.9835531,
+    "lng": 24.2042873,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1232009356",
+    "name": "Čili pizza",
+    "lat": 56.9834496,
+    "lng": 24.2053659,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1232009358",
+    "name": "Gan Bei",
+    "lat": 56.9836886,
+    "lng": 24.2052612,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1232009359",
+    "name": "9 drakoni",
+    "lat": 56.9836752,
+    "lng": 24.2048612,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1233555486",
+    "name": "Caffeine",
+    "lat": 56.9826702,
+    "lng": 24.2033456,
+    "amenity": "cafe",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1274580987",
+    "name": null,
+    "lat": 56.8973789,
+    "lng": 24.1941614,
+    "amenity": "cafe",
+    "districtId": "rumbula"
+  },
+  {
+    "id": "way/1305361310",
+    "name": null,
+    "lat": 56.9409132,
+    "lng": 24.0887809,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "way/1336524970",
+    "name": "Papa Misha",
+    "lat": 57.0522155,
+    "lng": 24.0701161,
+    "amenity": "cafe",
+    "districtId": "mangalsala"
+  },
+  {
+    "id": "way/1337310907",
+    "name": null,
+    "lat": 56.9817801,
+    "lng": 24.0515428,
+    "amenity": "cafe",
+    "districtId": "spilve"
+  },
+  {
+    "id": "way/1340096858",
+    "name": null,
+    "lat": 56.9354697,
+    "lng": 24.0833877,
+    "amenity": "cafe",
+    "districtId": "agenskalns"
+  },
+  {
+    "id": "way/1352961865",
+    "name": "Čili pizza",
+    "lat": 56.9735529,
+    "lng": 24.1627375,
+    "amenity": "restaurant",
+    "districtId": "teika"
+  },
+  {
+    "id": "way/1383282313",
+    "name": "Strelīcija",
+    "lat": 56.9683278,
+    "lng": 24.1975639,
+    "amenity": "cafe",
+    "districtId": "mezciems"
+  }
+]

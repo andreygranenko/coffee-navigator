@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import type { CafeMarker, DistrictSummary } from "./types";
+import { getAuthToken } from "./auth";
+import type { CafeMarker, DistrictSummary, VenueMarker } from "./types";
 
 // Minimal GeoJSON type — leaflet's GeoJSON layer accepts the raw object.
 export interface DistrictFeatureCollection {
@@ -14,18 +15,30 @@ export interface DistrictFeatureCollection {
 interface DataBundle {
   districts: DistrictSummary[];
   cafes: CafeMarker[];
+  venues: VenueMarker[];
   geojson: DistrictFeatureCollection;
 }
 
 let cache: Promise<DataBundle> | null = null;
 
+async function fetchJson<T>(url: string): Promise<T> {
+  const token = getAuthToken();
+  const res = await fetch(url, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+  if (res.status === 401) throw new Error("Unauthorized. Please log in.");
+  if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+  return res.json();
+}
+
 async function loadAll(): Promise<DataBundle> {
-  const [districts, cafes, geojson] = await Promise.all([
-    fetch("/data/districts.json").then((r) => r.json()),
-    fetch("/data/cafes.json").then((r) => r.json()),
-    fetch("/data/districts.geojson").then((r) => r.json()),
+  const [districts, cafes, venues, geojson] = await Promise.all([
+    fetchJson("/api/districts"),
+    fetchJson("/api/cafes"),
+    fetchJson("/api/venues"),
+    fetchJson("/api/geo/districts"),
   ]);
-  return { districts, cafes, geojson };
+  return { districts, cafes, venues, geojson };
 }
 
 export function useData() {
