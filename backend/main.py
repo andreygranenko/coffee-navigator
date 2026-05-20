@@ -128,8 +128,23 @@ CLUSTER_LV: dict[str, str] = {
     "Suburban": "Piepilsēta",
 }
 
-ARIAL_FONT = "/System/Library/Fonts/Supplemental/Arial.ttf"
-ARIAL_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
+def _resolve_font(candidates: list[str]) -> str:
+    for path in candidates:
+        if Path(path).exists():
+            return path
+    raise RuntimeError(f"No PDF font found in: {candidates}")
+
+
+ARIAL_FONT = _resolve_font([
+    "/System/Library/Fonts/Supplemental/Arial.ttf",                  # macOS
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",               # Debian/Ubuntu
+    "/usr/share/fonts/dejavu/DejaVuSans.ttf",                        # Alpine/Fedora
+])
+ARIAL_BOLD = _resolve_font([
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
+])
 
 
 def _pdf_safe(value: Any) -> str:
@@ -187,17 +202,12 @@ class ActiveUpdateIn(BaseModel):
 
 app = FastAPI(title="Riga Coffee Navigator API", version="0.2.0")
 
+_extra_origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:3001",
-        "http://127.0.0.1:3001",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
-    allow_credentials=True,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_origins=_extra_origins or ["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

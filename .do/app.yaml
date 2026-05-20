@@ -1,0 +1,44 @@
+name: riga-coffee-navigator
+region: fra
+services:
+  - name: api
+    github:
+      repo: andreygranenko/coffee-navigator
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    build_command: pip install --no-cache-dir -r backend/requirements.txt
+    run_command: uvicorn backend.main:app --host 0.0.0.0 --port 8080
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /api
+      - path: /health
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_AND_BUILD_TIME
+        type: SECRET
+        value: REPLACE_WITH_NEON_CONNECTION_STRING
+      - key: USE_POSTGRES
+        scope: RUN_AND_BUILD_TIME
+        value: "1"
+      - key: PYTHONUNBUFFERED
+        scope: RUN_AND_BUILD_TIME
+        value: "1"
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 10
+      period_seconds: 30
+static_sites:
+  - name: web
+    github:
+      repo: andreygranenko/coffee-navigator
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    build_command: npm ci && npm run build
+    output_dir: dist
+    routes:
+      - path: /
+    catchall_document: index.html
