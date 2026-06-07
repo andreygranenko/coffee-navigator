@@ -210,6 +210,20 @@ class ActiveUpdateIn(BaseModel):
     isActive: bool
 
 
+class OsmVenueIn(BaseModel):
+    id: str
+    name: str | None
+    lat: float
+    lng: float
+    amenity: str
+    cuisine: str | None = None
+    operator: str | None = None
+
+
+class OsmCommitIn(BaseModel):
+    venues: list[OsmVenueIn]
+
+
 app = FastAPI(title="Riga Coffee Navigator API", version="0.2.0")
 
 _extra_origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
@@ -237,11 +251,13 @@ def startup() -> None:
     def _init(cur):
         cur.execute(schema_sql)
         cur.execute("SELECT 1")
-        cur.fetchone()
+        return cur.fetchone()
 
     res = _with_pg(_init)
     if res is None:
         print("[backend] PostgreSQL unavailable; using JSON fallback for data endpoints.")
+    else:
+        print("[backend] PostgreSQL connected.")
 
 
 @app.get("/health")
@@ -601,3 +617,146 @@ def admin_update_active(user_id: int, payload: ActiveUpdateIn, authorization: st
     if out is None:
         raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
     return {"user": out}
+
+
+# ── OSM refresh ───────────────────────────────────────────────────────────────
+
+_RIGA_BBOX = "56.8573,23.9455,57.0861,24.3245"
+_OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+_AMENITY_TYPES = ["cafe", "restaurant", "fast_food"]
+
+
+def _fetch_overpass() -> list[dict[str, Any]]:
+    import urllib.request
+    import urllib.parse
+
+    parts = "\n".join(
+        f'  node["amenity"="{t}"]({_RIGA_BBOX});\n  way["amenity"="{t}"]({_RIGA_BBOX});'
+        for t in _AMENITY_TYPES
+    )
+    query = f"[out:json][timeout:60];\n(\n{parts}\n);\nout center tags;"
+    data = urllib.parse.urlencode({"data": query}).encode()
+    req = urllib.request.Request(_OVERPASS_URL, data=data, method="POST")
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        return json.loads(resp.read()).get("elements", [])
+
+
+def _parse_overpass(elements: list[dict]) -> list[dict[str, Any]]:
+    rows, seen = [], set()
+    for el in elements:
+        typ = el.get("type", "")
+        osmid = el.get("id")
+        if not typ or osmid is None:
+            continue
+        key = f"{typ}/{osmid}"
+        if key in seen:
+            continue
+        seen.add(key)
+        c = el.get("center") or {}
+        lat = el.get("lat") or c.get("lat")
+        lng = el.get("lon") or c.get("lon")
+        if lat is None or lng is None:
+            continue
+        tags = el.get("tags") or {}
+        rows.append({
+            "id": key,
+            "name": tags.get("name") or None,
+            "lat": float(lat),
+            "lng": float(lng),
+            "amenity": tags.get("amenity", ""),
+            "cuisine": tags.get("cuisine") or None,
+            "operator": tags.get("operator") or None,
+        })
+    return rows
+
+
+@app.post("/api/admin/osm-preview")
+def osm_preview(
+    limit: int = Query(default=20, ge=1, le=50),
+    authorization: str | None = Header(default=None),
+) -> dict[str, Any]:
+    _require_admin(authorization)
+
+    existing_venues: list[dict] = _get_dataset("venues", "venues.json") or []
+    existing_ids = {v["id"] for v in existing_venues}
+
+    try:
+        elements = _fetch_overpass()
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Overpass API kļūda: {exc}")
+
+    all_venues = _parse_overpass(elements)
+    new_venues = [v for v in all_venues if v["id"] not in existing_ids][:limit]
+
+    return {
+        "totalOsm": len(all_venues),
+        "existing": len(existing_ids),
+        "newFound": len([v for v in all_venues if v["id"] not in existing_ids]),
+        "limit": limit,
+        "venues": new_venues,
+    }
+
+
+@app.post("/api/admin/osm-commit")
+def osm_commit(
+    payload: OsmCommitIn,
+    authorization: str | None = Header(default=None),
+) -> dict[str, Any]:
+    _require_admin(authorization)
+
+    if not payload.venues:
+        raise HTTPException(status_code=400, detail="Nav atlasīts neviens objekts")
+
+    existing_venues: list[dict] = _get_dataset("venues", "venues.json") or []
+    new_ids = {v.id for v in payload.venues}
+    merged_venues = existing_venues + [
+        {"id": v.id, "name": v.name, "lat": v.lat, "lng": v.lng,
+         "amenity": v.amenity, "districtId": None}
+        for v in payload.venues
+    ]
+
+    def _q(cur):
+        cur.execute(
+            "INSERT INTO model_runs (run_label) VALUES (%s) RETURNING id",
+            (f"osm-refresh-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}",),
+        )
+        new_run_id = cur.fetchone()[0]
+
+        cur.execute(
+            """
+            SELECT id FROM model_runs
+            WHERE id != %s
+            ORDER BY created_at DESC LIMIT 1
+            """,
+            (new_run_id,),
+        )
+        row = cur.fetchone()
+        if row:
+            old_run_id = row[0]
+            cur.execute(
+                """
+                INSERT INTO artifacts (run_id, name, payload)
+                SELECT %s, name, payload FROM artifacts
+                WHERE run_id = %s AND name != 'venues'
+                """,
+                (new_run_id, old_run_id),
+            )
+
+        cur.execute(
+            "INSERT INTO artifacts (run_id, name, payload) VALUES (%s, %s, %s::jsonb)",
+            (new_run_id, "venues", json.dumps(merged_venues)),
+        )
+        return new_run_id
+
+    run_id = _with_pg(_q)
+    if run_id is None:
+        raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
+
+    return {
+        "ok": True,
+        "runId": run_id,
+        "added": len(payload.venues),
+        "total": len(merged_venues),
+        "message": f"Datu atjaunošana pabeigta. Pievienoti {len(payload.venues)} jauni ieraksti.",
+    }
