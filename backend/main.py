@@ -686,6 +686,9 @@ def _assign_district_ids(venues: list[dict], geojson_features: list[dict]) -> li
                 break
         if found:
             assigned += 1
+            log.info(f"  district assigned venue_id={v.get('id')} name={v.get('name')!r} → district={found}")
+        else:
+            log.warning(f"  district not found venue_id={v.get('id')} name={v.get('name')!r} lat={lat} lng={lng}")
         result.append({**v, "districtId": found})
     log.info(f"district assignment: assigned={assigned} of {len(venues)} venues had districtId=None")
     return result
