@@ -126,12 +126,25 @@ export default function Admin() {
     setPreview(null);
     setSelected(new Set());
     try {
-      const result = await api<PreviewResult>(`/api/admin/osm-preview?limit=${osmLimit}`, { method: "POST" });
-      setPreview(result);
-      setSelected(new Set(result.venues.map((v) => v.id)));
+      const { jobId } = await api<{ jobId: string }>(`/api/admin/osm-preview?limit=${osmLimit}`, { method: "POST" });
+
+      // Poll until done
+      const poll = async (): Promise<void> => {
+        const job = await api<{ status: string; result?: PreviewResult; detail?: string }>(`/api/admin/osm-job/${jobId}`);
+        if (job.status === "done" && job.result) {
+          setPreview(job.result);
+          setSelected(new Set(job.result.venues.map((v) => v.id)));
+          setOsmLoading(false);
+        } else if (job.status === "error") {
+          setOsmError(job.detail ?? "Overpass API kļūda");
+          setOsmLoading(false);
+        } else {
+          setTimeout(() => void poll(), 3000);
+        }
+      };
+      void poll();
     } catch (e) {
       setOsmError(e instanceof Error ? e.message : "Kļūda");
-    } finally {
       setOsmLoading(false);
     }
   }

@@ -5,13 +5,15 @@ import hmac
 import json
 import os
 import secrets
+import threading
+import uuid
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 import psycopg
-from fastapi import FastAPI, Header, HTTPException, Query
+from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from fpdf import FPDF
@@ -671,8 +673,32 @@ def _parse_overpass(elements: list[dict]) -> list[dict[str, Any]]:
     return rows
 
 
+# In-memory job store {job_id: {"status": "pending"|"done"|"error", "result": ..., "detail": ...}}
+_osm_jobs: dict[str, dict[str, Any]] = {}
+
+
+def _run_osm_preview_job(job_id: str, limit: int, existing_ids: set[str]) -> None:
+    try:
+        elements = _fetch_overpass()
+        all_venues = _parse_overpass(elements)
+        new_venues = [v for v in all_venues if v["id"] not in existing_ids]
+        _osm_jobs[job_id] = {
+            "status": "done",
+            "result": {
+                "totalOsm": len(all_venues),
+                "existing": len(existing_ids),
+                "newFound": len(new_venues),
+                "limit": limit,
+                "venues": new_venues[:limit],
+            },
+        }
+    except Exception as exc:
+        _osm_jobs[job_id] = {"status": "error", "detail": str(exc)}
+
+
 @app.post("/api/admin/osm-preview")
 def osm_preview(
+    background_tasks: BackgroundTasks,
     limit: int = Query(default=20, ge=1, le=50),
     authorization: str | None = Header(default=None),
 ) -> dict[str, Any]:
@@ -681,21 +707,20 @@ def osm_preview(
     existing_venues: list[dict] = _get_dataset("venues", "venues.json") or []
     existing_ids = {v["id"] for v in existing_venues}
 
-    try:
-        elements = _fetch_overpass()
-    except Exception as exc:
-        raise HTTPException(status_code=502, detail=f"Overpass API kļūda: {exc}")
+    job_id = str(uuid.uuid4())
+    _osm_jobs[job_id] = {"status": "pending"}
+    background_tasks.add_task(_run_osm_preview_job, job_id, limit, existing_ids)
 
-    all_venues = _parse_overpass(elements)
-    new_venues = [v for v in all_venues if v["id"] not in existing_ids][:limit]
+    return {"jobId": job_id}
 
-    return {
-        "totalOsm": len(all_venues),
-        "existing": len(existing_ids),
-        "newFound": len([v for v in all_venues if v["id"] not in existing_ids]),
-        "limit": limit,
-        "venues": new_venues,
-    }
+
+@app.get("/api/admin/osm-job/{job_id}")
+def osm_job_status(job_id: str, authorization: str | None = Header(default=None)) -> dict[str, Any]:
+    _require_admin(authorization)
+    job = _osm_jobs.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return job
 
 
 @app.post("/api/admin/osm-commit")
