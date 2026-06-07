@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
+import logging
 import os
 import secrets
 import threading
@@ -11,6 +12,13 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+log = logging.getLogger("riga")
 
 import psycopg
 from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Query
@@ -257,9 +265,18 @@ def startup() -> None:
 
     res = _with_pg(_init)
     if res is None:
-        print("[backend] PostgreSQL unavailable; using JSON fallback for data endpoints.")
+        log.warning("PostgreSQL unavailable — using JSON fallback for data endpoints")
     else:
-        print("[backend] PostgreSQL connected.")
+        def _count(cur):
+            cur.execute("SELECT COUNT(*) FROM model_runs")
+            runs = cur.fetchone()[0]
+            cur.execute("SELECT COUNT(*) FROM users")
+            users = cur.fetchone()[0]
+            cur.execute("SELECT COUNT(*) FROM venues")
+            venues = cur.fetchone()[0]
+            return runs, users, venues
+        runs, users, venues = _with_pg(_count) or (0, 0, 0)
+        log.info(f"PostgreSQL connected — model_runs={runs} users={users} venues={venues}")
 
 
 @app.get("/health")
@@ -381,6 +398,7 @@ def auth_register(payload: RegisterIn) -> dict[str, Any]:
     user = _with_pg(_q)
     if user is None:
         raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
+    log.info(f"AUTH register — email={payload.email} role={user['user']['role']}")
     return {"user": user}
 
 
@@ -401,6 +419,7 @@ def auth_login(payload: LoginIn) -> dict[str, Any]:
         if not is_active:
             raise HTTPException(status_code=403, detail="User is inactive")
         if not _verify_password(payload.password, password_hash):
+            log.warning(f"AUTH login failed — email={payload.email} reason=wrong_password")
             raise HTTPException(status_code=401, detail="Invalid credentials")
 
         token = secrets.token_urlsafe(32)
@@ -409,6 +428,7 @@ def auth_login(payload: LoginIn) -> dict[str, Any]:
             "INSERT INTO user_sessions (token, user_id, expires_at) VALUES (%s, %s, %s)",
             (token, user_id, expires_at),
         )
+        log.info(f"AUTH login — email={email} role={role} user_id={user_id}")
         return {
             "token": token,
             "expiresAt": expires_at.isoformat(),
@@ -444,10 +464,12 @@ def district_report_pdf(district_id: str, authorization: str | None = Header(def
 
     district = next((d for d in districts if d.get("id") == district_id), None)
     if not district:
+        log.warning(f"PDF requested for unknown district_id={district_id} user_id={user['id']}")
         raise HTTPException(status_code=404, detail=f"District not found: {district_id}")
 
     district_cafes = [c for c in cafes if c.get("districtId") == district_id]
     district_venues = [v for v in venues if v.get("districtId") == district_id]
+    log.info(f"PDF generating district_id={district_id} cafes={len(district_cafes)} venues={len(district_venues)} user_id={user['id']}")
     top_cafes = sorted(district_cafes, key=lambda c: int(c.get("reviews", 0)), reverse=True)[:8]
 
     cluster_lv = CLUSTER_LV.get(district.get("cluster", ""), district.get("cluster", ""))
@@ -520,6 +542,7 @@ def district_report_pdf(district_id: str, authorization: str | None = Header(def
 
     _with_pg(_save_report)
 
+    log.info(f"PDF done district_id={district_id} size_bytes={len(pdf_bytes)} user_id={user['id']}")
     return Response(
         content=pdf_bytes,
         media_type="application/pdf",
@@ -689,10 +712,13 @@ _osm_jobs: dict[str, dict[str, Any]] = {}
 
 
 def _run_osm_preview_job(job_id: str, limit: int, existing_ids: set[str]) -> None:
+    log.info(f"OSM preview job={job_id} started existing_ids={len(existing_ids)}")
     try:
         elements = _fetch_overpass()
+        log.info(f"OSM preview job={job_id} overpass returned {len(elements)} elements")
         all_venues = _parse_overpass(elements)
         new_venues = [v for v in all_venues if v["id"] not in existing_ids]
+        log.info(f"OSM preview job={job_id} done total_osm={len(all_venues)} new={len(new_venues)} showing={min(len(new_venues), limit)}")
         _osm_jobs[job_id] = {
             "status": "done",
             "result": {
@@ -704,6 +730,7 @@ def _run_osm_preview_job(job_id: str, limit: int, existing_ids: set[str]) -> Non
             },
         }
     except Exception as exc:
+        log.error(f"OSM preview job={job_id} failed: {exc}")
         _osm_jobs[job_id] = {"status": "error", "detail": str(exc)}
 
 
@@ -744,32 +771,34 @@ def osm_commit(
     if not payload.venues:
         raise HTTPException(status_code=400, detail="Nav atlasīts neviens objekts")
 
+    log.info(f"OSM commit started — incoming={len(payload.venues)} venues")
+    for v in payload.venues:
+        log.info(f"  incoming venue id={v.id} name={v.name!r} amenity={v.amenity} lat={v.lat} lng={v.lng}")
+
     existing_venues: list[dict] = _get_dataset("venues", "venues.json") or []
-    new_ids = {v.id for v in payload.venues}
+    log.info(f"OSM commit existing_venues={len(existing_venues)}")
+
     merged_venues = existing_venues + [
         {"id": v.id, "name": v.name, "lat": v.lat, "lng": v.lng,
          "amenity": v.amenity, "districtId": None}
         for v in payload.venues
     ]
+    log.info(f"OSM commit merged_total={len(merged_venues)}")
 
     def _q(cur):
-        cur.execute(
-            "INSERT INTO model_runs (run_label) VALUES (%s) RETURNING id",
-            (f"osm-refresh-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}",),
-        )
+        run_label = f"osm-refresh-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}"
+        cur.execute("INSERT INTO model_runs (run_label) VALUES (%s) RETURNING id", (run_label,))
         new_run_id = cur.fetchone()[0]
+        log.info(f"OSM commit new model_run id={new_run_id} label={run_label}")
 
         cur.execute(
-            """
-            SELECT id FROM model_runs
-            WHERE id != %s
-            ORDER BY created_at DESC LIMIT 1
-            """,
+            "SELECT id FROM model_runs WHERE id != %s ORDER BY created_at DESC LIMIT 1",
             (new_run_id,),
         )
         row = cur.fetchone()
         if row:
             old_run_id = row[0]
+            log.info(f"OSM commit copying artifacts from run_id={old_run_id} → {new_run_id} (excluding venues)")
             cur.execute(
                 """
                 INSERT INTO artifacts (run_id, name, payload)
@@ -778,17 +807,22 @@ def osm_commit(
                 """,
                 (new_run_id, old_run_id),
             )
+        else:
+            log.warning("OSM commit no previous run found — only venues artifact will be created")
 
         cur.execute(
             "INSERT INTO artifacts (run_id, name, payload) VALUES (%s, %s, %s::jsonb)",
             (new_run_id, "venues", json.dumps(merged_venues)),
         )
+        log.info(f"OSM commit artifacts saved run_id={new_run_id} total_venues={len(merged_venues)}")
         return new_run_id
 
     run_id = _with_pg(_q)
     if run_id is None:
+        log.error("OSM commit failed — PostgreSQL unavailable")
         raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
 
+    log.info(f"OSM commit complete run_id={run_id} added={len(payload.venues)} total={len(merged_venues)}")
     return {
         "ok": True,
         "runId": run_id,
@@ -857,11 +891,13 @@ def add_favorite(
             (user_id, payload.districtId),
         )
         if cur.fetchone():
+            log.info(f"FAV add skip — user_id={user_id} district_id={payload.districtId} already_exists=true")
             return {"ok": True, "added": False}
         cur.execute(
             "INSERT INTO favorites (user_id, district_id) VALUES (%s, %s)",
             (user_id, payload.districtId),
         )
+        log.info(f"FAV add — user_id={user_id} district_id={payload.districtId}")
         return {"ok": True, "added": True}
 
     result = _with_pg(_q)
@@ -883,6 +919,8 @@ def remove_favorite(
             "DELETE FROM favorites WHERE user_id = %s AND district_id = %s",
             (user_id, district_id),
         )
+        deleted = cur.rowcount
+        log.info(f"FAV remove — user_id={user_id} district_id={district_id} deleted={deleted}")
         return {"ok": True}
 
     result = _with_pg(_q)
