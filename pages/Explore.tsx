@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useData } from "../data";
 import RigaMap from "../components/RigaMap";
 import { ChevronRight, Search, X } from "lucide-react";
-import type { ColorMode, DistrictSummary } from "../types";
+import type { ColorMode, DistrictSummary, VenueMarker } from "../types";
 import { clusterLv } from "../types";
 
 export default function Explore() {
@@ -16,6 +16,32 @@ export default function Explore() {
   const [filters, setFilters] = useState({ minOpportunity: 0, maxCompetition: 10 });
   const [venueCategory, setVenueCategory] = useState<"" | "cafe" | "restaurant" | "fast_food">("");
   const [minRating, setMinRating] = useState(0);
+  const [showPois, setShowPois] = useState(false);
+  const [pois, setPois] = useState<VenueMarker[]>([]);
+  const [poisLoading, setPoisLoading] = useState(false);
+  const poisStarted = useRef(false);
+
+  useEffect(() => {
+    if (!showPois || poisStarted.current) return;
+    poisStarted.current = true;
+    let cancelled = false;
+    const run = async () => {
+      setPoisLoading(true);
+      for (let i = 0; i < 20 && !cancelled; i++) {
+        try {
+          const res = await fetch("/api/pois");
+          if (!res.ok) break;
+          const json = await res.json();
+          if (json.status === "done") { if (!cancelled) setPois(json.data ?? []); break; }
+          if (json.status === "error") break;
+        } catch { break; }
+        await new Promise((r) => setTimeout(r, 4000));
+      }
+      if (!cancelled) setPoisLoading(false);
+    };
+    run();
+    return () => { cancelled = true; };
+  }, [showPois]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const districts = data?.districts ?? [];
   const cafes = data?.cafes ?? [];
@@ -99,7 +125,7 @@ export default function Explore() {
             </div>
           </div>
 
-          <div className="flex gap-3 text-xs text-stone-600">
+          <div className="flex gap-3 text-xs text-stone-600 flex-wrap">
             <label className="flex items-center gap-1.5 cursor-pointer">
               <input type="checkbox" checked={hideLowConfidence} onChange={(e) => setHideLowConfidence(e.target.checked)} />
               Slēpt maz datu
@@ -111,6 +137,10 @@ export default function Explore() {
             <label className="flex items-center gap-1.5 cursor-pointer">
               <input type="checkbox" checked={showCafes} onChange={(e) => setShowCafes(e.target.checked)} />
               Novērtētās kafejnīcas
+            </label>
+            <label className="flex items-center gap-1.5 cursor-pointer" title="Skolas, universitātes, autobusu un tramvaja pieturas">
+              <input type="checkbox" checked={showPois} onChange={(e) => setShowPois(e.target.checked)} />
+              {poisLoading ? "Ielādē POI…" : "Plūsmas ģeneratori"}
             </label>
           </div>
 
@@ -149,7 +179,7 @@ export default function Explore() {
             <div className="p-8 text-center text-stone-400">
               <p>Neviens rajons neatbilst kritērijiem.</p>
               <button
-                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); setVenueCategory(""); setMinRating(0); }}
+                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); setVenueCategory(""); setMinRating(0); setShowPois(false); }}
                 className="text-amber-600 text-sm mt-2 font-medium hover:underline"
               >
                 Atiestatīt filtrus
@@ -192,6 +222,8 @@ export default function Explore() {
             colorMode={colorMode}
             showCafes={showCafes}
             showVenues={showVenues}
+            pois={pois}
+            showPois={showPois}
           />
         </div>
 

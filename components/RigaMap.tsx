@@ -18,6 +18,21 @@ const AMENITY_LV: Record<string, string> = {
   fast_food: "Ātrā ēdināšana",
 };
 
+const POI_COLORS: Record<string, string> = {
+  school:       "#3b82f6",   // blue
+  university:   "#8b5cf6",   // violet
+  bus_station:  "#f59e0b",   // amber
+  tram_stop:    "#10b981",   // emerald
+};
+const POI_DEFAULT_COLOR = "#6b7280";
+
+const POI_LV: Record<string, string> = {
+  school:       "Skola",
+  university:   "Universitāte",
+  bus_station:  "Autobusa pietura",
+  tram_stop:    "Tramvaja pietura",
+};
+
 const COLOR_MODE_LV: Record<string, string> = {
   opportunity: "Iespējas",
   competition: "Konkurence",
@@ -34,6 +49,8 @@ interface Props {
   colorMode: ColorMode;
   showCafes?: boolean;
   showVenues?: boolean;
+  pois?: VenueMarker[];
+  showPois?: boolean;
 }
 
 const RIGA_CENTER: [number, number] = [56.95, 24.11];
@@ -67,6 +84,7 @@ function scoreFor(d: DistrictSummary, mode: ColorMode): number {
 export default function RigaMap({
   districts, geojson, cafes, venues, selectedId,
   onDistrictClick, colorMode, showCafes = false, showVenues = false,
+  pois = [], showPois = false,
 }: Props) {
   const districtsById = useMemo(() => {
     const map = new Map<string, DistrictSummary>();
@@ -153,6 +171,26 @@ export default function RigaMap({
             </Tooltip>
           </CircleMarker>
         ))}
+
+        {/* POI layer — hollow rings, visually distinct from filled venue dots */}
+        {showPois && pois.map((p) => {
+          const color = POI_COLORS[p.amenity] ?? POI_DEFAULT_COLOR;
+          return (
+            <CircleMarker
+              key={p.id}
+              center={[p.lat, p.lng]}
+              radius={7}
+              pathOptions={{ color, weight: 2.5, fillOpacity: 0 }}
+            >
+              <Tooltip direction="top">
+                <div className="text-xs">
+                  <div className="font-semibold">{p.name ?? POI_LV[p.amenity] ?? p.amenity}</div>
+                  <div className="text-stone-500">{POI_LV[p.amenity] ?? p.amenity}</div>
+                </div>
+              </Tooltip>
+            </CircleMarker>
+          );
+        })}
       </MapContainer>
 
       {/* Legend */}
@@ -182,6 +220,16 @@ export default function RigaMap({
               <div className="w-4 h-4 rounded-full border-2 border-stone-800" style={{ background: "#fbbf24" }} />
               <span>Novērtēta kafejnīca (Google)</span>
             </div>
+          </div>
+        )}
+        {showPois && (
+          <div className="mt-2 pt-2 border-t border-stone-200 flex flex-col gap-1">
+            {Object.entries(POI_LV).map(([type, label]) => (
+              <div key={type} className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full border-2" style={{ borderColor: POI_COLORS[type] ?? POI_DEFAULT_COLOR }} />
+                <span>{label}</span>
+              </div>
+            ))}
           </div>
         )}
       </div>

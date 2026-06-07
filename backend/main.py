@@ -626,15 +626,17 @@ def admin_update_active(user_id: int, payload: ActiveUpdateIn, authorization: st
 _RIGA_BBOX = "56.8573,23.9455,57.0861,24.3245"
 _OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 _AMENITY_TYPES = ["cafe", "restaurant", "fast_food"]
+_POI_AMENITY_TYPES = ["school", "university", "bus_station", "tram_stop"]
 
 
-def _fetch_overpass() -> list[dict[str, Any]]:
+def _fetch_overpass(amenity_types: list[str] | None = None) -> list[dict[str, Any]]:
     import urllib.request
     import urllib.parse
 
+    types = amenity_types if amenity_types is not None else _AMENITY_TYPES
     parts = "\n".join(
         f'  node["amenity"="{t}"]({_RIGA_BBOX});\n  way["amenity"="{t}"]({_RIGA_BBOX});'
-        for t in _AMENITY_TYPES
+        for t in types
     )
     query = f"[out:json][timeout:60];\n(\n{parts}\n);\nout center tags;"
     data = urllib.parse.urlencode({"data": query}).encode()
@@ -794,3 +796,26 @@ def osm_commit(
         "total": len(merged_venues),
         "message": f"Datu atjaunošana pabeigta. Pievienoti {len(payload.venues)} jauni ieraksti.",
     }
+
+
+# ── POI layer (schools, universities, transit) ────────────────────────────────
+
+_poi_job: dict[str, Any] = {"status": "idle", "data": []}
+
+
+def _run_poi_fetch() -> None:
+    global _poi_job
+    try:
+        elements = _fetch_overpass(_POI_AMENITY_TYPES)
+        _poi_job = {"status": "done", "data": _parse_overpass(elements)}
+    except Exception as exc:
+        _poi_job = {"status": "error", "data": [], "detail": str(exc)}
+
+
+@app.get("/api/pois")
+def get_pois(background_tasks: BackgroundTasks) -> dict[str, Any]:
+    global _poi_job
+    if _poi_job["status"] == "idle":
+        _poi_job = {"status": "loading", "data": []}
+        background_tasks.add_task(_run_poi_fetch)
+    return _poi_job
