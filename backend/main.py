@@ -398,7 +398,7 @@ def auth_register(payload: RegisterIn) -> dict[str, Any]:
     user = _with_pg(_q)
     if user is None:
         raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
-    log.info(f"AUTH register — email={payload.email} role={user['user']['role']}")
+    log.info(f"AUTH register — email={payload.email} role={user['role']}")
     return {"user": user}
 
 
