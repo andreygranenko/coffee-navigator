@@ -405,13 +405,37 @@ function Stat({ label, value, small }: { label: string; value: string | number; 
   );
 }
 
+function MapBootstrap({ newVenues }: { newVenues: OsmVenue[] }) {
+  const map = useMap();
+  useEffect(() => {
+    // Fix gray tiles in flex containers — invalidate with multiple delays
+    const t1 = setTimeout(() => map.invalidateSize(), 0);
+    const t2 = setTimeout(() => map.invalidateSize(), 150);
+    const t3 = setTimeout(() => map.invalidateSize(), 500);
+    const ro = new ResizeObserver(() => map.invalidateSize());
+    ro.observe(map.getContainer());
+
+    // Fit to new venues so they're immediately visible
+    if (newVenues.length > 0) {
+      const lats = newVenues.map((v) => v.lat);
+      const lngs = newVenues.map((v) => v.lng);
+      map.fitBounds(
+        [[Math.min(...lats), Math.min(...lngs)], [Math.max(...lats), Math.max(...lngs)]],
+        { padding: [40, 40], maxZoom: 14 }
+      );
+    }
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); ro.disconnect(); };
+  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
+}
+
 function FlyTo({ id, venues }: { id: string | null; venues: OsmVenue[] }) {
   const map = useMap();
   useEffect(() => {
     if (!id) return;
     const v = venues.find((x) => x.id === id);
-    if (v) map.flyTo([v.lat, v.lng], 16, { duration: 0.6 });
-  }, [id, venues, map]);
+    if (v) map.flyTo([v.lat, v.lng], 16, { duration: 0.5 });
+  }, [id]);  // eslint-disable-line react-hooks/exhaustive-deps
   return null;
 }
 
@@ -423,24 +447,37 @@ function OsmPreviewMap({ existing, newVenues, selected, focusedId, onToggle }: {
   onToggle: (id: string) => void;
 }) {
   return (
-    <MapContainer center={[56.95, 24.11]} zoom={12} style={{ width: "100%", height: "100%" }} scrollWheelZoom>
+    <MapContainer
+      center={[56.95, 24.11]}
+      zoom={12}
+      style={{ width: "100%", height: "100%" }}
+      scrollWheelZoom
+    >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>'
       />
+      <MapBootstrap newVenues={newVenues} />
       <FlyTo id={focusedId} venues={newVenues} />
 
-      {/* Existing venues — small gray dots */}
+      {/* Existing venues — gray dots */}
       {existing.map((v) => (
-        <CircleMarker key={v.id} center={[v.lat, v.lng]} radius={3}
-          pathOptions={{ color: "#a8a29e", fillColor: "#d6d3d1", weight: 0.5, fillOpacity: 0.6 }}>
+        <CircleMarker
+          key={v.id}
+          center={[v.lat, v.lng]}
+          radius={5}
+          pathOptions={{ color: "#78716c", fillColor: "#a8a29e", weight: 1, fillOpacity: 0.7 }}
+        >
           <Tooltip direction="top">
-            <span className="text-xs">{v.id} · {v.amenity}</span>
+            <div className="text-xs">
+              <div className="font-semibold">{v.amenity}</div>
+              <div className="text-stone-400">Esošs DB ieraksts</div>
+            </div>
           </Tooltip>
         </CircleMarker>
       ))}
 
-      {/* New venues — green if selected, red if not */}
+      {/* New venues — green selected, red unselected */}
       {newVenues.map((v) => {
         const isSel = selected.has(v.id);
         const isFocused = focusedId === v.id;
@@ -448,20 +485,22 @@ function OsmPreviewMap({ existing, newVenues, selected, focusedId, onToggle }: {
           <CircleMarker
             key={v.id}
             center={[v.lat, v.lng]}
-            radius={isFocused ? 10 : 7}
+            radius={isFocused ? 12 : 9}
             pathOptions={{
-              color: isSel ? "#166534" : "#991b1b",
-              fillColor: isSel ? "#22c55e" : "#ef4444",
-              weight: isFocused ? 2.5 : 1.5,
-              fillOpacity: 0.85,
+              color: isSel ? "#14532d" : "#7f1d1d",
+              fillColor: isSel ? "#16a34a" : "#dc2626",
+              weight: 2,
+              fillOpacity: 0.9,
             }}
             eventHandlers={{ click: () => onToggle(v.id) }}
           >
-            <Tooltip direction="top">
-              <div className="text-xs">
+            <Tooltip direction="top" permanent={isFocused}>
+              <div className="text-xs min-w-[120px]">
                 <div className="font-semibold">{v.name ?? "Bez nosaukuma"}</div>
-                <div className="text-stone-500">{v.amenity}{v.cuisine ? ` · ${v.cuisine}` : ""}</div>
-                <div className="text-stone-400">{isSel ? "✓ Atlasīts" : "✗ Nav atlasīts"} — klikšķis lai mainītu</div>
+                <div className="text-stone-500">{AMENITY_LV[v.amenity] ?? v.amenity}{v.cuisine ? ` · ${v.cuisine}` : ""}</div>
+                <div className={isSel ? "text-emerald-600" : "text-red-500"}>
+                  {isSel ? "✓ Atlasīts" : "✗ Noņemts"} — klikšķis lai mainītu
+                </div>
               </div>
             </Tooltip>
           </CircleMarker>
