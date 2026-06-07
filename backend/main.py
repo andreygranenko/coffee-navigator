@@ -698,7 +698,7 @@ def _run_osm_preview_job(job_id: str, limit: int, existing_ids: set[str]) -> Non
                 "existing": len(existing_ids),
                 "newFound": len(new_venues),
                 "limit": limit,
-                "venues": new_venues[:limit],
+                "venues": new_venues,        # all new venues — limit is advisory only
             },
         }
     except Exception as exc:

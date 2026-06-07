@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap } from "react-leaflet";
 import { getAuthToken } from "../auth";
 import { RefreshCw, Check, X as XIcon } from "lucide-react";
 
@@ -36,6 +37,8 @@ type PreviewResult = {
   venues: OsmVenue[];
 };
 
+type ExistingVenue = { id: string; lat: number; lng: number; amenity: string };
+
 const AMENITY_LV: Record<string, string> = {
   cafe: "Kafejnīca",
   restaurant: "Restorāns",
@@ -62,6 +65,8 @@ export default function Admin() {
   const [preview, setPreview] = useState<PreviewResult | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [committing, setCommitting] = useState(false);
+  const [existingVenues, setExistingVenues] = useState<ExistingVenue[]>([]);
+  const [focusedId, setFocusedId] = useState<string | null>(null);
 
   const token = getAuthToken();
 
@@ -135,6 +140,8 @@ export default function Admin() {
           setPreview(job.result);
           setSelected(new Set(job.result.venues.map((v) => v.id)));
           setOsmLoading(false);
+          // fetch existing venues for map context
+          api<ExistingVenue[]>("/api/venues").then(setExistingVenues).catch(() => {});
         } else if (job.status === "error") {
           setOsmError(job.detail ?? "Overpass API kļūda");
           setOsmLoading(false);
@@ -255,9 +262,6 @@ export default function Admin() {
               <div className="flex items-center justify-between text-sm">
                 <div className="text-stone-500">
                   OSM kopā: <b className="text-stone-800">{preview.totalOsm}</b> · Esošie DB: <b className="text-stone-800">{preview.existing}</b> · Jauni: <b className="text-emerald-700">{preview.newFound}</b>
-                  {preview.newFound > preview.limit && (
-                    <span className="ml-2 text-amber-600">(rāda {preview.limit} no {preview.newFound})</span>
-                  )}
                 </div>
                 <span className="text-stone-400 text-xs">Atlasīti: {selected.size}/{preview.venues.length}</span>
               </div>
@@ -267,69 +271,70 @@ export default function Admin() {
                   Nav atrasti jauni objekti
                 </div>
               ) : (
-                <div className="rounded-xl border border-stone-200 overflow-hidden">
-                  <table className="w-full text-sm">
-                    <thead className="bg-stone-50 text-stone-500 uppercase text-xs">
-                      <tr>
-                        <th className="px-3 py-2 text-left w-8">
-                          <input
-                            type="checkbox"
-                            checked={selected.size === preview.venues.length}
-                            onChange={toggleAll}
-                            className="accent-amber-600"
-                          />
-                        </th>
-                        <th className="px-3 py-2 text-left">Nosaukums</th>
-                        <th className="px-3 py-2 text-left">Tips</th>
-                        <th className="px-3 py-2 text-left hidden md:table-cell">Virtuve / Operators</th>
-                        <th className="px-3 py-2 text-left hidden md:table-cell">Koordinātes</th>
-                        <th className="px-3 py-2 text-left">OSM ID</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-stone-100">
-                      {preview.venues.map((v) => (
-                        <tr
-                          key={v.id}
-                          onClick={() => toggleVenue(v.id)}
-                          className={`cursor-pointer transition-colors ${selected.has(v.id) ? "bg-amber-50/60" : "hover:bg-stone-50"}`}
-                        >
-                          <td className="px-3 py-2.5">
-                            <input
-                              type="checkbox"
-                              checked={selected.has(v.id)}
-                              onChange={() => toggleVenue(v.id)}
-                              onClick={(e) => e.stopPropagation()}
-                              className="accent-amber-600"
-                            />
-                          </td>
-                          <td className="px-3 py-2.5 font-medium text-coffee-900">
-                            {v.name ?? <span className="text-stone-400 italic font-normal">Bez nosaukuma</span>}
-                          </td>
-                          <td className="px-3 py-2.5">
-                            <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${AMENITY_COLOR[v.amenity] ?? "bg-stone-100 text-stone-600"}`}>
-                              {AMENITY_LV[v.amenity] ?? v.amenity}
-                            </span>
-                          </td>
-                          <td className="px-3 py-2.5 text-stone-400 hidden md:table-cell text-xs">
-                            {v.cuisine ?? v.operator ?? "—"}
-                          </td>
-                          <td className="px-3 py-2.5 text-stone-400 hidden md:table-cell text-xs font-mono">
-                            {v.lat.toFixed(4)}, {v.lng.toFixed(4)}
-                          </td>
-                          <td className="px-3 py-2.5 text-stone-300 text-xs font-mono">{v.id}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                <div className="flex flex-col lg:flex-row gap-4">
+                  {/* Map */}
+                  <div className="lg:w-1/2 h-96 rounded-xl overflow-hidden border border-stone-200 shrink-0">
+                    <OsmPreviewMap
+                      existing={existingVenues}
+                      newVenues={preview.venues}
+                      selected={selected}
+                      focusedId={focusedId}
+                      onToggle={toggleVenue}
+                    />
+                  </div>
+
+                  {/* Table */}
+                  <div className="lg:w-1/2 rounded-xl border border-stone-200 overflow-hidden flex flex-col">
+                    <div className="overflow-y-auto max-h-96">
+                      <table className="w-full text-sm">
+                        <thead className="bg-stone-50 text-stone-500 uppercase text-xs sticky top-0">
+                          <tr>
+                            <th className="px-3 py-2 text-left w-8">
+                              <input type="checkbox" checked={selected.size === preview.venues.length} onChange={toggleAll} className="accent-amber-600" />
+                            </th>
+                            <th className="px-3 py-2 text-left">Nosaukums</th>
+                            <th className="px-3 py-2 text-left">Tips</th>
+                            <th className="px-3 py-2 text-left">Virtuve</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-stone-100">
+                          {preview.venues.map((v) => (
+                            <tr
+                              key={v.id}
+                              onClick={() => { toggleVenue(v.id); setFocusedId(v.id); }}
+                              onMouseEnter={() => setFocusedId(v.id)}
+                              onMouseLeave={() => setFocusedId(null)}
+                              className={`cursor-pointer transition-colors ${
+                                focusedId === v.id ? "bg-amber-100/70" :
+                                selected.has(v.id) ? "bg-amber-50/50" : "hover:bg-stone-50"
+                              }`}
+                            >
+                              <td className="px-3 py-2">
+                                <input type="checkbox" checked={selected.has(v.id)} onChange={() => toggleVenue(v.id)} onClick={(e) => e.stopPropagation()} className="accent-amber-600" />
+                              </td>
+                              <td className="px-3 py-2 font-medium text-coffee-900 max-w-[140px] truncate">
+                                {v.name ?? <span className="text-stone-400 italic font-normal">Bez nosaukuma</span>}
+                              </td>
+                              <td className="px-3 py-2">
+                                <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${AMENITY_COLOR[v.amenity] ?? "bg-stone-100 text-stone-600"}`}>
+                                  {AMENITY_LV[v.amenity] ?? v.amenity}
+                                </span>
+                              </td>
+                              <td className="px-3 py-2 text-stone-400 text-xs truncate max-w-[100px]">
+                                {v.cuisine ?? v.operator ?? "—"}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               )}
 
               {preview.venues.length > 0 && (
                 <div className="flex items-center justify-between pt-1">
-                  <button
-                    onClick={() => { setPreview(null); setSelected(new Set()); }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-stone-500 hover:text-stone-700"
-                  >
+                  <button onClick={() => { setPreview(null); setSelected(new Set()); setExistingVenues([]); }} className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-stone-500 hover:text-stone-700">
                     <XIcon size={14} /> Atcelt
                   </button>
                   <button
@@ -397,5 +402,71 @@ function Stat({ label, value, small }: { label: string; value: string | number; 
       <div className="text-xs uppercase text-stone-500">{label}</div>
       <div className={`font-bold text-coffee-900 ${small ? "text-sm mt-1 break-all" : "text-2xl mt-1"}`}>{value}</div>
     </div>
+  );
+}
+
+function FlyTo({ id, venues }: { id: string | null; venues: OsmVenue[] }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!id) return;
+    const v = venues.find((x) => x.id === id);
+    if (v) map.flyTo([v.lat, v.lng], 16, { duration: 0.6 });
+  }, [id, venues, map]);
+  return null;
+}
+
+function OsmPreviewMap({ existing, newVenues, selected, focusedId, onToggle }: {
+  existing: ExistingVenue[];
+  newVenues: OsmVenue[];
+  selected: Set<string>;
+  focusedId: string | null;
+  onToggle: (id: string) => void;
+}) {
+  return (
+    <MapContainer center={[56.95, 24.11]} zoom={12} style={{ width: "100%", height: "100%" }} scrollWheelZoom>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>'
+      />
+      <FlyTo id={focusedId} venues={newVenues} />
+
+      {/* Existing venues — small gray dots */}
+      {existing.map((v) => (
+        <CircleMarker key={v.id} center={[v.lat, v.lng]} radius={3}
+          pathOptions={{ color: "#a8a29e", fillColor: "#d6d3d1", weight: 0.5, fillOpacity: 0.6 }}>
+          <Tooltip direction="top">
+            <span className="text-xs">{v.id} · {v.amenity}</span>
+          </Tooltip>
+        </CircleMarker>
+      ))}
+
+      {/* New venues — green if selected, red if not */}
+      {newVenues.map((v) => {
+        const isSel = selected.has(v.id);
+        const isFocused = focusedId === v.id;
+        return (
+          <CircleMarker
+            key={v.id}
+            center={[v.lat, v.lng]}
+            radius={isFocused ? 10 : 7}
+            pathOptions={{
+              color: isSel ? "#166534" : "#991b1b",
+              fillColor: isSel ? "#22c55e" : "#ef4444",
+              weight: isFocused ? 2.5 : 1.5,
+              fillOpacity: 0.85,
+            }}
+            eventHandlers={{ click: () => onToggle(v.id) }}
+          >
+            <Tooltip direction="top">
+              <div className="text-xs">
+                <div className="font-semibold">{v.name ?? "Bez nosaukuma"}</div>
+                <div className="text-stone-500">{v.amenity}{v.cuisine ? ` · ${v.cuisine}` : ""}</div>
+                <div className="text-stone-400">{isSel ? "✓ Atlasīts" : "✗ Nav atlasīts"} — klikšķis lai mainītu</div>
+              </div>
+            </Tooltip>
+          </CircleMarker>
+        );
+      })}
+    </MapContainer>
   );
 }
