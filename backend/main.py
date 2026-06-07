@@ -646,6 +646,99 @@ def admin_update_active(user_id: int, payload: ActiveUpdateIn, authorization: st
 
 # ── OSM refresh ───────────────────────────────────────────────────────────────
 
+import math as _math
+
+
+def _point_in_ring(lat: float, lng: float, ring: list) -> bool:
+    """Ray-casting point-in-polygon. ring is list of [lng, lat] GeoJSON coords."""
+    n = len(ring)
+    inside = False
+    j = n - 1
+    for i in range(n):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if ((yi > lat) != (yj > lat)) and (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi):
+            inside = not inside
+        j = i
+    return inside
+
+
+def _assign_district_ids(venues: list[dict], geojson_features: list[dict]) -> list[dict]:
+    """Return venues with districtId filled in for those where it is None."""
+    assigned = 0
+    result = []
+    for v in venues:
+        if v.get("districtId") is not None:
+            result.append(v)
+            continue
+        lat, lng = v.get("lat"), v.get("lng")
+        if lat is None or lng is None:
+            result.append(v)
+            continue
+        found = None
+        for feat in geojson_features:
+            geom = feat.get("geometry", {})
+            if geom.get("type") != "Polygon":
+                continue
+            outer_ring = geom["coordinates"][0]
+            if _point_in_ring(lat, lng, outer_ring):
+                found = feat["properties"].get("id")
+                break
+        if found:
+            assigned += 1
+        result.append({**v, "districtId": found})
+    log.info(f"district assignment: assigned={assigned} of {len(venues)} venues had districtId=None")
+    return result
+
+
+def _log_normalize_series(values: list[float]) -> list[float]:
+    """log1p min-max → [0, 10]. Returns 5.0 for all if range is zero."""
+    logs = [_math.log1p(v) for v in values]
+    lo, hi = min(logs), max(logs)
+    if hi == lo:
+        return [5.0] * len(values)
+    return [(v - lo) / (hi - lo) * 10 for v in logs]
+
+
+def _recalculate_district_scores(districts: list[dict], venues: list[dict]) -> list[dict]:
+    """Recount venue_count/venues_per_km2, recompute competition and opportunity scores."""
+    venue_counts: dict[str, int] = {}
+    for v in venues:
+        did = v.get("districtId")
+        if did:
+            venue_counts[did] = venue_counts.get(did, 0) + 1
+
+    updated = []
+    for d in districts:
+        did = d["id"]
+        area = d.get("areaKm2") or 1.0
+        vc = venue_counts.get(did, 0)
+        vpk = round(vc / area, 2)
+        updated.append({**d, "venueCount": vc, "venuesPerKm2": vpk})
+
+    ids = [d["id"] for d in updated]
+    vpk_vals = [d["venuesPerKm2"] for d in updated]
+    norm_comp = _log_normalize_series(vpk_vals)
+
+    final = []
+    for d, comp_raw in zip(updated, norm_comp):
+        comp = round(comp_raw, 1)
+        demand = d.get("demandScore", 5.0)
+        quality = d.get("qualityScore", 5.0)
+        opp = round(0.4 * demand + 0.3 * (10 - comp) + 0.3 * quality, 1)
+        old_comp = d.get("competitionScore")
+        old_opp = d.get("opportunityScore")
+        if comp != old_comp or opp != old_opp:
+            log.info(
+                f"score change district={d['id']} "
+                f"venueCount={d['venueCount']} venuesPerKm2={d['venuesPerKm2']} "
+                f"competition {old_comp}→{comp} opportunity {old_opp}→{opp}"
+            )
+        final.append({**d, "competitionScore": comp, "opportunityScore": opp})
+
+    return final
+
+
 _RIGA_BBOX = "56.8573,23.9455,57.0861,24.3245"
 _OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 _AMENITY_TYPES = ["cafe", "restaurant", "fast_food"]
@@ -664,15 +757,26 @@ def _fetch_overpass(amenity_types: list[str] | None = None) -> list[dict[str, An
     query = f"[out:json][timeout:60];\n(\n{parts}\n);\nout center tags;"
     data = urllib.parse.urlencode({"data": query}).encode()
 
-    for endpoint in [_OVERPASS_URL, "https://lz4.overpass-api.de/api/interpreter"]:
+    _OVERPASS_MIRRORS = [
+        _OVERPASS_URL,
+        "https://lz4.overpass-api.de/api/interpreter",
+        "https://z.overpass-api.de/api/interpreter",
+        "https://overpass.kumi.systems/api/interpreter",
+        "https://overpass.private.coffee/api/interpreter",
+    ]
+    for endpoint in _OVERPASS_MIRRORS:
         try:
+            log.info(f"Overpass trying endpoint={endpoint}")
             req = urllib.request.Request(endpoint, data=data, method="POST")
             req.add_header("Content-Type", "application/x-www-form-urlencoded")
             req.add_header("User-Agent", "RigaCoffeeNavigator/1.0")
             req.add_header("Accept", "application/json")
             with urllib.request.urlopen(req, timeout=90) as resp:
-                return json.loads(resp.read()).get("elements", [])
-        except Exception:
+                elements = json.loads(resp.read()).get("elements", [])
+                log.info(f"Overpass success endpoint={endpoint} elements={len(elements)}")
+                return elements
+        except Exception as exc:
+            log.warning(f"Overpass endpoint={endpoint} failed: {type(exc).__name__}: {exc}")
             continue
 
     raise RuntimeError("Visi Overpass serveri nav pieejami")
@@ -778,12 +882,23 @@ def osm_commit(
     existing_venues: list[dict] = _get_dataset("venues", "venues.json") or []
     log.info(f"OSM commit existing_venues={len(existing_venues)}")
 
-    merged_venues = existing_venues + [
+    raw_merged = existing_venues + [
         {"id": v.id, "name": v.name, "lat": v.lat, "lng": v.lng,
          "amenity": v.amenity, "districtId": None}
         for v in payload.venues
     ]
-    log.info(f"OSM commit merged_total={len(merged_venues)}")
+    log.info(f"OSM commit raw_merged={len(raw_merged)}")
+
+    # Point-in-polygon: assign districtId for every venue missing it
+    geojson = _get_dataset("districts_geojson", "districts.geojson") or {}
+    geo_features = geojson.get("features", [])
+    log.info(f"OSM commit geojson_features={len(geo_features)}")
+    merged_venues = _assign_district_ids(raw_merged, geo_features)
+
+    # Recalculate district scores based on updated venue list
+    districts: list[dict] = _get_dataset("districts", "districts.json") or []
+    log.info(f"OSM commit districts={len(districts)} before recalc")
+    updated_districts = _recalculate_district_scores(districts, merged_venues)
 
     def _q(cur):
         run_label = f"osm-refresh-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}"
@@ -798,23 +913,27 @@ def osm_commit(
         row = cur.fetchone()
         if row:
             old_run_id = row[0]
-            log.info(f"OSM commit copying artifacts from run_id={old_run_id} → {new_run_id} (excluding venues)")
+            log.info(f"OSM commit copying other artifacts from run_id={old_run_id} → {new_run_id}")
             cur.execute(
                 """
                 INSERT INTO artifacts (run_id, name, payload)
                 SELECT %s, name, payload FROM artifacts
-                WHERE run_id = %s AND name != 'venues'
+                WHERE run_id = %s AND name NOT IN ('venues', 'districts')
                 """,
                 (new_run_id, old_run_id),
             )
         else:
-            log.warning("OSM commit no previous run found — only venues artifact will be created")
+            log.warning("OSM commit no previous run found — only venues/districts artifacts will be created")
 
         cur.execute(
             "INSERT INTO artifacts (run_id, name, payload) VALUES (%s, %s, %s::jsonb)",
             (new_run_id, "venues", json.dumps(merged_venues)),
         )
-        log.info(f"OSM commit artifacts saved run_id={new_run_id} total_venues={len(merged_venues)}")
+        cur.execute(
+            "INSERT INTO artifacts (run_id, name, payload) VALUES (%s, %s, %s::jsonb)",
+            (new_run_id, "districts", json.dumps(updated_districts)),
+        )
+        log.info(f"OSM commit artifacts saved run_id={new_run_id} venues={len(merged_venues)} districts={len(updated_districts)}")
         return new_run_id
 
     run_id = _with_pg(_q)
@@ -822,7 +941,7 @@ def osm_commit(
         log.error("OSM commit failed — PostgreSQL unavailable")
         raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
 
-    log.info(f"OSM commit complete run_id={run_id} added={len(payload.venues)} total={len(merged_venues)}")
+    log.info(f"OSM commit complete run_id={run_id} added={len(payload.venues)} total={len(merged_venues)} districts_updated={len(updated_districts)}")
     return {
         "ok": True,
         "runId": run_id,
