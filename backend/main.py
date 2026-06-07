@@ -638,10 +638,19 @@ def _fetch_overpass() -> list[dict[str, Any]]:
     )
     query = f"[out:json][timeout:60];\n(\n{parts}\n);\nout center tags;"
     data = urllib.parse.urlencode({"data": query}).encode()
-    req = urllib.request.Request(_OVERPASS_URL, data=data, method="POST")
-    req.add_header("Content-Type", "application/x-www-form-urlencoded")
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        return json.loads(resp.read()).get("elements", [])
+
+    for endpoint in [_OVERPASS_URL, "https://lz4.overpass-api.de/api/interpreter"]:
+        try:
+            req = urllib.request.Request(endpoint, data=data, method="POST")
+            req.add_header("Content-Type", "application/x-www-form-urlencoded")
+            req.add_header("User-Agent", "RigaCoffeeNavigator/1.0")
+            req.add_header("Accept", "application/json")
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                return json.loads(resp.read()).get("elements", [])
+        except Exception:
+            continue
+
+    raise RuntimeError("Visi Overpass serveri nav pieejami")
 
 
 def _parse_overpass(elements: list[dict]) -> list[dict[str, Any]]:
