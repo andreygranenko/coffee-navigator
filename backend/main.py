@@ -819,3 +819,73 @@ def get_pois(background_tasks: BackgroundTasks) -> dict[str, Any]:
         _poi_job = {"status": "loading", "data": []}
         background_tasks.add_task(_run_poi_fetch)
     return _poi_job
+
+
+# ── Favorites ─────────────────────────────────────────────────────────────────
+
+class FavoriteIn(BaseModel):
+    districtId: str
+
+
+@app.get("/api/favorites")
+def get_favorites(authorization: str | None = Header(default=None)) -> list[str]:
+    user = _require_user(authorization)
+    user_id = user["id"]
+
+    def _q(cur):
+        cur.execute(
+            "SELECT district_id FROM favorites WHERE user_id = %s AND district_id IS NOT NULL ORDER BY created_at DESC",
+            (user_id,),
+        )
+        return [row[0] for row in cur.fetchall()]
+
+    result = _with_pg(_q)
+    return result if result is not None else []
+
+
+@app.post("/api/favorites")
+def add_favorite(
+    payload: FavoriteIn,
+    authorization: str | None = Header(default=None),
+) -> dict[str, Any]:
+    user = _require_user(authorization)
+    user_id = user["id"]
+
+    def _q(cur):
+        cur.execute(
+            "SELECT 1 FROM favorites WHERE user_id = %s AND district_id = %s",
+            (user_id, payload.districtId),
+        )
+        if cur.fetchone():
+            return {"ok": True, "added": False}
+        cur.execute(
+            "INSERT INTO favorites (user_id, district_id) VALUES (%s, %s)",
+            (user_id, payload.districtId),
+        )
+        return {"ok": True, "added": True}
+
+    result = _with_pg(_q)
+    if result is None:
+        raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
+    return result
+
+
+@app.delete("/api/favorites/{district_id}")
+def remove_favorite(
+    district_id: str,
+    authorization: str | None = Header(default=None),
+) -> dict[str, Any]:
+    user = _require_user(authorization)
+    user_id = user["id"]
+
+    def _q(cur):
+        cur.execute(
+            "DELETE FROM favorites WHERE user_id = %s AND district_id = %s",
+            (user_id, district_id),
+        )
+        return {"ok": True}
+
+    result = _with_pg(_q)
+    if result is None:
+        raise HTTPException(status_code=503, detail="PostgreSQL unavailable")
+    return result

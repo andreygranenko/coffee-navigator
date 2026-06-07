@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useData } from "../data";
-import { ArrowLeft, AlertCircle, Coffee, Star, Bus, ShoppingBag, Download } from "lucide-react";
+import { ArrowLeft, AlertCircle, Coffee, Star, Bus, ShoppingBag, Download, Heart } from "lucide-react";
 import { getAuthToken } from "../auth";
 import { clusterLv } from "../types";
 import {
@@ -14,6 +14,40 @@ export default function DistrictDetail() {
   const { data, loading, error } = useData();
   const [reportLoading, setReportLoading] = React.useState(false);
   const [reportError, setReportError] = React.useState<string | null>(null);
+  const [isFav, setIsFav] = React.useState(false);
+  const [favLoading, setFavLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    const token = getAuthToken();
+    if (!token || !id) return;
+    fetch("/api/favorites", { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => (r.ok ? r.json() : []))
+      .then((ids: string[]) => setIsFav(ids.includes(id)))
+      .catch(() => {});
+  }, [id]);
+
+  const toggleFavorite = async () => {
+    const token = getAuthToken();
+    if (!token || !id) return;
+    setFavLoading(true);
+    try {
+      if (isFav) {
+        await fetch(`/api/favorites/${id}`, {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setIsFav(false);
+      } else {
+        await fetch("/api/favorites", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ districtId: id }),
+        });
+        setIsFav(true);
+      }
+    } catch {}
+    setFavLoading(false);
+  };
 
   if (error) return <div className="p-10 text-red-600">Failed to load data: {error}</div>;
   if (loading || !data) return <div className="p-10 text-stone-500">Loading…</div>;
@@ -76,7 +110,7 @@ export default function DistrictDetail() {
       a.click();
       window.URL.revokeObjectURL(url);
     } catch (e) {
-      setReportError(e instanceof Error ? e.message : "Neizdevās lejupielādēt atskaiti");
+      setReportError(e instanceof Error ? e.message : "Sistēmas kļūda: Neizdevās ģenerēt PDF. Lūdzu, mēģiniet vēlāk.");
     } finally {
       setReportLoading(false);
     }
@@ -114,7 +148,7 @@ export default function DistrictDetail() {
             <div className="text-2xl font-bold text-emerald-600">{district.opportunityScore}</div>
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 flex flex-wrap gap-3 items-center">
           <button
             onClick={downloadReport}
             disabled={reportLoading}
@@ -123,7 +157,22 @@ export default function DistrictDetail() {
             <Download size={16} />
             {reportLoading ? "Ģenerē PDF..." : "Lejupielādēt PDF atskaiti"}
           </button>
-          {reportError && <div className="text-red-600 text-sm mt-2">{reportError}</div>}
+          {getAuthToken() && (
+            <button
+              onClick={toggleFavorite}
+              disabled={favLoading}
+              title={isFav ? "Noņemt no izlases" : "Pievienot izlasei"}
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors disabled:opacity-50 ${
+                isFav
+                  ? "bg-rose-50 border-rose-300 text-rose-600 hover:bg-rose-100"
+                  : "bg-white border-stone-300 text-stone-600 hover:border-rose-300 hover:text-rose-500"
+              }`}
+            >
+              <Heart size={16} fill={isFav ? "currentColor" : "none"} />
+              {isFav ? "Izlasē" : "Pievienot izlasei"}
+            </button>
+          )}
+          {reportError && <div className="text-red-600 text-sm w-full">{reportError}</div>}
         </div>
       </div>
 
