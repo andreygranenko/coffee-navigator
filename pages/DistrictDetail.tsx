@@ -260,7 +260,7 @@ export default function DistrictDetail() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center border-t border-stone-100 pt-4">
           <PoiBox label="Transporta pieturas" v={district.transitCount} sub={`${district.transitPerKm2}/km²`} icon={<Bus size={14} className="inline mr-1 text-blue-400" />} />
-          <PoiBox label="Tirdzniecības enkuri" v={district.mallCount} sub="centri un lielveikali" icon={<ShoppingBag size={14} className="inline mr-1 text-purple-400" />} />
+          <PoiBox label="Lielveikali" v={district.mallCount} sub="tirdzniecības centri un lielveikali" icon={<ShoppingBag size={14} className="inline mr-1 text-purple-400" />} />
           <PoiBox label="Transporta mezgli" v={district.poiBreakdown.transport_hubs} sub="galvenās stacijas" />
         </div>
       </div>
