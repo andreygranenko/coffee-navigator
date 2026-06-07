@@ -15,7 +15,8 @@ from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from fpdf import FPDF
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, field_validator
+from typing import Annotated
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "public" / "data"
@@ -183,8 +184,17 @@ def _require_user(authorization: str | None) -> dict[str, Any]:
 
 
 class RegisterIn(BaseModel):
-    email: EmailStr
+    email: Annotated[EmailStr, Field(max_length=50)]
     password: str = Field(min_length=8, max_length=128)
+
+    @field_validator("password")
+    @classmethod
+    def password_complexity(cls, v: str) -> str:
+        if not any(c.isalpha() for c in v):
+            raise ValueError("Parolei jāsatur vismaz viens burts")
+        if not any(c.isdigit() for c in v):
+            raise ValueError("Parolei jāsatur vismaz viens cipars")
+        return v
 
 
 class LoginIn(BaseModel):
@@ -237,16 +247,23 @@ def startup() -> None:
 @app.get("/health")
 def health() -> dict[str, Any]:
     pg_ok = False
+    model_runs_count = 0
 
     def _q(cur):
         cur.execute("SELECT 1")
         cur.fetchone()
         return True
 
+    def _runs(cur):
+        cur.execute("SELECT COUNT(*) FROM model_runs")
+        return cur.fetchone()[0]
+
     if USE_POSTGRES and _with_pg(_q):
         pg_ok = True
+        model_runs_count = _with_pg(_runs) or 0
 
-    return {"status": "ok", "postgres": pg_ok, "json_fallback": True}
+    data_source = "database" if model_runs_count > 0 else "json_files"
+    return {"status": "ok", "postgres": pg_ok, "model_runs": model_runs_count, "data_source": data_source}
 
 
 @app.get("/api/districts")

@@ -14,11 +14,23 @@ export default function Explore() {
   const [showVenues, setShowVenues] = useState(false);
   const [hideLowConfidence, setHideLowConfidence] = useState(false);
   const [filters, setFilters] = useState({ minOpportunity: 0, maxCompetition: 10 });
+  const [venueCategory, setVenueCategory] = useState<"" | "cafe" | "restaurant" | "fast_food">("");
+  const [minRating, setMinRating] = useState(0);
 
   const districts = data?.districts ?? [];
   const cafes = data?.cafes ?? [];
   const venues = data?.venues ?? [];
   const geojson = data?.geojson;
+
+  const filteredCafes = useMemo(
+    () => cafes.filter((c) => minRating === 0 || (c.rating != null && c.rating >= minRating)),
+    [cafes, minRating]
+  );
+
+  const filteredVenues = useMemo(
+    () => venues.filter((v) => !venueCategory || v.amenity === venueCategory),
+    [venues, venueCategory]
+  );
 
   const filteredDistricts = useMemo(() => {
     return districts.filter((d) =>
@@ -32,8 +44,8 @@ export default function Explore() {
   const selectedDistrict = districts.find((d) => d.id === selectedDistrictId);
 
   const cafesInSelected = useMemo(
-    () => (selectedDistrict ? cafes.filter((c) => c.districtId === selectedDistrict.id) : []),
-    [cafes, selectedDistrict]
+    () => (selectedDistrict ? filteredCafes.filter((c) => c.districtId === selectedDistrict.id) : []),
+    [filteredCafes, selectedDistrict]
   );
 
   if (error) {
@@ -59,6 +71,7 @@ export default function Explore() {
             <input
               type="text"
               placeholder="Meklēt rajonus..."
+              maxLength={50}
               className="w-full pl-10 pr-4 py-2 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all text-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -100,6 +113,35 @@ export default function Explore() {
               Novērtētās kafejnīcas
             </label>
           </div>
+
+          <div className="flex gap-2 text-xs">
+            <div className="flex flex-col flex-1 gap-1">
+              <label className="text-stone-500 font-medium">Kategorija</label>
+              <select
+                value={venueCategory}
+                onChange={(e) => setVenueCategory(e.target.value as "" | "cafe" | "restaurant" | "fast_food")}
+                className="w-full py-1.5 px-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
+              >
+                <option value="">Visas</option>
+                <option value="cafe">Kafejnīca</option>
+                <option value="restaurant">Restorāns</option>
+                <option value="fast_food">Ātrā ēdināšana</option>
+              </select>
+            </div>
+            <div className="flex flex-col flex-1 gap-1">
+              <label className="text-stone-500 font-medium">Min. reitings ({minRating === 0 ? "visi" : `≥${minRating.toFixed(1)}★`})</label>
+              <input
+                type="range" min="0" max="5" step="0.1"
+                value={minRating}
+                onChange={(e) => setMinRating(Number(e.target.value))}
+                className="accent-amber-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
+              />
+            </div>
+          </div>
+
+          <div className="text-xs text-stone-400 text-right">
+            Atrasti {filteredCafes.length + filteredVenues.length} objekti
+          </div>
         </div>
 
         <div className="flex-1 overflow-y-auto p-2 space-y-2 bg-stone-50/50">
@@ -107,7 +149,7 @@ export default function Explore() {
             <div className="p-8 text-center text-stone-400">
               <p>Neviens rajons neatbilst kritērijiem.</p>
               <button
-                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); }}
+                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); setVenueCategory(""); setMinRating(0); }}
                 className="text-amber-600 text-sm mt-2 font-medium hover:underline"
               >
                 Atiestatīt filtrus
@@ -143,8 +185,8 @@ export default function Explore() {
           <RigaMap
             districts={districts}
             geojson={geojson}
-            cafes={cafes}
-            venues={venues}
+            cafes={filteredCafes}
+            venues={filteredVenues}
             selectedId={selectedDistrictId || undefined}
             onDistrictClick={(id) => setSelectedDistrictId(id === selectedDistrictId ? null : id)}
             colorMode={colorMode}
@@ -185,7 +227,7 @@ export default function Explore() {
               </div>
             </div>
 
-            {cafesInSelected.length > 0 && (
+            {cafesInSelected.length > 0 ? (
               <div className="mt-4 max-h-32 overflow-y-auto text-xs text-stone-600 border-t border-stone-100 pt-3">
                 <div className="font-semibold text-stone-500 mb-1 uppercase text-[10px] tracking-wide">Labākās kafejnīcas</div>
                 {cafesInSelected
@@ -199,6 +241,10 @@ export default function Explore() {
                     </div>
                   ))}
               </div>
+            ) : minRating > 0 && (
+              <p className="mt-4 text-xs text-stone-400 border-t border-stone-100 pt-3">
+                Diemžēl šajā rajonā nav objektu, kas atbilst izvēlētajiem kritērijiem.
+              </p>
             )}
 
             <a href={`#/district/${selectedDistrict.id}`} className="block mt-6 w-full py-3 bg-coffee-800 hover:bg-coffee-900 text-white text-center rounded-lg font-medium transition-colors text-sm">

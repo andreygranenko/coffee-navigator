@@ -72,7 +72,7 @@ export default function DistrictDetail() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `district-report-${district.id}.pdf`;
+      a.download = `${district.name.replace(/\s+/g, "_")}_Analize_${new Date().getFullYear()}.pdf`;
       a.click();
       window.URL.revokeObjectURL(url);
     } catch (e) {

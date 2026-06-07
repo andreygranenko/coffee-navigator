@@ -59,6 +59,7 @@ export default function Login() {
         throw new Error(body.detail || `Reģistrācija neizdevās (${res.status})`);
       }
       setOk("Konts izveidots. Tagad vari ielogоties.");
+      setMode("login");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Reģistrācija neizdevās");
     } finally {
@@ -95,6 +96,7 @@ export default function Login() {
             <input
               type="email"
               required
+              maxLength={50}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-coffee-300"
