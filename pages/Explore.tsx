@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useData } from "../data";
 import RigaMap from "../components/RigaMap";
-import { ChevronRight, Search, X } from "lucide-react";
+import { ChevronRight, Heart, Search, X } from "lucide-react";
 import type { ColorMode, DistrictSummary, VenueMarker } from "../types";
 import { clusterLv } from "../types";
+import { getAuthToken } from "../auth";
 
 export default function Explore() {
   const { data, loading, error } = useData();
@@ -20,6 +21,9 @@ export default function Explore() {
   const [pois, setPois] = useState<VenueMarker[]>([]);
   const [poisLoading, setPoisLoading] = useState(false);
   const poisStarted = useRef(false);
+  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
+  const isLoggedIn = !!getAuthToken();
 
   useEffect(() => {
     if (!showPois || poisStarted.current) return;
@@ -43,6 +47,15 @@ export default function Explore() {
     return () => { cancelled = true; };
   }, [showPois]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  useEffect(() => {
+    const token = getAuthToken();
+    if (!token) return;
+    fetch("/api/favorites", { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => r.ok ? r.json() : [])
+      .then((ids: string[]) => setFavoriteIds(new Set(ids)))
+      .catch(() => {});
+  }, []);
+
   const districts = data?.districts ?? [];
   const cafes = data?.cafes ?? [];
   const venues = data?.venues ?? [];
@@ -63,9 +76,10 @@ export default function Explore() {
       d.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
       d.opportunityScore >= filters.minOpportunity &&
       d.competitionScore <= filters.maxCompetition &&
-      (!hideLowConfidence || !d.lowConfidence)
+      (!hideLowConfidence || !d.lowConfidence) &&
+      (!showOnlyFavorites || favoriteIds.has(d.id))
     );
-  }, [districts, searchQuery, filters, hideLowConfidence]);
+  }, [districts, searchQuery, filters, hideLowConfidence, showOnlyFavorites, favoriteIds]);
 
   const selectedDistrict = districts.find((d) => d.id === selectedDistrictId);
 
@@ -142,6 +156,13 @@ export default function Explore() {
               <input type="checkbox" checked={showPois} onChange={(e) => setShowPois(e.target.checked)} />
               {poisLoading ? "Ielādē POI…" : "Plūsmas ģeneratori"}
             </label>
+            {isLoggedIn && (
+              <label className="flex items-center gap-1.5 cursor-pointer text-rose-600">
+                <input type="checkbox" checked={showOnlyFavorites} onChange={(e) => setShowOnlyFavorites(e.target.checked)} />
+                <Heart size={11} className={showOnlyFavorites ? "fill-rose-500 text-rose-500" : "text-rose-400"} />
+                Tikai favorīti
+              </label>
+            )}
           </div>
 
           <div className="flex gap-2 text-xs">
@@ -179,14 +200,14 @@ export default function Explore() {
             <div className="p-8 text-center text-stone-400">
               <p>Neviens rajons neatbilst kritērijiem.</p>
               <button
-                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); setVenueCategory(""); setMinRating(0); setShowPois(false); }}
+                onClick={() => { setFilters({ minOpportunity: 0, maxCompetition: 10 }); setSearchQuery(""); setVenueCategory(""); setMinRating(0); setShowPois(false); setShowOnlyFavorites(false); }}
                 className="text-amber-600 text-sm mt-2 font-medium hover:underline"
               >
                 Atiestatīt filtrus
               </button>
             </div>
           ) : (
-            filteredDistricts.map((d) => <DistrictCard key={d.id} d={d} selected={selectedDistrictId === d.id} onClick={() => setSelectedDistrictId(d.id)} />)
+            filteredDistricts.map((d) => <DistrictCard key={d.id} d={d} selected={selectedDistrictId === d.id} isFav={favoriteIds.has(d.id)} onClick={() => setSelectedDistrictId(d.id)} />)
           )}
         </div>
       </div>
@@ -289,7 +310,7 @@ export default function Explore() {
   );
 }
 
-function DistrictCard({ d, selected, onClick }: { d: DistrictSummary; selected: boolean; onClick: () => void }) {
+function DistrictCard({ d, selected, isFav, onClick }: { d: DistrictSummary; selected: boolean; isFav: boolean; onClick: () => void }) {
   return (
     <div
       onClick={onClick}
@@ -303,6 +324,7 @@ function DistrictCard({ d, selected, onClick }: { d: DistrictSummary; selected: 
         <h3 className="font-bold text-coffee-900 flex items-center gap-1">
           {d.name}
           {d.lowConfidence && <span className="text-[9px] text-amber-700 font-semibold">·MAZ DATU</span>}
+          {isFav && <Heart size={11} className="fill-rose-500 text-rose-500 ml-0.5" />}
         </h3>
         <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wide ${
           d.cluster.includes("Business") ? "bg-indigo-100 text-indigo-700"
