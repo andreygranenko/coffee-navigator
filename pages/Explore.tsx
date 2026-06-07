@@ -213,7 +213,7 @@ export default function Explore() {
 
         <div className="w-full h-full p-4 md:p-8">
           <RigaMap
-            districts={districts}
+            districts={filteredDistricts}
             geojson={geojson}
             cafes={filteredCafes}
             venues={filteredVenues}

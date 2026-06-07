@@ -404,7 +404,7 @@ def auth_login(payload: LoginIn) -> dict[str, Any]:
             raise HTTPException(status_code=401, detail="Invalid credentials")
 
         token = secrets.token_urlsafe(32)
-        expires_at = datetime.now(timezone.utc) + timedelta(days=7)
+        expires_at = datetime.now(timezone.utc) + timedelta(hours=24)
         cur.execute(
             "INSERT INTO user_sessions (token, user_id, expires_at) VALUES (%s, %s, %s)",
             (token, user_id, expires_at),

@@ -143,7 +143,7 @@ export default function Admin() {
           // fetch existing venues for map context
           api<ExistingVenue[]>("/api/venues").then(setExistingVenues).catch(() => {});
         } else if (job.status === "error") {
-          setOsmError(job.detail ?? "Overpass API kļūda");
+          setOsmError(job.detail ?? "Savienojuma kļūda ar ārējo avotu. Skripts apturēts.");
           setOsmLoading(false);
         } else {
           setTimeout(() => void poll(), 3000);
